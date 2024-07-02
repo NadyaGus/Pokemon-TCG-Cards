@@ -71,7 +71,9 @@ module.exports = {
       '@typescript-eslint/parser': ['.ts', '.tsx'],
     },
     'import/resolver': {
-      typescript: true,
+      typescript: {
+        project: ['tsconfig.json', 'tsconfig.node.json', 'tsconfig.app.json'],
+      },
       alias: {
         map: [['', './public']],
       },
