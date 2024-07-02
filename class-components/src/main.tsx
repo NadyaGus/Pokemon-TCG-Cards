@@ -1,19 +1,22 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
 
-import { App } from "./app/App.tsx";
+import { App } from './app/App.tsx';
+import { ErrorBoundary } from './utils/ErrorBoundary.tsx';
 
-import "./global.css";
+import './global.css';
 
-const node = document.getElementById("root");
+const node = document.getElementById('root');
 
 if (!node) {
-  throw new Error("You forgot to add root node to index.html");
+  throw new Error('You forgot to add root node to index.html');
 }
 
 const root = createRoot(node);
 root.render(
   <StrictMode>
-    <App />
+    <ErrorBoundary>
+      <App />
+    </ErrorBoundary>
   </StrictMode>,
 );
