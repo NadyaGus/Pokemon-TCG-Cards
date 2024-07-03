@@ -2,6 +2,7 @@ import { type ChangeEvent, Component, type FormEvent } from 'react';
 
 import { LS_KEY } from '@/utils/variables';
 
+import { Results } from '../results/Results';
 import { getItems } from './api/getItems';
 
 export class Search extends Component {
@@ -16,25 +17,37 @@ export class Search extends Component {
   async handleSubmit(): Promise<void> {
     localStorage.setItem(LS_KEY, this.state.value);
     const response = await getItems().catch((err) => console.error(err));
-    console.log(response);
+
+    response?.data.forEach((item) => {
+      console.log(item.name);
+    });
   }
 
   render(): React.ReactNode {
     return (
-      <form
-        onSubmit={(e: FormEvent) => {
-          e.preventDefault();
-          this.handleSubmit().catch((err) => console.error(err));
-        }}
-      >
-        <input
-          onChange={(event: ChangeEvent<HTMLInputElement>) => this.handleChange(event)}
-          placeholder="Search"
-          type="search"
-          value={this.state.value}
-        ></input>
-        <button type="submit">Search</button>
-      </form>
+      <>
+        <form
+          onSubmit={(e: FormEvent) => {
+            e.preventDefault();
+            this.handleSubmit().catch((err) => console.error(err));
+          }}
+        >
+          <input
+            onChange={(event: ChangeEvent<HTMLInputElement>) => this.handleChange(event)}
+            placeholder="Search"
+            type="search"
+            value={this.state.value}
+          ></input>
+          <button type="submit">Search</button>
+        </form>
+
+        <Results
+          list={[
+            { images: { small: '' }, name: '1' },
+            { images: { small: '' }, name: '2' },
+          ]}
+        />
+      </>
     );
   }
 }

@@ -1,6 +1,14 @@
 import { API_KEY, API_URL } from '@/utils/variables';
 
-export const getItems = async <T>(): Promise<T | void> => {
+export interface Pokemon {
+  images: { small: string };
+  name: string;
+}
+
+export interface ResponseData {
+  data: Pokemon[];
+}
+export const getItems = async (): Promise<ResponseData | void> => {
   const response = await fetch(`${API_URL}?page=1&pageSize=5`, {
     headers: {
       'X-Api-Key': API_KEY,
@@ -8,7 +16,7 @@ export const getItems = async <T>(): Promise<T | void> => {
     method: 'GET',
   })
     .then((response) => response.json())
-    .then((data: T) => data)
+    .then((data: ResponseData) => data)
     .catch((err) => console.error(err));
 
   return response;
