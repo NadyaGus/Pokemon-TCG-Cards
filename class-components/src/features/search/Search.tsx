@@ -16,7 +16,9 @@ export class Search extends Component {
   };
 
   componentDidMount(): void {
-    this.init();
+    getItems()
+      .then((response) => this.setState({ response: response?.data }))
+      .catch((err) => console.error(err));
   }
 
   handleChange(event: ChangeEvent<HTMLInputElement>): void {
@@ -25,12 +27,6 @@ export class Search extends Component {
 
   handleSubmit(): void {
     localStorage.setItem(LS_KEY, this.state.value);
-  }
-
-  init(): void {
-    getItems()
-      .then((response) => this.setState({ response: response?.data }))
-      .catch((err) => console.error(err));
   }
 
   render(): React.ReactNode {
