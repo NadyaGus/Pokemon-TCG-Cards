@@ -1,5 +1,6 @@
 import { Component, type ReactNode } from 'react';
 
+import { ErrorButton } from '@/features/error/ErrorButton';
 import { Loader } from '@/features/loader/Loader';
 import { Search } from '@/features/search/Search';
 
@@ -12,6 +13,7 @@ export class App extends Component {
     return (
       <>
         <div className={classes.app}>
+          <ErrorButton />
           <h1>App</h1>
           <Search loader={appLoader} />
         </div>
