@@ -1,8 +1,10 @@
 import { type ChangeEvent, Component, type FormEvent } from 'react';
 
+const LS_KEY = 'NadyaGus_search_key';
+
 export class Search extends Component {
   state = {
-    value: '',
+    value: localStorage.getItem(LS_KEY) ?? '',
   };
 
   handleChange(event: ChangeEvent<HTMLInputElement>): void {
@@ -10,7 +12,7 @@ export class Search extends Component {
   }
 
   handleSubmit(): void {
-    console.log(this.state.value);
+    localStorage.setItem(LS_KEY, this.state.value);
   }
 
   render(): React.ReactNode {
@@ -27,6 +29,7 @@ export class Search extends Component {
           type="search"
           value={this.state.value}
         ></input>
+        <button type="submit">Search</button>
       </form>
     );
   }
