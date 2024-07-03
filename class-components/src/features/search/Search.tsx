@@ -2,23 +2,34 @@ import { type ChangeEvent, Component, type FormEvent } from 'react';
 
 import { LS_KEY } from '@/utils/variables';
 
+import type { Loader } from '../loader/Loader';
+
 import { Results } from '../results/Results';
 import { type Pokemon, getItems } from './api/getItems';
 
+interface Props {
+  loader: Loader;
+}
 interface State {
   response?: Pokemon[] | null;
   value: string;
 }
 
-export class Search extends Component {
+export class Search extends Component<Props> {
+  loader = this.props.loader;
+
   state: State = {
     value: localStorage.getItem(LS_KEY) ?? '',
   };
 
+  constructor(props: Props) {
+    super(props);
+  }
   componentDidMount(): void {
     getItems()
       .then((response) => this.setState({ response: response?.data }))
-      .catch((err) => console.error(err));
+      .catch((err) => console.error(err))
+      .finally(() => this.loader.hideLoader());
   }
 
   handleChange(event: ChangeEvent<HTMLInputElement>): void {
@@ -48,6 +59,7 @@ export class Search extends Component {
         </form>
 
         <Results list={this.state.response ?? []} />
+        {this.loader.render()}
       </>
     );
   }
