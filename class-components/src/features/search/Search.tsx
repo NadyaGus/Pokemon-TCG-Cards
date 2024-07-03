@@ -3,24 +3,34 @@ import { type ChangeEvent, Component, type FormEvent } from 'react';
 import { LS_KEY } from '@/utils/variables';
 
 import { Results } from '../results/Results';
-import { getItems } from './api/getItems';
+import { type Pokemon, getItems } from './api/getItems';
+
+interface State {
+  response?: Pokemon[] | null;
+  value: string;
+}
 
 export class Search extends Component {
-  state = {
+  state: State = {
     value: localStorage.getItem(LS_KEY) ?? '',
   };
+
+  componentDidMount(): void {
+    this.init();
+  }
 
   handleChange(event: ChangeEvent<HTMLInputElement>): void {
     this.setState({ value: event.target.value });
   }
 
-  async handleSubmit(): Promise<void> {
+  handleSubmit(): void {
     localStorage.setItem(LS_KEY, this.state.value);
-    const response = await getItems().catch((err) => console.error(err));
+  }
 
-    response?.data.forEach((item) => {
-      console.log(item.name);
-    });
+  init(): void {
+    getItems()
+      .then((response) => this.setState({ response: response?.data }))
+      .catch((err) => console.error(err));
   }
 
   render(): React.ReactNode {
@@ -29,7 +39,7 @@ export class Search extends Component {
         <form
           onSubmit={(e: FormEvent) => {
             e.preventDefault();
-            this.handleSubmit().catch((err) => console.error(err));
+            this.handleSubmit();
           }}
         >
           <input
@@ -41,12 +51,7 @@ export class Search extends Component {
           <button type="submit">Search</button>
         </form>
 
-        <Results
-          list={[
-            { images: { small: '' }, name: '1' },
-            { images: { small: '' }, name: '2' },
-          ]}
-        />
+        <Results list={this.state.response ?? []} />
       </>
     );
   }
