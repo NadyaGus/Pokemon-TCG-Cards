@@ -1,7 +1,7 @@
 import { Component } from 'react';
 
-import { type Pokemon } from '../search/api/getItems';
-import { ResultItem } from './result-item/Result-Item';
+import { type Pokemon } from '../search/api/get-items';
+import { ResultItem } from './result-item/result-Item';
 
 interface Props {
   list: Pokemon[];

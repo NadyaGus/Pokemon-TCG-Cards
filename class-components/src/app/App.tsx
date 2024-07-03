@@ -1,10 +1,10 @@
 import { Component, type ReactNode } from 'react';
 
-import { ErrorButton } from '@/features/error/ErrorButton';
-import { Loader } from '@/features/loader/Loader';
-import { Search } from '@/features/search/Search';
+import { ErrorButton } from '@/features/error/error-button';
+import { Loader } from '@/features/loader/loader';
+import { Search } from '@/features/search/search';
 
-import classes from './App.module.css';
+import classes from './app.module.css';
 
 const appLoader = new Loader({});
 

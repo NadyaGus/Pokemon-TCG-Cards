@@ -2,10 +2,10 @@ import { type ChangeEvent, Component, type FormEvent } from 'react';
 
 import { LS_KEY } from '@/utils/variables';
 
-import type { Loader } from '../loader/Loader';
+import type { Loader } from '../loader/loader';
 
-import { Results } from '../results/Results';
-import { type Pokemon, getItems } from './api/getItems';
+import { Results } from '../results/results';
+import { type Pokemon, getItems } from './api/get-items';
 
 interface Props {
   loader: Loader;
