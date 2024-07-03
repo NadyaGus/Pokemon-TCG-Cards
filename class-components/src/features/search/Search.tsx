@@ -1,6 +1,8 @@
 import { type ChangeEvent, Component, type FormEvent } from 'react';
 
-const LS_KEY = 'NadyaGus_search_key';
+import { LS_KEY } from '@/utils/variables';
+
+import { getItems } from './api/getItems';
 
 export class Search extends Component {
   state = {
@@ -11,8 +13,10 @@ export class Search extends Component {
     this.setState({ value: event.target.value });
   }
 
-  handleSubmit(): void {
+  async handleSubmit(): Promise<void> {
     localStorage.setItem(LS_KEY, this.state.value);
+    const response = await getItems().catch((err) => console.error(err));
+    console.log(response);
   }
 
   render(): React.ReactNode {
@@ -20,7 +24,7 @@ export class Search extends Component {
       <form
         onSubmit={(e: FormEvent) => {
           e.preventDefault();
-          this.handleSubmit();
+          this.handleSubmit().catch((err) => console.error(err));
         }}
       >
         <input
