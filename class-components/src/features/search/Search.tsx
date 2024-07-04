@@ -1,7 +1,14 @@
 import { type ChangeEvent, Component, type FormEvent } from 'react';
 
-import { type State } from '@/pages/main-page';
 import { LS_KEY } from '@/utils/variables';
+
+import type { ResponseData } from './api/get-items';
+
+interface State {
+  handleSubmitValue: (value: string) => void;
+  response?: ResponseData | void;
+  searchValue: string;
+}
 
 export class Search extends Component<State> {
   state: State;
