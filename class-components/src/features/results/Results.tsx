@@ -2,7 +2,7 @@ import { Component } from 'react';
 
 import { Loader } from '../loader/loader';
 import { type ResponseData, getItems } from '../search/api/get-items';
-import { ResultItem } from './result-item/result-Item';
+import { ResultItem } from './result-item/result-item';
 
 export interface State {
   response?: ResponseData | void;
@@ -20,7 +20,7 @@ export class Results extends Component<State> {
   }
 
   componentDidMount(): void {
-    getItems()
+    getItems(this.state.searchValue)
       .then((response) => this.setState({ response }))
       .catch((err) => console.error(err))
       .finally(() => this.loader.hide());
@@ -30,7 +30,7 @@ export class Results extends Component<State> {
     return (
       <div>
         <h2>Results</h2>
-        {this.state.response?.data.map((item) => <ResultItem key={item.name} {...item} />)}
+        {this.state.response?.data.map((item) => <ResultItem key={item.id} {...item} />)}
         {this.loader.render()}
       </div>
     );
