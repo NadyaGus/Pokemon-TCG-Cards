@@ -8,25 +8,21 @@ import { Search } from '@/features/search/search';
 import { LS_KEY } from '@/utils/variables';
 
 interface PageState {
-  handleLoading: (isLoading: boolean) => void;
-  handleSubmitValue: (value: string) => void;
+  handleSearchValue: (value: string) => void;
   isLoading: boolean;
   searchValue: string;
+  setLoadingState: (isLoading: boolean) => void;
 }
 
 export class SearchPage extends Component {
   state: PageState = {
-    handleLoading: this.handleLoading.bind(this),
-    handleSubmitValue: this.handleSubmitValue.bind(this),
+    handleSearchValue: this.handleSearchValue.bind(this),
     isLoading: true,
     searchValue: localStorage.getItem(LS_KEY) ?? '',
+    setLoadingState: this.setLoadingState.bind(this),
   };
 
-  handleLoading(isLoading: boolean): void {
-    this.setState({ isLoading });
-  }
-
-  handleSubmitValue(value: string): void {
+  handleSearchValue(value: string): void {
     this.setState({ searchValue: value });
   }
 
@@ -34,9 +30,9 @@ export class SearchPage extends Component {
     return (
       <>
         <Header />
-        <Search handleSubmitValue={this.state.handleSubmitValue} searchValue={this.state.searchValue} />
+        <Search handleSearchValue={this.state.handleSearchValue} searchValue={this.state.searchValue} />
         <Results
-          handleLoading={this.state.handleLoading}
+          handleLoading={this.state.setLoadingState}
           isLoading={this.state.isLoading}
           searchValue={this.state.searchValue}
         />
@@ -44,5 +40,9 @@ export class SearchPage extends Component {
         <Loader isLoading={this.state.isLoading} />
       </>
     );
+  }
+
+  setLoadingState(isLoading: boolean): void {
+    this.setState({ isLoading });
   }
 }

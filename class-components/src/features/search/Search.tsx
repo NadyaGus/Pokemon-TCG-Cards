@@ -5,7 +5,7 @@ import { LS_KEY } from '@/utils/variables';
 import classes from './search.module.css';
 
 interface SearchState {
-  handleSubmitValue: (value: string) => void;
+  handleSearchValue: (value: string) => void;
   searchValue: string;
 }
 
@@ -15,8 +15,8 @@ export class Search extends Component<SearchState> {
   constructor(props: SearchState) {
     super(props);
     this.state = {
-      handleSubmitValue(value) {
-        props.handleSubmitValue(value);
+      handleSearchValue(value) {
+        props.handleSearchValue(value);
       },
       searchValue: props.searchValue,
     };
@@ -28,7 +28,7 @@ export class Search extends Component<SearchState> {
 
   handleSubmit(): void {
     localStorage.setItem(LS_KEY, this.state.searchValue);
-    this.state.handleSubmitValue(this.state.searchValue);
+    this.state.handleSearchValue(this.state.searchValue);
   }
 
   render(): React.ReactNode {
