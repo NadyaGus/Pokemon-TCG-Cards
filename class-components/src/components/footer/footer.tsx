@@ -1,6 +1,6 @@
 import { Component } from 'react';
 
-import logo from '@/assets/rsschool-logo.svg';
+import logo from './assets/rsschool-logo.svg';
 
 import classes from './footer.module.css';
 
