@@ -1,6 +1,10 @@
-.app {
+.item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  margin: 1rem;
+}
+
+.image {
+  width: 15rem;
 }

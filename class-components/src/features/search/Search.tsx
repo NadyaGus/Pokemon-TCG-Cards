@@ -4,6 +4,8 @@ import { LS_KEY } from '@/utils/variables';
 
 import type { ResponseData } from './api/get-items';
 
+import classes from './search.module.css';
+
 interface State {
   handleSubmitValue: (value: string) => void;
   response?: ResponseData | void;
@@ -35,12 +37,14 @@ export class Search extends Component<State> {
   render(): React.ReactNode {
     return (
       <form
+        className={classes.form}
         onSubmit={(e: FormEvent) => {
           e.preventDefault();
           this.handleSubmit();
         }}
       >
         <input
+          className={classes.input}
           onChange={(event: ChangeEvent<HTMLInputElement>) => this.handleChange(event)}
           placeholder="Search"
           type="search"

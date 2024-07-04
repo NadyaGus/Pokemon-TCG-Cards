@@ -10,9 +10,11 @@ export class Footer extends Component {
   render(): React.ReactNode {
     return (
       <footer className={classes.footer}>
-        <img alt="RSSchool-logo" src={logo} />
-        <p>2024</p>
-        <a href={GITHUB_LINK}>GitHub</a>
+        <div className={classes.content}>
+          <img alt="RSSchool-logo" className={classes.logo} src={logo} />
+          <p>2024</p>
+          <a href={GITHUB_LINK}>GitHub</a>
+        </div>
       </footer>
     );
   }

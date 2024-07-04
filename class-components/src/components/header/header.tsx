@@ -8,10 +8,12 @@ export class Header extends Component {
   render(): React.ReactNode {
     return (
       <header className={classes.header}>
-        <h1>Pokemon TCG Card Search</h1>
-        <a href={TASK_LINK} rel="noreferrer" target="_blank">
-          About Task
-        </a>
+        <div className={classes.content}>
+          <h1 className={classes.title}>Pokémon TCG Cards</h1>
+          <a className={classes.link} href={TASK_LINK} rel="noreferrer" target="_blank">
+            About Task
+          </a>
+        </div>
       </header>
     );
   }
