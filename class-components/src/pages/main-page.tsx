@@ -4,20 +4,18 @@ import { Footer } from '@/components/footer/footer';
 import { Header } from '@/components/header/header';
 import { Loader } from '@/features/loader/loader';
 import { Results } from '@/features/results/results';
-import { type ResponseData } from '@/features/search/api/get-items';
 import { Search } from '@/features/search/search';
 import { LS_KEY } from '@/utils/variables';
 
-export interface State {
+interface PageState {
   handleLoading: (isLoading: boolean) => void;
   handleSubmitValue: (value: string) => void;
   isLoading: boolean;
-  response?: ResponseData | void;
   searchValue: string;
 }
 
 export class SearchPage extends Component {
-  state: State = {
+  state: PageState = {
     handleLoading: this.handleLoading.bind(this),
     handleSubmitValue: this.handleSubmitValue.bind(this),
     isLoading: true,

@@ -2,20 +2,17 @@ import { type ChangeEvent, Component, type FormEvent } from 'react';
 
 import { LS_KEY } from '@/utils/variables';
 
-import type { ResponseData } from './api/get-items';
-
 import classes from './search.module.css';
 
-interface State {
+interface SearchState {
   handleSubmitValue: (value: string) => void;
-  response?: ResponseData | void;
   searchValue: string;
 }
 
-export class Search extends Component<State> {
-  state: State;
+export class Search extends Component<SearchState> {
+  state: SearchState;
 
-  constructor(props: State) {
+  constructor(props: SearchState) {
     super(props);
     this.state = {
       handleSubmitValue(value) {

@@ -2,16 +2,12 @@ import { Component } from 'react';
 
 import classes from './result-item.module.css';
 
-interface Props {
+interface ItemProps {
   images: { small: string };
   name: string;
 }
 
-export class ResultItem extends Component<Props> {
-  constructor(props: Props) {
-    super(props);
-  }
-
+export class ResultItem extends Component<ItemProps> {
   render(): React.ReactNode {
     return (
       <li className={classes.item}>

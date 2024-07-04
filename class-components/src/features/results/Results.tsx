@@ -7,17 +7,17 @@ import { ResultItem } from './result-item/result-item';
 
 import classes from './results.module.css';
 
-interface State {
+interface ResultsState {
   handleLoading: (isLoading: boolean) => void;
   isLoading: boolean;
   response?: ResponseData | void;
   searchValue: string;
 }
 
-export class Results extends Component<State> {
-  state: State;
+export class Results extends Component<ResultsState> {
+  state: ResultsState;
 
-  constructor(props: State) {
+  constructor(props: ResultsState) {
     super(props);
     this.state = {
       handleLoading: props.handleLoading,
@@ -33,7 +33,7 @@ export class Results extends Component<State> {
       .finally(() => this.state.handleLoading(false));
   }
 
-  componentDidUpdate(prevProps: Readonly<State>): void {
+  componentDidUpdate(prevProps: Readonly<ResultsState>): void {
     if (prevProps.searchValue !== this.props.searchValue) {
       this.state.handleLoading(true);
       getItems(this.props.searchValue)
