@@ -1,5 +1,6 @@
 import { Component } from 'react';
 
+import { Header } from '@/components/header';
 import { Loader } from '@/features/loader/loader';
 import { Results } from '@/features/results/results';
 import { type ResponseData } from '@/features/search/api/get-items';
@@ -33,6 +34,7 @@ export class SearchPage extends Component {
   render(): React.ReactNode {
     return (
       <>
+        <Header />
         <Search handleSubmitValue={this.state.handleSubmitValue} searchValue={this.state.searchValue} />
         <Results
           handleLoading={this.state.handleLoading}
