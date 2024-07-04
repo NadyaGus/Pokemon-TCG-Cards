@@ -8,7 +8,12 @@ export class Search extends Component<State> {
 
   constructor(props: State) {
     super(props);
-    this.state = { searchValue: props.searchValue };
+    this.state = {
+      handleSubmitValue(value) {
+        props.handleSubmitValue(value);
+      },
+      searchValue: props.searchValue,
+    };
   }
 
   handleChange(event: ChangeEvent<HTMLInputElement>): void {
@@ -17,6 +22,7 @@ export class Search extends Component<State> {
 
   handleSubmit(): void {
     localStorage.setItem(LS_KEY, this.state.searchValue);
+    this.state.handleSubmitValue(this.state.searchValue);
   }
 
   render(): React.ReactNode {

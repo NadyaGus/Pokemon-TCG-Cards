@@ -1,7 +1,9 @@
 import { Component } from 'react';
 
+import type { ResponseData } from '../search/api/get-items';
+
 import { Loader } from '../loader/loader';
-import { type ResponseData, getItems } from '../search/api/get-items';
+import { getItems } from '../search/api/get-items';
 import { ResultItem } from './result-item/result-item';
 
 export interface State {
@@ -15,7 +17,9 @@ export class Results extends Component<State> {
 
   constructor(props: State) {
     super(props);
-    this.state = { searchValue: props.searchValue };
+    this.state = {
+      searchValue: props.searchValue,
+    };
     this.loader = new Loader({});
   }
 
@@ -24,6 +28,14 @@ export class Results extends Component<State> {
       .then((response) => this.setState({ response }))
       .catch((err) => console.error(err))
       .finally(() => this.loader.hide());
+  }
+
+  componentDidUpdate(prevProps: Readonly<State>): void {
+    if (prevProps.searchValue !== this.props.searchValue) {
+      getItems(this.props.searchValue)
+        .then((response) => this.setState({ response }))
+        .catch((err) => console.error(err));
+    }
   }
 
   render(): React.ReactNode {
