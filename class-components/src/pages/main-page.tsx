@@ -1,6 +1,5 @@
 import { Component } from 'react';
 
-import { Loader } from '@/features/loader/loader';
 import { Results } from '@/features/results/results';
 import { type ResponseData } from '@/features/search/api/get-items';
 import { Search } from '@/features/search/search';
@@ -13,8 +12,6 @@ export interface State {
 }
 
 export class SearchPage extends Component {
-  loader = new Loader({});
-
   state: State = {
     handleSubmitValue: this.handleSubmitValue.bind(this),
     searchValue: localStorage.getItem(LS_KEY) ?? '',
@@ -28,7 +25,7 @@ export class SearchPage extends Component {
     return (
       <>
         <Search handleSubmitValue={this.state.handleSubmitValue} searchValue={this.state.searchValue} />
-        <Results searchValue={this.state.searchValue} />
+        <Results isLoading={true} searchValue={this.state.searchValue} />
       </>
     );
   }

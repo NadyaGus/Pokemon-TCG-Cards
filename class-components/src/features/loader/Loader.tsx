@@ -2,18 +2,12 @@ import { Component } from 'react';
 
 import classes from './loader.module.css';
 
-export class Loader extends Component {
-  isShowing = true;
+interface LoaderProps {
+  isLoading: boolean;
+}
 
-  hide(): void {
-    this.isShowing = false;
-  }
-
+export class Loader extends Component<LoaderProps> {
   render(): React.ReactNode {
-    return <div className={this.isShowing ? classes.loader : classes.hidden}>Loading...</div>;
-  }
-
-  show(): void {
-    this.isShowing = true;
+    return <div className={this.props.isLoading ? classes.loader : classes.hidden}>Loading...</div>;
   }
 }
