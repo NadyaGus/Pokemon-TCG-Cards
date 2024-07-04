@@ -12,10 +12,10 @@ export class ResultItem extends Component<Props> {
 
   render(): React.ReactNode {
     return (
-      <div>
-        <h2>{this.props.name}</h2>
+      <li>
+        <h3>{this.props.name}</h3>
         <img alt="alt" src={this.props.images.small} />
-      </div>
+      </li>
     );
   }
 }

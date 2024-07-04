@@ -34,22 +34,20 @@ export class Search extends Component<State> {
 
   render(): React.ReactNode {
     return (
-      <>
-        <form
-          onSubmit={(e: FormEvent) => {
-            e.preventDefault();
-            this.handleSubmit();
-          }}
-        >
-          <input
-            onChange={(event: ChangeEvent<HTMLInputElement>) => this.handleChange(event)}
-            placeholder="Search"
-            type="search"
-            value={this.state.searchValue}
-          ></input>
-          <button type="submit">Search</button>
-        </form>
-      </>
+      <form
+        onSubmit={(e: FormEvent) => {
+          e.preventDefault();
+          this.handleSubmit();
+        }}
+      >
+        <input
+          onChange={(event: ChangeEvent<HTMLInputElement>) => this.handleChange(event)}
+          placeholder="Search"
+          type="search"
+          value={this.state.searchValue}
+        ></input>
+        <button type="submit">Search</button>
+      </form>
     );
   }
 }

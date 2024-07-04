@@ -45,7 +45,7 @@ export class Results extends Component<State> {
     return (
       <div>
         <h2>Results</h2>
-        {this.state.response?.data.map((item) => <ResultItem key={item.id} {...item} />)}
+        <ul>{this.state.response?.data.map((item) => <ResultItem key={item.id} {...item} />)}</ul>
       </div>
     );
   }
