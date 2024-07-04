@@ -1,6 +1,7 @@
 import { Component } from 'react';
 
-import { Header } from '@/components/header';
+import { Footer } from '@/components/footer/footer';
+import { Header } from '@/components/header/header';
 import { Loader } from '@/features/loader/loader';
 import { Results } from '@/features/results/results';
 import { type ResponseData } from '@/features/search/api/get-items';
@@ -41,6 +42,7 @@ export class SearchPage extends Component {
           isLoading={this.state.isLoading}
           searchValue={this.state.searchValue}
         />
+        <Footer />
         <Loader isLoading={this.state.isLoading} />
       </>
     );
