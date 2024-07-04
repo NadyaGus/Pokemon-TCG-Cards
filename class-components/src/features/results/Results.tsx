@@ -1,23 +1,37 @@
 import { Component } from 'react';
 
-import { type Pokemon } from '../search/api/get-items';
+import { Loader } from '../loader/loader';
+import { type ResponseData, getItems } from '../search/api/get-items';
 import { ResultItem } from './result-item/result-Item';
 
-interface Props {
-  list: Pokemon[];
+export interface State {
+  response?: ResponseData | void;
+  searchValue: string;
 }
-export class Results extends Component<Props> {
-  constructor(props: Props) {
+
+export class Results extends Component<State> {
+  loader: Loader;
+  state: State;
+
+  constructor(props: State) {
     super(props);
+    this.state = { searchValue: props.searchValue };
+    this.loader = new Loader({});
+  }
+
+  componentDidMount(): void {
+    getItems()
+      .then((response) => this.setState({ response }))
+      .catch((err) => console.error(err))
+      .finally(() => this.loader.hide());
   }
 
   render(): React.ReactNode {
     return (
       <div>
         <h2>Results</h2>
-        {this.props.list.map((item) => (
-          <ResultItem key={item.name} {...item} />
-        ))}
+        {this.state.response?.data.map((item) => <ResultItem key={item.name} {...item} />)}
+        {this.loader.render()}
       </div>
     );
   }

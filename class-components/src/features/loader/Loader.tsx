@@ -5,14 +5,15 @@ import classes from './loader.module.css';
 export class Loader extends Component {
   isShowing = true;
 
-  hideLoader(): void {
+  hide(): void {
     this.isShowing = false;
   }
+
   render(): React.ReactNode {
     return <div className={this.isShowing ? classes.loader : classes.hidden}>Loading...</div>;
   }
 
-  showLoader(): void {
+  show(): void {
     this.isShowing = true;
   }
 }

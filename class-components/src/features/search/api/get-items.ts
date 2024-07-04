@@ -8,6 +8,7 @@ export interface Pokemon {
 export interface ResponseData {
   data: Pokemon[];
 }
+
 export const getItems = async (): Promise<ResponseData | void> => {
   const response = await fetch(`${API_URL}?page=1&pageSize=5`, {
     headers: {

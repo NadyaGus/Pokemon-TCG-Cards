@@ -4,6 +4,7 @@ interface Props {
   images: { small: string };
   name: string;
 }
+
 export class ResultItem extends Component<Props> {
   constructor(props: Props) {
     super(props);
