@@ -8,8 +8,28 @@
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.557);
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.image {
+  width: 100px;
+  height: 100px;
+  background-image: url(/pokeball.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: all 0.3s ease;
+  animation: rotate 1s infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(360deg);
+  }
 }
 
 .hidden {
-  display: none;
+  z-index: -1;
+  opacity: 0;
 }
