@@ -4,6 +4,10 @@ export interface Pokemon {
   id: string;
   images: { small: string };
   name: string;
+  set: {
+    name: string;
+    series: string;
+  };
 }
 
 export interface ResponseData {

@@ -47,7 +47,9 @@ export class Search extends Component<SearchState> {
           type="search"
           value={this.state.searchValue}
         ></input>
-        <button type="submit">Search</button>
+        <button className={classes.button} type="submit">
+          Search
+        </button>
       </form>
     );
   }

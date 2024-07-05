@@ -7,7 +7,7 @@
   align-items: center;
   margin: 0 3rem;
   width: 100%;
-  background-color: cornflowerblue;
+  background-color: rgb(248, 134, 28);
   box-shadow: 0px 10px 20px rgba(30, 30, 30, 0.25);
 }
 
@@ -15,8 +15,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 80%;
-  max-width: 70rem;
+  width: 85%;
+  max-width: 76rem;
+}
+
+.wrapper {
+  display: flex;
+  gap: 1rem;
+}
+
+.logo {
+  width: 3rem;
 }
 
 .title {
