@@ -21,9 +21,11 @@ a {
   transition: 0.3s;
 }
 
-a:hover {
-  color: rgb(16, 80, 14);
-  border-bottom: 1px solid rgb(16, 80, 14);
+@media (hover: hover) {
+  a:hover {
+    color: rgb(16, 80, 14);
+    border-bottom: 1px solid rgb(16, 80, 14);
+  }
 }
 
 body {
@@ -51,6 +53,8 @@ button {
   transition: 0.4s;
 }
 
-button:hover {
-  background-color: #de1818;
+@media (hover: hover) {
+  button:hover {
+    background-color: #de1818;
+  }
 }
