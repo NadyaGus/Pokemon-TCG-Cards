@@ -27,8 +27,10 @@ export class Search extends Component<SearchState> {
   }
 
   handleSubmit(): void {
-    localStorage.setItem(LS_KEY, this.state.searchValue);
-    this.state.handleSearchValue(this.state.searchValue);
+    const value = this.state.searchValue.trim();
+
+    localStorage.setItem(LS_KEY, value);
+    this.state.handleSearchValue(value);
   }
 
   render(): React.ReactNode {
