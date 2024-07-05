@@ -52,10 +52,12 @@ export class Results extends Component<ResultsState> {
       );
     }
 
-    return (
-      <div>
-        <h2>No results</h2>
-      </div>
-    );
+    if (this.state.response?.data.length === 0) {
+      return (
+        <div>
+          <h2>No results</h2>
+        </div>
+      );
+    }
   }
 }
