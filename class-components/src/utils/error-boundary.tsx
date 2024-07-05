@@ -33,7 +33,7 @@ export class ErrorBoundary extends Component<Props, State> {
           <h1 className={classes.title}>
             Sorry. Something went wrong...
             <br />
-            Please reload the page
+            Please, reload the page
           </h1>
         </div>
       );

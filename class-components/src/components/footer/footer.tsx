@@ -4,6 +4,7 @@ import logo from './assets/rsschool-logo.svg';
 
 import classes from './footer.module.css';
 
+const COURSE_LINK = 'https://rs.school/courses/reactjs';
 const GITHUB_LINK = 'https://github.com/NadyaGus';
 
 export class Footer extends Component {
@@ -11,9 +12,13 @@ export class Footer extends Component {
     return (
       <footer className={classes.footer}>
         <div className={classes.content}>
-          <img alt="RSSchool-logo" className={classes.logo} src={logo} />
+          <a className={classes.link} href={COURSE_LINK} rel="noreferrer" target="_blank">
+            <img alt="RSSchool-logo" className={classes.logo} src={logo} />
+          </a>
           <p>2024</p>
-          <a href={GITHUB_LINK}>GitHub</a>
+          <a href={GITHUB_LINK} rel="noreferrer" target="_blank">
+            GitHub
+          </a>
         </div>
       </footer>
     );

@@ -16,15 +16,13 @@
 a {
   font-weight: 500;
   color: rgba(255, 255, 255, 0.9);
-  text-decoration: inherit;
-  border-bottom: 1px solid rgb(248, 134, 28);
+  text-decoration: none;
   transition: 0.3s;
 }
 
 @media (hover: hover) {
   a:hover {
-    color: rgb(16, 80, 14);
-    border-bottom: 1px solid rgb(16, 80, 14);
+    opacity: 0.8;
   }
 }
 

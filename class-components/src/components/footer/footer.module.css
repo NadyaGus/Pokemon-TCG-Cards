@@ -23,3 +23,16 @@
 .logo {
   width: 3rem;
 }
+
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: none;
+}
+
+@media (hover: hover) {
+  link:hover {
+    border-bottom: none;
+  }
+}

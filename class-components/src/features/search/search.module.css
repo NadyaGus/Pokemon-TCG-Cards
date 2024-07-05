@@ -28,11 +28,11 @@
   font-family: inherit;
   font-size: inherit;
   border-radius: 8px;
-  border: 1px solid #777777;
+  border: 1px solid #ffb749;
   text-indent: 0.5rem;
 }
 
-input[type='search']::-webkit-search-cancel-button {
+.input[type='search']::-webkit-search-cancel-button {
   -webkit-appearance: none;
   margin-right: 0.5rem;
   width: 20px;
@@ -40,6 +40,11 @@ input[type='search']::-webkit-search-cancel-button {
   background: url(/cross.svg);
   cursor: pointer;
   transition: 0.3s;
+}
+
+.input:focus {
+  outline: 2px solid #ffb749;
+  outline-offset: -4px;
 }
 
 .button {
