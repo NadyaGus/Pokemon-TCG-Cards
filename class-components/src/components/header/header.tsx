@@ -1,5 +1,7 @@
 import { Component } from 'react';
 
+import { ErrorButton } from '@/features/error/error-button';
+
 import classes from './header.module.css';
 
 import pokeball from '/pokeball.svg';
@@ -15,9 +17,12 @@ export class Header extends Component {
             <img alt="Logotype" className={classes.logo} src={pokeball}></img>
             <h1 className={classes.title}>Pokémon TCG Cards</h1>
           </div>
-          <a className={classes.link} href={TASK_LINK} rel="noreferrer" target="_blank">
-            About Task
-          </a>
+          <div className={classes.wrapper}>
+            <a className={classes.link} href={TASK_LINK} rel="noreferrer" target="_blank">
+              About Task
+            </a>
+            <ErrorButton />
+          </div>
         </div>
       </header>
     );
