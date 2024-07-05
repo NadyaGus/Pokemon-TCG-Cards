@@ -9,6 +9,7 @@ export class App extends Component {
     return (
       <div className={classes.app}>
         <SearchPage />
+        <div className={classes.background}></div>
       </div>
     );
   }
