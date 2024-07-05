@@ -45,11 +45,9 @@ export class Results extends Component<ResultsState> {
 
   render(): React.ReactNode {
     return (
-      <div>
-        <ul className={classes.list}>
-          {this.state.response?.data.map((item) => <ResultItem key={item.id} {...item} />)}
-        </ul>
-      </div>
+      <ul className={classes.list}>
+        {this.state.response?.data.map((item) => <ResultItem key={item.id} {...item} />)}
+      </ul>
     );
   }
 }

@@ -15,7 +15,7 @@ export interface ResponseData {
 }
 
 export const getItems = async (value: string): Promise<ResponseData | void> => {
-  const response = await fetch(`${API_URL}?q=name:${value}*`, {
+  const response = await fetch(`${API_URL}?page=1&pageSize=20&q=name:${value}*`, {
     headers: {
       'X-Api-Key': API_KEY,
     },
