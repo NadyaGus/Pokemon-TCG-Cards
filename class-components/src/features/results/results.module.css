@@ -1,9 +1,11 @@
 .list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  padding: 0;
   gap: 1rem;
+  justify-content: center;
+
   max-width: 88rem;
+  padding: 0;
+
   list-style: none;
 }
