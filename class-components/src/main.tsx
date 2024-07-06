@@ -2,7 +2,7 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 
 import { App } from './app/app.tsx';
-import { ErrorBoundary } from './utils/error-boundary.tsx';
+import { ErrorBoundary } from './utils/error-boundary';
 
 import './global.css';
 
