@@ -6,12 +6,12 @@ import { LS_KEY } from '@/utils/variables';
 
 import classes from './search.module.css';
 
-type SearchType = Pick<PageState, 'handleSearchValue' | 'searchValue'>;
+type SearchProps = Pick<PageState, 'handleSearchValue' | 'searchValue'>;
 
-export class Search extends Component<SearchType> {
-  state: SearchType;
+export class Search extends Component<SearchProps> {
+  state: SearchProps;
 
-  constructor(props: SearchType) {
+  constructor(props: SearchProps) {
     super(props);
     this.state = {
       handleSearchValue(value) {

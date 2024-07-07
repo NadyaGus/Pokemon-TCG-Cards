@@ -1,5 +1,7 @@
 import { Component } from 'react';
 
+import type { PageState } from '@/pages/main-page';
+
 import type { ResponseData } from '../search/api/get-items';
 
 import { getItems } from '../search/api/get-items';
@@ -7,23 +9,19 @@ import { ResultItem } from './result-item/result-item';
 
 import classes from './results.module.css';
 
-interface ResultsState {
-  handleLoading: (isLoading: boolean) => void;
-  isLoading: boolean;
+interface ResultsProps extends Omit<PageState, 'handleSearchValue'> {
   response?: ResponseData | void;
-  searchValue: string;
-  timestamp: number;
 }
 
-export class Results extends Component<ResultsState> {
-  state: ResultsState;
+export class Results extends Component<ResultsProps> {
+  state: ResultsProps;
 
-  constructor(props: ResultsState) {
+  constructor(props: ResultsProps) {
     super(props);
     this.state = {
-      handleLoading: props.handleLoading,
       isLoading: props.isLoading,
       searchValue: props.searchValue,
+      setLoadingState: props.setLoadingState,
       timestamp: props.timestamp,
     };
   }
@@ -32,16 +30,16 @@ export class Results extends Component<ResultsState> {
     getItems(this.state.searchValue)
       .then((response) => this.setState({ response }))
       .catch((err) => console.error(err))
-      .finally(() => this.state.handleLoading(false));
+      .finally(() => this.state.setLoadingState(false));
   }
 
-  componentDidUpdate(prevProps: Readonly<ResultsState>): void {
+  componentDidUpdate(prevProps: Readonly<ResultsProps>): void {
     if (prevProps.timestamp !== this.props.timestamp) {
-      this.state.handleLoading(true);
+      this.state.setLoadingState(true);
       getItems(this.props.searchValue ?? '')
         .then((response) => this.setState({ response }))
         .catch((err) => console.error(err))
-        .finally(() => this.state.handleLoading(false));
+        .finally(() => this.state.setLoadingState(false));
     }
   }
 

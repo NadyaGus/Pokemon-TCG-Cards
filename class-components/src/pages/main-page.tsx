@@ -34,9 +34,9 @@ export class SearchPage extends Component {
         <Header />
         <Search handleSearchValue={this.state.handleSearchValue} searchValue={this.state.searchValue} />
         <Results
-          handleLoading={this.state.setLoadingState}
           isLoading={this.state.isLoading}
           searchValue={this.state.searchValue}
+          setLoadingState={this.state.setLoadingState}
           timestamp={this.state.timestamp}
         />
         <Footer />
