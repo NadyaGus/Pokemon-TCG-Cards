@@ -35,6 +35,7 @@ export class ErrorBoundary extends Component<Props, State> {
             <br />
             Please, reload the page
           </h1>
+          <button onClick={() => window.location.reload()}>Reset</button>
         </div>
       );
     }
