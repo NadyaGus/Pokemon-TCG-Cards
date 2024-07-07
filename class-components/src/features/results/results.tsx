@@ -1,10 +1,10 @@
 import { Component } from 'react';
 
+import type { ResponseData } from '@/api/get-items';
 import type { PageState } from '@/pages/main-page';
 
-import type { ResponseData } from '../search/api/get-items';
+import { getItems } from '@/api/get-items';
 
-import { getItems } from '../search/api/get-items';
 import { ResultItem } from './result-item/result-item';
 
 import classes from './results.module.css';

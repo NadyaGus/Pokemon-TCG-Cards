@@ -1,6 +1,6 @@
 import { Component } from 'react';
 
-import type { Pokemon } from '@/features/search/api/get-items';
+import type { Pokemon } from '@/api/get-items';
 
 import classes from './result-item.module.css';
 
