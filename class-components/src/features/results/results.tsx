@@ -12,6 +12,7 @@ interface ResultsState {
   isLoading: boolean;
   response?: ResponseData | void;
   searchValue: string;
+  timestamp: number;
 }
 
 export class Results extends Component<ResultsState> {
@@ -23,6 +24,7 @@ export class Results extends Component<ResultsState> {
       handleLoading: props.handleLoading,
       isLoading: props.isLoading,
       searchValue: props.searchValue,
+      timestamp: props.timestamp,
     };
   }
 
@@ -34,9 +36,9 @@ export class Results extends Component<ResultsState> {
   }
 
   componentDidUpdate(prevProps: Readonly<ResultsState>): void {
-    if (prevProps.searchValue !== this.props.searchValue) {
+    if (prevProps.timestamp !== this.props.timestamp) {
       this.state.handleLoading(true);
-      getItems(this.props.searchValue)
+      getItems(this.props.searchValue ?? '')
         .then((response) => this.setState({ response }))
         .catch((err) => console.error(err))
         .finally(() => this.state.handleLoading(false));
