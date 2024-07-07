@@ -1,18 +1,17 @@
 import { type ChangeEvent, Component, type FormEvent } from 'react';
 
+import type { PageState } from '@/pages/main-page';
+
 import { LS_KEY } from '@/utils/variables';
 
 import classes from './search.module.css';
 
-interface SearchState {
-  handleSearchValue: (value: string) => void;
-  searchValue: string;
-}
+type SearchType = Pick<PageState, 'handleSearchValue' | 'searchValue'>;
 
-export class Search extends Component<SearchState> {
-  state: SearchState;
+export class Search extends Component<SearchType> {
+  state: SearchType;
 
-  constructor(props: SearchState) {
+  constructor(props: SearchType) {
     super(props);
     this.state = {
       handleSearchValue(value) {
