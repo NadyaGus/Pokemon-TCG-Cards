@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import type { ReactNode } from 'react';
 
 import classes from './loader.module.css';
 
@@ -6,12 +6,10 @@ interface LoaderProps {
   isLoading: boolean;
 }
 
-export class Loader extends Component<LoaderProps> {
-  render(): React.ReactNode {
-    return (
-      <div className={this.props.isLoading ? classes.loader : classes.hidden}>
-        <div className={classes.image}></div>
-      </div>
-    );
-  }
-}
+export const Loader = (props: LoaderProps): ReactNode => {
+  return (
+    <div className={props.isLoading ? classes.loader : classes.hidden}>
+      <div className={classes.image}></div>
+    </div>
+  );
+};
