@@ -1,12 +1,14 @@
 import { type ChangeEvent, type FormEvent, type ReactNode, useState } from 'react';
 
-import type { PageState } from '@/pages/main-page';
-
 import { LS_KEY } from '@/utils/variables';
 
 import classes from './search.module.css';
 
-type SearchProps = { setTimestamp: (timestamp: number) => void } & Pick<PageState, 'handleSearchValue' | 'searchValue'>;
+interface SearchProps {
+  handleSearchValue: (value: string) => void;
+  searchValue: string;
+  setTimestamp: (timestamp: number) => void;
+}
 
 export const Search = (props: SearchProps): ReactNode => {
   const [inputValue, setInputValue] = useState(props.searchValue);
