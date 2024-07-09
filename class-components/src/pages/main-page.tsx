@@ -8,14 +8,6 @@ import { Results } from '@/features/results/results';
 import { Search } from '@/features/search/search';
 import { LS_KEY } from '@/utils/variables';
 
-export interface PageState {
-  handleSearchValue: (value: string) => void;
-  isLoading: boolean;
-  searchValue: string;
-  setLoadingState: (isLoading: boolean) => void;
-  timestamp: number;
-}
-
 export const SearchPage = (): ReactNode => {
   const [searchValue, setSearchValue] = useState(localStorage.getItem(LS_KEY) ?? '');
 

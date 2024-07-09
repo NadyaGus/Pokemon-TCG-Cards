@@ -1,7 +1,6 @@
 import { Component } from 'react';
 
 import type { ResponseData } from '@/api/get-items';
-import type { PageState } from '@/pages/main-page';
 
 import { getItems } from '@/api/get-items';
 
@@ -9,8 +8,12 @@ import { ResultItem } from './result-item/result-item';
 
 import classes from './results.module.css';
 
-interface ResultsProps extends Omit<PageState, 'handleSearchValue'> {
+interface ResultsProps {
+  isLoading: boolean;
   response?: ResponseData | void;
+  searchValue: string;
+  setLoadingState: (isLoading: boolean) => void;
+  timestamp: number;
 }
 
 export class Results extends Component<ResultsProps> {
