@@ -1,4 +1,5 @@
-import { Component } from 'react';
+import type { ReactNode } from 'react';
+import { useState } from 'react';
 
 import { Footer } from '@/components/footer/footer';
 import { Header } from '@/components/header/header';
@@ -15,37 +16,19 @@ export interface PageState {
   timestamp: number;
 }
 
-export class SearchPage extends Component {
-  state: PageState = {
-    handleSearchValue: this.handleSearchValue.bind(this),
-    isLoading: true,
-    searchValue: localStorage.getItem(LS_KEY) ?? '',
-    setLoadingState: this.setLoadingState.bind(this),
-    timestamp: Date.now(),
-  };
+export const SearchPage = (): ReactNode => {
+  const [searchValue, setSearchValue] = useState(localStorage.getItem(LS_KEY) ?? '');
 
-  handleSearchValue(value: string): void {
-    this.setState({ searchValue: value, timestamp: Date.now() });
-  }
+  const [isLoading, setIsLoading] = useState(true);
+  const [timestamp, setTimestamp] = useState(Date.now());
 
-  render(): React.ReactNode {
-    return (
-      <>
-        <Header />
-        <Search handleSearchValue={this.state.handleSearchValue} searchValue={this.state.searchValue} />
-        <Results
-          isLoading={this.state.isLoading}
-          searchValue={this.state.searchValue}
-          setLoadingState={this.state.setLoadingState}
-          timestamp={this.state.timestamp}
-        />
-        <Footer />
-        <Loader isLoading={this.state.isLoading} />
-      </>
-    );
-  }
-
-  setLoadingState(isLoading: boolean): void {
-    this.setState({ isLoading });
-  }
-}
+  return (
+    <>
+      <Header />
+      <Search handleSearchValue={setSearchValue} searchValue={searchValue} setTimestamp={setTimestamp} />
+      <Results isLoading={isLoading} searchValue={searchValue} setLoadingState={setIsLoading} timestamp={timestamp} />
+      <Footer />
+      <Loader isLoading={isLoading} />
+    </>
+  );
+};

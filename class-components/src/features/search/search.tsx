@@ -6,7 +6,7 @@ import { LS_KEY } from '@/utils/variables';
 
 import classes from './search.module.css';
 
-type SearchProps = Pick<PageState, 'handleSearchValue' | 'searchValue'>;
+type SearchProps = { setTimestamp: (timestamp: number) => void } & Pick<PageState, 'handleSearchValue' | 'searchValue'>;
 
 export const Search = (props: SearchProps): ReactNode => {
   const [inputValue, setInputValue] = useState(props.searchValue);
@@ -17,6 +17,8 @@ export const Search = (props: SearchProps): ReactNode => {
 
   const handleSubmit = (): void => {
     const value = inputValue.trim();
+
+    props.setTimestamp(Date.now());
 
     localStorage.setItem(LS_KEY, value);
     props.handleSearchValue(value);
