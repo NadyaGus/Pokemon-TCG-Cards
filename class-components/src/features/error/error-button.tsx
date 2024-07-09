@@ -1,16 +1,16 @@
-import { Component } from 'react';
+import type { ReactNode } from 'react';
+import { useState } from 'react';
 
-export class ErrorButton extends Component {
-  state = { hasError: false };
+export const ErrorButton = (): ReactNode => {
+  const [hasError, setHasError] = useState(false);
 
-  handleClick(): void {
-    this.setState({ hasError: true });
+  const handleClick = (): void => {
+    setHasError(true);
+  };
+
+  if (hasError) {
+    throw (new Error('Something went wrong.').name = 'Error Boundary Test');
   }
 
-  render(): React.ReactNode {
-    if (this.state.hasError) {
-      throw new Error('Something went wrong.');
-    }
-    return <button onClick={() => this.handleClick()}>Error</button>;
-  }
-}
+  return <button onClick={() => handleClick()}>Throw Error</button>;
+};
