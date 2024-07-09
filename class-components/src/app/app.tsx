@@ -2,7 +2,7 @@ import { type ReactNode } from 'react';
 
 import { Footer } from '@/components/footer/footer';
 import { Header } from '@/components/header/header';
-import { SearchPage } from '@/pages/main-page';
+import { SearchPage } from '@/pages/search-page';
 
 import classes from './app.module.css';
 
