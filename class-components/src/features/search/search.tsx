@@ -7,7 +7,6 @@ import classes from './search.module.css';
 interface SearchProps {
   handleSearchValue: (value: string) => void;
   searchValue: string;
-  setTimestamp: (timestamp: number) => void;
 }
 
 export const Search = (props: SearchProps): ReactNode => {
@@ -19,8 +18,6 @@ export const Search = (props: SearchProps): ReactNode => {
 
   const handleSubmit = (): void => {
     const value = inputValue.trim();
-
-    props.setTimestamp(Date.now());
 
     localStorage.setItem(LS_KEY, value);
     props.handleSearchValue(value);

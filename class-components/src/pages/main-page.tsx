@@ -12,13 +12,12 @@ export const SearchPage = (): ReactNode => {
   const [searchValue, setSearchValue] = useState(localStorage.getItem(LS_KEY) ?? '');
 
   const [isLoading, setIsLoading] = useState(true);
-  const [timestamp, setTimestamp] = useState(Date.now());
 
   return (
     <>
       <Header />
-      <Search handleSearchValue={setSearchValue} searchValue={searchValue} setTimestamp={setTimestamp} />
-      <Results isLoading={isLoading} searchValue={searchValue} setLoadingState={setIsLoading} timestamp={timestamp} />
+      <Search handleSearchValue={setSearchValue} searchValue={searchValue} />
+      <Results searchValue={searchValue} setLoadingState={setIsLoading} />
       <Footer />
       <Loader isLoading={isLoading} />
     </>

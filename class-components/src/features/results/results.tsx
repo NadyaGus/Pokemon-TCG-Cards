@@ -1,66 +1,47 @@
-import { Component } from 'react';
+import type { ReactNode } from 'react';
+import { useEffect, useState } from 'react';
 
-import type { ResponseData } from '@/api/get-items';
-
-import { getItems } from '@/api/get-items';
+import { type ResponseData, getItems } from '@/api/get-items';
 
 import { ResultItem } from './result-item/result-item';
 
 import classes from './results.module.css';
 
 interface ResultsProps {
-  isLoading: boolean;
   response?: ResponseData | void;
   searchValue: string;
   setLoadingState: (isLoading: boolean) => void;
-  timestamp: number;
 }
 
-export class Results extends Component<ResultsProps> {
-  state: ResultsProps;
+export const Results = (props: ResultsProps): ReactNode => {
+  const [resultsList, setResultsList] = useState(props.response?.data);
 
-  constructor(props: ResultsProps) {
-    super(props);
-    this.state = {
-      isLoading: props.isLoading,
-      searchValue: props.searchValue,
-      setLoadingState: props.setLoadingState,
-      timestamp: props.timestamp,
-    };
+  const loaderHandler = props.setLoadingState;
+
+  useEffect(() => {
+    loaderHandler(true);
+
+    getItems(props.searchValue)
+      .then((response) => setResultsList(response?.data))
+      .then(() => loaderHandler(false))
+      .catch((err) => console.error(err));
+  }, [props.searchValue, loaderHandler]);
+
+  if (resultsList && resultsList.length > 0) {
+    return (
+      <ul className={classes.list}>
+        {resultsList.map((item) => (
+          <ResultItem key={item.id} {...item} />
+        ))}
+      </ul>
+    );
   }
 
-  componentDidMount(): void {
-    getItems(this.state.searchValue)
-      .then((response) => this.setState({ response }))
-      .catch((err) => console.error(err))
-      .finally(() => this.state.setLoadingState(false));
+  if (resultsList?.length === 0) {
+    return (
+      <div>
+        <h2>No results</h2>
+      </div>
+    );
   }
-
-  componentDidUpdate(prevProps: Readonly<ResultsProps>): void {
-    if (prevProps.timestamp !== this.props.timestamp) {
-      this.state.setLoadingState(true);
-      getItems(this.props.searchValue ?? '')
-        .then((response) => this.setState({ response }))
-        .catch((err) => console.error(err))
-        .finally(() => this.state.setLoadingState(false));
-    }
-  }
-
-  render(): React.ReactNode {
-    if (this.state.response?.data && this.state.response?.data.length > 0) {
-      return (
-        <ul className={classes.list}>
-          {this.state.response?.data.map((item) => <ResultItem key={item.id} {...item} />)}
-        </ul>
-      );
-    }
-
-    if (this.state.response?.data.length === 0) {
-      return (
-        <div>
-          <h2>No results</h2>
-        </div>
-      );
-    }
-  }
-}
+};
