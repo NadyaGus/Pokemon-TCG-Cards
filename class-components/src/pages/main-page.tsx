@@ -1,8 +1,6 @@
 import type { ReactNode } from 'react';
 import { useState } from 'react';
 
-import { Footer } from '@/components/footer/footer';
-import { Header } from '@/components/header/header';
 import { Loader } from '@/features/loader/loader';
 import { Results } from '@/features/results/results';
 import { Search } from '@/features/search/search';
@@ -15,10 +13,8 @@ export const SearchPage = (): ReactNode => {
 
   return (
     <>
-      <Header />
       <Search handleSearchValue={setSearchValue} searchValue={searchValue} />
       <Results searchValue={searchValue} setLoadingState={setIsLoading} />
-      <Footer />
       <Loader isLoading={isLoading} />
     </>
   );
