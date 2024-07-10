@@ -44,6 +44,14 @@ export class Results extends Component<ResultsProps> {
   }
 
   render(): React.ReactNode {
+    if (this.state.response && !this.state.response.data) {
+      return (
+        <div>
+          <h2>Bad Request. English letters only</h2>
+        </div>
+      );
+    }
+
     if (this.state.response?.data && this.state.response?.data.length > 0) {
       return (
         <ul className={classes.list}>
