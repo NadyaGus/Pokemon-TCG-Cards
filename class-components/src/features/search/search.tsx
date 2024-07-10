@@ -1,4 +1,5 @@
-import { type ChangeEvent, type FormEvent, type ReactNode, useState } from 'react';
+import type { ChangeEvent, Dispatch, FormEvent, ReactNode, SetStateAction } from 'react';
+import { useState } from 'react';
 
 import { LS_KEY } from '@/utils/variables';
 
@@ -7,6 +8,7 @@ import classes from './search.module.css';
 interface SearchProps {
   handleSearchValue: (value: string) => void;
   searchValue: string;
+  setPage: Dispatch<SetStateAction<number>>;
 }
 
 export const Search = (props: SearchProps): ReactNode => {
@@ -18,6 +20,8 @@ export const Search = (props: SearchProps): ReactNode => {
 
   const handleSubmit = (): void => {
     const value = inputValue.trim();
+
+    props.setPage(1);
 
     localStorage.setItem(LS_KEY, value);
     props.handleSearchValue(value);

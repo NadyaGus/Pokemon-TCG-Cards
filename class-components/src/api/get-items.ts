@@ -12,10 +12,13 @@ export interface Pokemon {
 
 export interface ResponseData {
   data: Pokemon[];
+  page: number;
+  pageSize: number;
+  totalCount: number;
 }
 
-export const getItems = async (value: string): Promise<ResponseData | void> => {
-  const response = await fetch(`${API_URL}?page=1&pageSize=20&q=name:${value}*`, {
+export const getItems = async (value: string, page = 1): Promise<ResponseData | void> => {
+  const response = await fetch(`${API_URL}?page=${page}&pageSize=20&q=name:${value}*`, {
     headers: {
       'X-Api-Key': API_KEY,
     },
