@@ -14,7 +14,7 @@ export const SearchPage = (): ReactNode => {
   return (
     <>
       <Search handleSearchValue={setSearchValue} searchValue={searchValue} />
-      <Results searchValue={searchValue} setLoadingState={setIsLoading} />
+      <Results isLoading={isLoading} searchValue={searchValue} setLoadingState={setIsLoading} />
       <Loader isLoading={isLoading} />
     </>
   );

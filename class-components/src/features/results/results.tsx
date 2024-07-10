@@ -8,6 +8,7 @@ import { ResultItem } from './result-item/result-item';
 import classes from './results.module.css';
 
 interface ResultsProps {
+  isLoading: boolean;
   response?: ResponseData | void;
   searchValue: string;
   setLoadingState: (isLoading: boolean) => void;
@@ -37,7 +38,7 @@ export const Results = (props: ResultsProps): ReactNode => {
     );
   }
 
-  if (resultsList?.length === 0) {
+  if (resultsList?.length === 0 || (!resultsList && !props.isLoading)) {
     return (
       <div>
         <h2>No results</h2>
