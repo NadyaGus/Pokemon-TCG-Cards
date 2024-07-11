@@ -1,8 +1,8 @@
 import { createBrowserRouter } from 'react-router-dom';
 
 import { Layout } from '@/components/layout/layout';
+import { DetailsPage } from '@/pages/details-page';
 import { NotFoundPage } from '@/pages/not-found-page';
-import { SearchPage } from '@/pages/search-page';
 
 export const APP_ROUTES = {
   page: '/search',
@@ -11,7 +11,7 @@ export const APP_ROUTES = {
 
 const routes = [
   {
-    children: [{ element: <SearchPage />, path: `${APP_ROUTES.page}/:pageId` }],
+    children: [{ element: <DetailsPage />, path: `${APP_ROUTES.page}/:pageId?/:cardId?` }],
     element: <Layout />,
     errorElement: <NotFoundPage />,
     path: APP_ROUTES.root,
