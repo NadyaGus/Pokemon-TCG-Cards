@@ -25,7 +25,7 @@ export const Pagination = (props: PaginationProps): ReactNode => {
   const handlePageDecrement = (): void => {
     if (props.page > 1) {
       props.setPage(props.page - 1);
-      props.setSearchParams({ page: `${props.page - 1}` });
+      props.setSearchParams({ page: `${props.page - 1}`, pageSize: '20', search: props.searchValue });
     }
 
     window.scrollTo(0, 0);
