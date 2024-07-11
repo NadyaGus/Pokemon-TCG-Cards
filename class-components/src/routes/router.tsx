@@ -4,7 +4,7 @@ import { NotFoundPage } from '@/pages/not-found-page';
 import { SearchPage } from '@/pages/search-page';
 
 export const APP_ROUTES = {
-  page: '/page',
+  page: '/search',
   root: '/',
 };
 

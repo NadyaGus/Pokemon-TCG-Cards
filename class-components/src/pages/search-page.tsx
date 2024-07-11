@@ -12,27 +12,27 @@ import { LS_KEY } from '@/utils/variables';
 
 export const SearchPage = (): ReactNode => {
   const { pageId } = useParams();
+  const [page, setPage] = useState(pageId ? +pageId : 1);
 
   const [searchValue, setSearchValue] = useState(localStorage.getItem(LS_KEY) ?? '');
   const [isLoading, setIsLoading] = useState(true);
-  // const [page, setPage] = useState(pageId ? +pageId : 1);
   const [totalCount, setTotalCount] = useState(0);
 
   return (
     <>
       <Header />
 
-      <Search handleSearchValue={setSearchValue} searchValue={searchValue} />
+      <Search handleSearchValue={setSearchValue} searchValue={searchValue} setPage={setPage} />
 
       <Results
         isLoading={isLoading}
-        page={pageId ? +pageId : 1}
+        page={page}
         searchValue={searchValue}
         setLoadingState={setIsLoading}
         setTotalCount={setTotalCount}
       />
 
-      <Pagination page={pageId ? +pageId : 1} totalCount={totalCount} />
+      <Pagination page={page} setPage={setPage} totalCount={totalCount} />
 
       <Loader isLoading={isLoading} />
 
