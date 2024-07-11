@@ -3,7 +3,10 @@ import { useNavigate } from 'react-router-dom';
 
 import { APP_ROUTES } from '@/routes/router';
 
+import classes from './pagination.module.css';
+
 interface PaginationProps {
+  isLoading: boolean;
   page: number;
   setPage: Dispatch<SetStateAction<number>>;
   totalCount: number;
@@ -31,12 +34,12 @@ export const Pagination = (props: PaginationProps): ReactNode => {
   };
 
   return (
-    <div>
-      <button onClick={() => handlePageIncrement()}>Next</button>
+    <div className={props.isLoading ? classes.hidden : classes.pagination}>
+      <button onClick={() => handlePageDecrement()}>Prev</button>
       <div>
         Page: {props.page} from {Math.ceil(props.totalCount / 20)}
       </div>
-      <button onClick={() => handlePageDecrement()}>Prev</button>
+      <button onClick={() => handlePageIncrement()}>Next</button>
     </div>
   );
 };

@@ -32,7 +32,7 @@ export const SearchPage = (): ReactNode => {
         setTotalCount={setTotalCount}
       />
 
-      <Pagination page={page} setPage={setPage} totalCount={totalCount} />
+      <Pagination isLoading={isLoading} page={page} setPage={setPage} totalCount={totalCount} />
 
       <Loader isLoading={isLoading} />
 
