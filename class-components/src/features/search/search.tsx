@@ -1,4 +1,4 @@
-import type { ChangeEvent, Dispatch, FormEvent, ReactNode, SetStateAction } from 'react';
+import type { ChangeEvent, FormEvent, ReactNode } from 'react';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -10,7 +10,6 @@ import classes from './search.module.css';
 interface SearchProps {
   handleSearchValue: (value: string) => void;
   searchValue: string;
-  setPage: Dispatch<SetStateAction<number>>;
 }
 
 export const Search = (props: SearchProps): ReactNode => {
@@ -25,7 +24,6 @@ export const Search = (props: SearchProps): ReactNode => {
   const handleSubmit = (): void => {
     const value = inputValue.trim();
 
-    props.setPage(1);
     navigate(`${APP_ROUTES.page}/1`);
 
     localStorage.setItem(LS_KEY, value);
