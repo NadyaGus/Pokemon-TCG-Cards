@@ -13,7 +13,6 @@ interface ResultsProps {
   response?: ResponseData | void;
   searchValue: string;
   setLoadingState: (isLoading: boolean) => void;
-  setPage: Dispatch<SetStateAction<number>>;
   setTotalCount: Dispatch<SetStateAction<number>>;
 }
 
