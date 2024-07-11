@@ -1,0 +1,42 @@
+.footer {
+  position: fixed;
+  z-index: 2;
+  bottom: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  margin-top: 2rem;
+  padding: 0.5rem;
+
+  background-color: rgb(248 134 28);
+  box-shadow: 0 -10px 20px rgb(30 30 30 / 25%);
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 85%;
+  max-width: 76rem;
+}
+
+.logo {
+  width: 3rem;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: none;
+}
+
+@media (hover: hover) {
+  link:hover {
+    border-bottom: none;
+  }
+}

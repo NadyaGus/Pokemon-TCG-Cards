@@ -1,0 +1,4 @@
+cd class-components
+npm run format
+npm run typecheck
+npm run lint
