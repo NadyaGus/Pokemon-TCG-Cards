@@ -17,8 +17,8 @@ export interface ResponseData {
   totalCount: number;
 }
 
-export const getItems = async (value: string, page = 1): Promise<ResponseData | void> => {
-  const response = await fetch(`${API_URL}?page=${page}&pageSize=20&q=name:${value}*`, {
+export const getItems = async (value: string, query: string): Promise<ResponseData | void> => {
+  const response = await fetch(`${API_URL}${query}&q=name:${value}*`, {
     headers: {
       'X-Api-Key': API_KEY,
     },

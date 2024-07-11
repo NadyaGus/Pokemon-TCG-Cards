@@ -1,22 +1,22 @@
-import type { ReactNode } from 'react';
-import { useNavigate } from 'react-router-dom';
-
-import { APP_ROUTES } from '@/routes/router';
+import type { Dispatch, ReactNode, SetStateAction } from 'react';
+import type { SetURLSearchParams } from 'react-router-dom';
 
 import classes from './pagination.module.css';
 
 interface PaginationProps {
   isLoading: boolean;
   page: number;
+  searchValue: string;
+  setPage: Dispatch<SetStateAction<number>>;
+  setSearchParams: SetURLSearchParams;
   totalCount: number;
 }
 
 export const Pagination = (props: PaginationProps): ReactNode => {
-  const navigate = useNavigate();
-
   const handlePageIncrement = (): void => {
     if (Math.ceil(props.totalCount / 20) > props.page) {
-      navigate(`${APP_ROUTES.page}/${props.page + 1}`);
+      props.setPage(props.page + 1);
+      props.setSearchParams({ page: `${props.page + 1}`, pageSize: '20', search: props.searchValue });
     }
 
     window.scrollTo(0, 0);
@@ -24,7 +24,8 @@ export const Pagination = (props: PaginationProps): ReactNode => {
 
   const handlePageDecrement = (): void => {
     if (props.page > 1) {
-      navigate(`${APP_ROUTES.page}/${props.page - 1}`);
+      props.setPage(props.page - 1);
+      props.setSearchParams({ page: `${props.page - 1}` });
     }
 
     window.scrollTo(0, 0);

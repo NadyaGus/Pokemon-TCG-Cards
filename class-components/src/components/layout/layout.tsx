@@ -1,8 +1,8 @@
 import { type ReactNode, useEffect } from 'react';
-import { Outlet, useNavigate, useParams } from 'react-router-dom';
+import { Outlet, useSearchParams } from 'react-router-dom';
 
 import { SearchPage } from '@/pages/search-page';
-import { APP_ROUTES } from '@/routes/router';
+import { LS_KEY } from '@/utils/variables';
 
 import { Footer } from '../footer/footer';
 import { Header } from '../header/header';
@@ -10,15 +10,14 @@ import { Header } from '../header/header';
 import classes from './layout.module.css';
 
 export const Layout = (): ReactNode => {
-  const navigate = useNavigate();
-  const { pageId } = useParams();
+  const [searchParams, setSearchParams] = useSearchParams();
 
   useEffect(() => {
-    if (!pageId) {
-      navigate(`${APP_ROUTES.page}/1`);
-      window.scrollTo(0, 0);
+    if (!searchParams.get('page')) {
+      const search = localStorage.getItem(LS_KEY) ?? '';
+      setSearchParams({ page: '1', pageSize: '20', search });
     }
-  }, [navigate, pageId]);
+  });
 
   return (
     <div className={classes.app}>

@@ -21,18 +21,21 @@ export const Results = (props: ResultsProps): ReactNode => {
 
   const loaderHandler = props.setLoadingState;
   const setTotalCount = props.setTotalCount;
+  const query = location.search;
 
   useEffect(() => {
     loaderHandler(true);
 
-    getItems(props.searchValue, props.page)
-      .then((response) => {
-        setResultsList(response?.data);
-        setTotalCount(response?.totalCount ?? 0);
-      })
-      .then(() => loaderHandler(false))
-      .catch((err) => console.error(err));
-  }, [props.searchValue, loaderHandler, props.page, setTotalCount]);
+    if (query) {
+      getItems(props.searchValue, query)
+        .then((response) => {
+          setResultsList(response?.data);
+          setTotalCount(response?.totalCount ?? 0);
+        })
+        .then(() => loaderHandler(false))
+        .catch((err) => console.error(err));
+    }
+  }, [props.searchValue, loaderHandler, setTotalCount, query]);
 
   if (resultsList && resultsList.length > 0) {
     return (

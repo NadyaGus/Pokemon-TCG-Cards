@@ -11,7 +11,7 @@ export const APP_ROUTES = {
 
 const routes = [
   {
-    children: [{ element: <DetailsPage />, path: `${APP_ROUTES.page}/:pageId?/:cardId?` }],
+    children: [{ element: <DetailsPage /> }],
     element: <Layout />,
     errorElement: <NotFoundPage />,
     path: APP_ROUTES.root,
