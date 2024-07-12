@@ -8,6 +8,8 @@ import { Results } from '@/features/results/results';
 import { Search } from '@/features/search/search';
 import { LS_KEY } from '@/utils/variables';
 
+import classes from './search-page.module.css';
+
 export const SearchPage = (): ReactNode => {
   const [searchParams, setSearchParams] = useSearchParams();
   const search = searchParams.get('page') ? Number(searchParams.get('page')) : 1;
@@ -26,13 +28,21 @@ export const SearchPage = (): ReactNode => {
         setSearchParams={setSearchParams}
       />
 
-      <Results
-        isLoading={isLoading}
-        page={page}
-        searchValue={searchValue}
-        setLoadingState={setIsLoading}
-        setTotalCount={setTotalCount}
-      />
+      <div className={classes.container}>
+        <div className={classes.results}>
+          <Results
+            isLoading={isLoading}
+            page={page}
+            searchValue={searchValue}
+            setLoadingState={setIsLoading}
+            setTotalCount={setTotalCount}
+          />
+        </div>
+
+        <div className={classes.outlet}>
+          <Outlet context={{ isLoading }} />
+        </div>
+      </div>
 
       <Pagination
         isLoading={isLoading}
@@ -42,8 +52,6 @@ export const SearchPage = (): ReactNode => {
         setSearchParams={setSearchParams}
         totalCount={totalCount}
       />
-
-      <Outlet />
 
       <Loader isLoading={isLoading} />
     </>

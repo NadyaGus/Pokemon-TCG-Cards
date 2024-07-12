@@ -1,14 +1,19 @@
 import { type ReactNode, useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useOutletContext, useParams } from 'react-router-dom';
 
 import type { Pokemon } from '@/api/get-items';
 
 import { getItem } from '@/api/get-items';
 import { DetailedCard } from '@/features/detailed-card/detailed-card';
 
+interface loadingContext {
+  isLoading: boolean;
+}
+
 export const DetailsPage = (): ReactNode => {
   const { cardId } = useParams();
   const [pokemon, setPokemon] = useState({} as Pokemon);
+  const { isLoading }: loadingContext = useOutletContext();
 
   useEffect(() => {
     if (cardId) {
@@ -21,7 +26,7 @@ export const DetailsPage = (): ReactNode => {
     }
   }, [cardId]);
 
-  if (cardId) {
+  if (cardId && !isLoading) {
     return (
       <>
         <h1>Details of {pokemon?.name}</h1>

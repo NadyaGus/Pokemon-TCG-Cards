@@ -1,7 +1,7 @@
 import { type ReactNode, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 
-import { SearchPage } from '@/pages/search-page';
+import { SearchPage } from '@/pages/search-page/search-page';
 import { LS_KEY } from '@/utils/variables';
 
 import { Footer } from '../footer/footer';
