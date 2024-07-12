@@ -1,5 +1,5 @@
 import { type ReactNode, useEffect } from 'react';
-import { Outlet, useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 
 import { SearchPage } from '@/pages/search-page';
 import { LS_KEY } from '@/utils/variables';
@@ -23,7 +23,6 @@ export const Layout = (): ReactNode => {
     <div className={classes.app}>
       <Header />
       <SearchPage />
-      <Outlet />
       <div className={classes.background}></div>
       <Footer />
     </div>

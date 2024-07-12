@@ -1,9 +1,7 @@
 import type { ReactNode } from 'react';
 import { useState } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { Outlet, useSearchParams } from 'react-router-dom';
 
-import { Footer } from '@/components/footer/footer';
-import { Header } from '@/components/header/header';
 import { Loader } from '@/features/loader/loader';
 import { Pagination } from '@/features/pagination/pagination';
 import { Results } from '@/features/results/results';
@@ -21,8 +19,6 @@ export const SearchPage = (): ReactNode => {
 
   return (
     <>
-      <Header />
-
       <Search
         handleSearchValue={setSearchValue}
         searchValue={searchValue}
@@ -47,9 +43,9 @@ export const SearchPage = (): ReactNode => {
         totalCount={totalCount}
       />
 
-      <Loader isLoading={isLoading} />
+      <Outlet />
 
-      <Footer />
+      <Loader isLoading={isLoading} />
     </>
   );
 };
