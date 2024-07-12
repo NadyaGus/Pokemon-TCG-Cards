@@ -42,7 +42,7 @@ export const SearchPage = (): ReactNode => {
         </div>
 
         <div className={cardId ? classes.outlet : classes.hidden}>
-          <Outlet context={{ isLoading }} />
+          <Outlet context={{ isLoading, setIsLoading }} />
         </div>
       </div>
 
