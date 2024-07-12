@@ -2,9 +2,9 @@ import type { ReactNode } from 'react';
 import { useParams } from 'react-router-dom';
 
 export const DetailsPage = (): ReactNode => {
-  const { cardId, pageId } = useParams();
+  const { cardId } = useParams();
 
-  if (pageId && cardId) {
+  if (cardId) {
     return <h1>Details Page</h1>;
   }
 };

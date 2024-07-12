@@ -5,13 +5,19 @@ import { DetailsPage } from '@/pages/details-page';
 import { NotFoundPage } from '@/pages/not-found-page';
 
 export const APP_ROUTES = {
-  page: '/search',
+  cards: '/cards',
+  page: '/page',
   root: '/',
 };
 
 const routes = [
   {
-    children: [{ element: <DetailsPage /> }],
+    children: [
+      {
+        element: <DetailsPage />,
+        path: `${APP_ROUTES.cards}/:cardId`,
+      },
+    ],
     element: <Layout />,
     errorElement: <NotFoundPage />,
     path: APP_ROUTES.root,
