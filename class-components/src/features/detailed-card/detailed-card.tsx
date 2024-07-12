@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 
 import type { Pokemon } from '@/api/types';
 
@@ -10,12 +10,20 @@ interface DetailedCardProps {
 }
 
 export const DetailedCard = (props: DetailedCardProps): ReactNode => {
+  const [searchParams] = useSearchParams();
+
   return (
     <div className={classes.container}>
-      <Link className={classes.closeArea} to={'/'} />
+      <Link
+        className={classes.closeArea}
+        to={`/?page=${searchParams.get('page')}&pageSize=${searchParams.get('pageSize')}&search=${searchParams.get('search')}`}
+      />
 
       <div className={classes.cardArea}>
-        <Link className={classes.closeButton} to={'/'}>
+        <Link
+          className={classes.closeButton}
+          to={`/?page=${searchParams.get('page')}&pageSize=${searchParams.get('pageSize')}&search=${searchParams.get('search')}`}
+        >
           <button>Close</button>
         </Link>
 
