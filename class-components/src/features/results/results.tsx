@@ -1,8 +1,7 @@
 import type { Dispatch, ReactNode, SetStateAction } from 'react';
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
 
-import { type ResponseData, getItem, getItemsList } from '@/api/get-items';
+import { type ResponseData, getItemsList } from '@/api/get-items';
 
 import { ResultItem } from './result-item/result-item';
 
@@ -19,7 +18,6 @@ interface ResultsProps {
 
 export const Results = (props: ResultsProps): ReactNode => {
   const [resultsList, setResultsList] = useState(props.response?.data);
-  const { cardId } = useParams();
 
   const loaderHandler = props.setLoadingState;
   const setTotalCount = props.setTotalCount;
@@ -37,15 +35,7 @@ export const Results = (props: ResultsProps): ReactNode => {
         .then(() => loaderHandler(false))
         .catch((err) => console.error(err));
     }
-
-    if (cardId) {
-      getItem(cardId)
-        .then((response) => {
-          console.log(response);
-        })
-        .catch((err) => console.error(err));
-    }
-  }, [props.searchValue, loaderHandler, setTotalCount, query, cardId]);
+  }, [props.searchValue, loaderHandler, setTotalCount, query]);
 
   if (resultsList && resultsList.length > 0) {
     return (

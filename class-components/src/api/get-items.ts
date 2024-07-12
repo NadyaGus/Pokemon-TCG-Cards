@@ -17,6 +17,10 @@ export interface ResponseData {
   totalCount: number;
 }
 
+export interface ResponseDataCard {
+  data: Pokemon;
+}
+
 export const getItemsList = async (value: string, query: string): Promise<ResponseData | void> => {
   const response = await fetch(`${API_URL}${query}&q=name:${value}*`, {
     headers: {
@@ -31,7 +35,7 @@ export const getItemsList = async (value: string, query: string): Promise<Respon
   return response;
 };
 
-export const getItem = async (value: string): Promise<ResponseData | void> => {
+export const getItem = async (value: string): Promise<ResponseDataCard | void> => {
   const response = await fetch(`${API_URL}/${value}`, {
     headers: {
       'X-Api-Key': API_KEY,
@@ -39,7 +43,7 @@ export const getItem = async (value: string): Promise<ResponseData | void> => {
     method: 'GET',
   })
     .then((response) => response.json())
-    .then((data: ResponseData) => data)
+    .then((data: ResponseDataCard) => data)
     .catch((err) => console.error(err));
 
   return response;
