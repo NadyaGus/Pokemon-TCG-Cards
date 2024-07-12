@@ -29,7 +29,6 @@ export const DetailsPage = (): ReactNode => {
   if (cardId && !isLoading) {
     return (
       <>
-        <h1>Details of {pokemon?.name}</h1>
         <DetailedCard pokemon={pokemon} />
       </>
     );

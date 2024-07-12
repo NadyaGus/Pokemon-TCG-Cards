@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 import { useState } from 'react';
-import { Outlet, useSearchParams } from 'react-router-dom';
+import { Outlet, useParams, useSearchParams } from 'react-router-dom';
 
 import { Loader } from '@/features/loader/loader';
 import { Pagination } from '@/features/pagination/pagination';
@@ -18,6 +18,8 @@ export const SearchPage = (): ReactNode => {
   const [isLoading, setIsLoading] = useState(true);
   const [totalCount, setTotalCount] = useState(0);
   const [page, setPage] = useState(search ?? 1);
+
+  const { cardId } = useParams();
 
   return (
     <>
@@ -39,7 +41,7 @@ export const SearchPage = (): ReactNode => {
           />
         </div>
 
-        <div className={classes.outlet}>
+        <div className={cardId ? classes.outlet : classes.hidden}>
           <Outlet context={{ isLoading }} />
         </div>
       </div>
