@@ -1,25 +1,6 @@
 import { API_KEY, API_URL } from '@/utils/variables';
 
-export interface Pokemon {
-  id: string;
-  images: { small: string };
-  name: string;
-  set: {
-    name: string;
-    series: string;
-  };
-}
-
-export interface ResponseData {
-  data: Pokemon[];
-  page: number;
-  pageSize: number;
-  totalCount: number;
-}
-
-export interface ResponseDataCard {
-  data: Pokemon;
-}
+import type { ResponseData, ResponseDataCard } from './types';
 
 export const getItemsList = async (value: string, query: string): Promise<ResponseData | void> => {
   const response = await fetch(`${API_URL}${query}&q=name:${value}*`, {

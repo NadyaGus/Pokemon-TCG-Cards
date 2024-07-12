@@ -1,7 +1,9 @@
 import type { Dispatch, ReactNode, SetStateAction } from 'react';
 import { useEffect, useState } from 'react';
 
-import { type ResponseData, getItemsList } from '@/api/get-items';
+import type { ResponseData } from '@/api/types';
+
+import { getItemsList } from '@/api/get-items';
 
 import { ResultItem } from './result-item/result-item';
 

@@ -1,7 +1,7 @@
 import { type ReactNode, useEffect, useState } from 'react';
 import { useOutletContext, useParams } from 'react-router-dom';
 
-import type { Pokemon } from '@/api/get-items';
+import type { Pokemon } from '@/api/types';
 
 import { getItem } from '@/api/get-items';
 import { DetailedCard } from '@/features/detailed-card/detailed-card';
@@ -19,7 +19,6 @@ export const DetailsPage = (): ReactNode => {
     if (cardId) {
       getItem(cardId)
         .then((response) => {
-          console.log(response);
           setPokemon(response?.data ?? ({} as Pokemon));
         })
         .catch((err) => console.error(err));
