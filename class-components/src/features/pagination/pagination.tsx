@@ -1,4 +1,4 @@
-import type { Dispatch, ReactNode, SetStateAction } from 'react';
+import type { ReactNode } from 'react';
 import type { SetURLSearchParams } from 'react-router-dom';
 
 import classes from './pagination.module.css';
@@ -7,7 +7,6 @@ interface PaginationProps {
   isLoading: boolean;
   page: number;
   searchValue: string;
-  setPage: Dispatch<SetStateAction<number>>;
   setSearchParams: SetURLSearchParams;
   totalCount: number;
 }
@@ -15,7 +14,6 @@ interface PaginationProps {
 export const Pagination = (props: PaginationProps): ReactNode => {
   const handlePageIncrement = (): void => {
     if (Math.ceil(props.totalCount / 20) > props.page) {
-      props.setPage(props.page + 1);
       props.setSearchParams({ page: `${props.page + 1}`, pageSize: '20', search: props.searchValue });
     }
 
@@ -24,7 +22,6 @@ export const Pagination = (props: PaginationProps): ReactNode => {
 
   const handlePageDecrement = (): void => {
     if (props.page > 1) {
-      props.setPage(props.page - 1);
       props.setSearchParams({ page: `${props.page - 1}`, pageSize: '20', search: props.searchValue });
     }
 

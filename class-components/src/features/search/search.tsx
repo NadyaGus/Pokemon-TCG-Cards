@@ -1,4 +1,4 @@
-import type { ChangeEvent, Dispatch, FormEvent, ReactNode, SetStateAction } from 'react';
+import type { ChangeEvent, FormEvent, ReactNode } from 'react';
 import { useState } from 'react';
 import type { SetURLSearchParams } from 'react-router-dom';
 
@@ -9,7 +9,6 @@ import classes from './search.module.css';
 interface SearchProps {
   handleSearchValue: (value: string) => void;
   searchValue: string;
-  setPage: Dispatch<SetStateAction<number>>;
   setSearchParams: SetURLSearchParams;
 }
 
@@ -23,7 +22,6 @@ export const Search = (props: SearchProps): ReactNode => {
   const handleSubmit = (): void => {
     const value = inputValue.trim();
 
-    props.setPage(1);
     props.setSearchParams({ page: '1', pageSize: '20', search: value });
 
     localStorage.setItem(LS_KEY, value);

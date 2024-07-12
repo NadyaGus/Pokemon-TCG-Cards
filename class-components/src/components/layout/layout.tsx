@@ -13,7 +13,6 @@ export const Layout = (): ReactNode => {
   const [searchParams, setSearchParams] = useSearchParams();
 
   useEffect(() => {
-    console.log(window.location);
     if (!searchParams.get('page')) {
       const search = localStorage.getItem(LS_KEY) ?? '';
       setSearchParams({ page: '1', pageSize: '20', search });

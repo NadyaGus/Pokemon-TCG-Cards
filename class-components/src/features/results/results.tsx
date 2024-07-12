@@ -11,7 +11,6 @@ import classes from './results.module.css';
 
 interface ResultsProps {
   isLoading: boolean;
-  page: number;
   response?: ResponseData | void;
   searchValue: string;
   setLoadingState: (isLoading: boolean) => void;
