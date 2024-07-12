@@ -31,7 +31,7 @@ export const SearchPage = (): ReactNode => {
       />
 
       <div className={classes.container}>
-        <div className={classes.results}>
+        <div className={cardId ? classes.resultsHalf : classes.results}>
           <Results
             isLoading={isLoading}
             page={page}
