@@ -7,7 +7,7 @@ import classes from './result-item.module.css';
 
 export const ResultItem = (props: Pokemon): ReactNode => {
   return (
-    <Link to={`/cards/${props.id}`}>
+    <Link className={classes.link} to={`/cards/${props.id}`}>
       <li className={classes.item}>
         <h3 className={classes.title}>{props.name}</h3>
         <img alt="alt" className={classes.image} src={props.images.small} />

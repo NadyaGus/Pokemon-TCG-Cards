@@ -3,7 +3,6 @@ export interface Pokemon {
   id: string;
   images: { large: string; small: string };
   name: string;
-  releaseDate: string;
   set: {
     name: string;
     series: string;
@@ -11,7 +10,6 @@ export interface Pokemon {
   subtypes: string[];
   supertype: string;
   types: string[];
-  updatedAt: string;
 }
 
 export interface ResponseData {

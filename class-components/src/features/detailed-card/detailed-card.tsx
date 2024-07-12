@@ -15,14 +15,19 @@ export const DetailedCard = (props: DetailedCardProps): ReactNode => {
       <Link className={classes.closeArea} to={'/'} />
 
       <div className={classes.cardArea}>
-        <Link to={'/'}>
-          <button>close</button>
+        <Link className={classes.closeButton} to={'/'}>
+          <button>Close</button>
         </Link>
 
         <div className={classes.card}>
           <img alt={props.pokemon.name} className={classes.image} src={props.pokemon.images?.small} />
           <div className={classes.info}>
-            <h1 className={classes.title}>{props.pokemon.name}</h1>
+            <h2 className={classes.title}>{props.pokemon.name}</h2>
+            <p className={classes.description}>Set: {props.pokemon.set?.name}</p>
+            <p className={classes.description}>Series: {props.pokemon.set?.series}</p>
+            <p className={classes.description}>Supertype: {props.pokemon.supertype}</p>
+            <p className={classes.description}>Types: {props.pokemon.types}</p>
+            <p className={classes.description}>HP: {props.pokemon.hp}</p>
           </div>
         </div>
       </div>
