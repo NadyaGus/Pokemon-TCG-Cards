@@ -29,5 +29,5 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "stylelint.config.ts"]
+  "include": ["src", ".stylelintrc.json"]
 }
