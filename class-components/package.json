@@ -15,7 +15,9 @@
     "typecheck": "tsc",
     "preview": "vite preview",
     "prepare": "cd .. && husky class-components/.husky",
-    "deploy": "npm run build && npx gh-pages -d dist -e class-components"
+    "deploy": "npm run build && npx gh-pages -d dist -e class-components",
+    "test": "vitest run",
+    "coverage": "vitest run --coverage"
   },
   "author": "Nadya Gusakova",
   "license": "ISC",
@@ -25,11 +27,17 @@
     "react-router-dom": "^6.24.1"
   },
   "devDependencies": {
+    "@testing-library/dom": "^10.3.1",
+    "@testing-library/jest-dom": "^6.4.6",
+    "@testing-library/react": "^16.0.0",
+    "@testing-library/user-event": "^14.5.2",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
+    "@types/react-router-dom": "^5.3.3",
     "@typescript-eslint/eslint-plugin": "^7.13.1",
     "@typescript-eslint/parser": "^7.13.1",
     "@vitejs/plugin-react": "^4.3.1",
+    "@vitest/coverage-v8": "^2.0.2",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-import-resolver-alias": "^1.1.2",
@@ -43,7 +51,9 @@
     "eslint-plugin-react-refresh": "^0.4.7",
     "gh-pages": "^6.1.1",
     "husky": "^9.0.11",
+    "jsdom": "^24.1.0",
     "lint-staged": "^15.2.7",
+    "msw": "^2.3.1",
     "prettier": "^3.3.2",
     "stylelint": "^16.6.1",
     "stylelint-config-clean-order": "^6.1.0",
@@ -51,7 +61,8 @@
     "stylelint-config-standard": "^36.0.1",
     "typescript": "^5.2.2",
     "vite": "^5.3.1",
-    "vite-tsconfig-paths": "^4.3.2"
+    "vite-tsconfig-paths": "^4.3.2",
+    "vitest": "^2.0.2"
   },
   "lint-staged": {
     "*": "prettier --list-different --ignore-unknown",

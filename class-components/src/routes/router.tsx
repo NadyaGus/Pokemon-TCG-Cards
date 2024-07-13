@@ -10,7 +10,7 @@ export const APP_ROUTES = {
   root: '/',
 };
 
-const routes = [
+export const ROUTES = [
   {
     children: [
       {
@@ -25,4 +25,4 @@ const routes = [
   },
 ];
 
-export const router = createBrowserRouter(routes);
+export const router = createBrowserRouter(ROUTES);
