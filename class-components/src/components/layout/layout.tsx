@@ -1,8 +1,8 @@
 import { type ReactNode, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 
+import { useLocalStorage } from '@/hooks/useLocalStorage';
 import { SearchPage } from '@/pages/search-page/search-page';
-import { LS_KEY } from '@/utils/variables';
 
 import { Background } from '../background/background';
 import { Footer } from '../footer/footer';
@@ -12,10 +12,11 @@ import classes from './layout.module.css';
 
 export const Layout = (): ReactNode => {
   const [searchParams, setSearchParams] = useSearchParams();
+  const [searchValue] = useLocalStorage();
 
   useEffect(() => {
     if (!searchParams.get('page')) {
-      const search = localStorage.getItem(LS_KEY) ?? '';
+      const search = searchValue;
       setSearchParams({ page: '1', pageSize: '20', search });
     }
   });

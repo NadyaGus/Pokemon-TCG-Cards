@@ -6,7 +6,7 @@ import { Loader } from '@/features/loader/loader';
 import { Pagination } from '@/features/pagination/pagination';
 import { Results } from '@/features/results/results';
 import { Search } from '@/features/search/search';
-import { LS_KEY } from '@/utils/variables';
+import { useLocalStorage } from '@/hooks/useLocalStorage';
 
 import classes from './search-page.module.css';
 
@@ -14,7 +14,9 @@ export const SearchPage = (): ReactNode => {
   const [searchParams, setSearchParams] = useSearchParams();
   const page = searchParams.get('page') ? Number(searchParams.get('page')) : 1;
 
-  const [searchValue, setSearchValue] = useState(localStorage.getItem(LS_KEY) ?? '');
+  const [savedValue, setSavedValue] = useLocalStorage();
+  const [searchValue, setSearchValue] = useState(savedValue);
+
   const [isLoading, setIsLoading] = useState(true);
   const [totalCount, setTotalCount] = useState(0);
 
@@ -22,7 +24,12 @@ export const SearchPage = (): ReactNode => {
 
   return (
     <>
-      <Search handleSearchValue={setSearchValue} searchValue={searchValue} setSearchParams={setSearchParams} />
+      <Search
+        handleSearchValue={setSearchValue}
+        searchValue={searchValue}
+        setSavedValue={setSavedValue}
+        setSearchParams={setSearchParams}
+      />
 
       <div className={classes.container}>
         <div className={cardId ? classes.resultsHalf : classes.results}>
