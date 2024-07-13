@@ -4,6 +4,7 @@ import { useSearchParams } from 'react-router-dom';
 import { SearchPage } from '@/pages/search-page/search-page';
 import { LS_KEY } from '@/utils/variables';
 
+import { Background } from '../background/background';
 import { Footer } from '../footer/footer';
 import { Header } from '../header/header';
 
@@ -23,7 +24,7 @@ export const Layout = (): ReactNode => {
     <div className={classes.app}>
       <Header />
       <SearchPage />
-      <div className={classes.background}></div>
+      <Background />
       <Footer />
     </div>
   );
