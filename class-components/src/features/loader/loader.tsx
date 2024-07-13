@@ -11,7 +11,10 @@ export const Loader = (props: LoaderProps): ReactNode => {
   const navigate = useNavigation();
 
   return (
-    <div className={navigate.state === 'loading' || props.isLoading ? classes.loader : classes.hidden}>
+    <div
+      className={navigate.state === 'loading' || props.isLoading ? classes.loader : classes.hidden}
+      data-testid="loader"
+    >
       <div className={classes.image}></div>
     </div>
   );

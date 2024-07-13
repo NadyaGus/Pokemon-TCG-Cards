@@ -40,7 +40,7 @@ export const Results = (props: ResultsProps): ReactNode => {
 
   if (resultsList && resultsList.length > 0) {
     return (
-      <ul className={classes.list}>
+      <ul className={classes.list} data-testid="list">
         {resultsList.map((item) => (
           <ResultItem key={item.id} {...item} />
         ))}
