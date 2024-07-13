@@ -28,13 +28,15 @@ export const Pagination = (props: PaginationProps): ReactNode => {
     window.scrollTo(0, 0);
   };
 
-  return (
-    <div className={props.isLoading ? classes.hidden : classes.pagination}>
-      <button onClick={() => handlePageDecrement()}>Prev</button>
-      <div>
-        Page: {props.page} from {Math.ceil(props.totalCount / 20)}
+  if (props.totalCount) {
+    return (
+      <div className={props.isLoading ? classes.hidden : classes.pagination}>
+        <button onClick={() => handlePageDecrement()}>Prev</button>
+        <div>
+          Page: {props.page} from {Math.ceil(props.totalCount / 20)}
+        </div>
+        <button onClick={() => handlePageIncrement()}>Next</button>
       </div>
-      <button onClick={() => handlePageIncrement()}>Next</button>
-    </div>
-  );
+    );
+  }
 };
