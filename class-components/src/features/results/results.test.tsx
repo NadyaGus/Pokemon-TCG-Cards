@@ -9,7 +9,7 @@ describe('Results', () => {
   it('should render', () => {
     render(
       <MemoryRouter>
-        <Results isLoading={false} searchValue={''} setLoadingState={() => false} setTotalCount={() => 0} />
+        <Results isLoading={false} setLoadingState={() => false} setTotalCount={() => 0} />
       </MemoryRouter>,
     );
     expect(screen.getByText('No results')).toBeInTheDocument();

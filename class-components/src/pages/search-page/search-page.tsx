@@ -33,12 +33,7 @@ export const SearchPage = (): ReactNode => {
 
       <div className={classes.container}>
         <div className={cardId ? classes.resultsHalf : classes.results}>
-          <Results
-            isLoading={isLoading}
-            searchValue={searchValue}
-            setLoadingState={setIsLoading}
-            setTotalCount={setTotalCount}
-          />
+          <Results isLoading={isLoading} setLoadingState={setIsLoading} setTotalCount={setTotalCount} />
         </div>
 
         <div className={cardId ? classes.outlet : classes.hidden}>

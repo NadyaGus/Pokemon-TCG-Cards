@@ -1,5 +1,6 @@
 import type { Dispatch, ReactNode, SetStateAction } from 'react';
 import { useEffect, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 
 import type { ResponseData } from '@/api/types';
 
@@ -12,13 +13,14 @@ import classes from './results.module.css';
 interface ResultsProps {
   isLoading: boolean;
   response?: ResponseData | void;
-  searchValue: string;
   setLoadingState: (isLoading: boolean) => void;
   setTotalCount: Dispatch<SetStateAction<number>>;
 }
 
 export const Results = (props: ResultsProps): ReactNode => {
   const [resultsList, setResultsList] = useState(props.response?.data);
+
+  const [searchParams] = useSearchParams();
 
   const loaderHandler = props.setLoadingState;
   const setTotalCount = props.setTotalCount;
@@ -28,7 +30,7 @@ export const Results = (props: ResultsProps): ReactNode => {
     loaderHandler(true);
 
     if (query) {
-      getItemsList(props.searchValue, query)
+      getItemsList(searchParams.get('search') ?? '', query)
         .then((response) => {
           setResultsList(response?.data);
           setTotalCount(response?.totalCount ?? 0);
@@ -36,7 +38,7 @@ export const Results = (props: ResultsProps): ReactNode => {
         .then(() => loaderHandler(false))
         .catch((err) => console.error(err));
     }
-  }, [props.searchValue, loaderHandler, setTotalCount, query]);
+  }, [searchParams, loaderHandler, setTotalCount, query]);
 
   if (resultsList && resultsList.length > 0) {
     return (
