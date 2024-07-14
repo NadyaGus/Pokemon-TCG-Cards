@@ -4,7 +4,7 @@ import { render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
 
 import { Layout } from '@/components/layout/layout';
-import { DetailsPage } from '@/pages/details-page';
+import { DetailsPage } from '@/pages/search-page/details-page/details-page';
 
 describe('Layout', () => {
   it('event route', async () => {
