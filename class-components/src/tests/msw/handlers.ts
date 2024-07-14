@@ -4,7 +4,6 @@ import json from './arcanine.json';
 
 export const handlers = [
   http.get('*/cards*', ({ request }) => {
-    console.log(request.url);
     const url = new URL(request.url);
 
     const name = url.searchParams.get('name');
