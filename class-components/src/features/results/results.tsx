@@ -29,15 +29,13 @@ export const Results = (props: ResultsProps): ReactNode => {
   useEffect(() => {
     loaderHandler(true);
 
-    if (query) {
-      getItemsList(searchParams.get('search') ?? '', query)
-        .then((response) => {
-          setResultsList(response?.data);
-          setTotalCount(response?.totalCount ?? 0);
-        })
-        .then(() => loaderHandler(false))
-        .catch((err) => console.error(err));
-    }
+    getItemsList(searchParams.get('search') ?? '', query)
+      .then((response) => {
+        setResultsList(response?.data);
+        setTotalCount(response?.totalCount ?? 0);
+      })
+      .then(() => loaderHandler(false))
+      .catch((err) => console.error(err));
   }, [searchParams, loaderHandler, setTotalCount, query]);
 
   if (resultsList && resultsList.length > 0) {

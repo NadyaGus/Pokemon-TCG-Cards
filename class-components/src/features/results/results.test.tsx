@@ -1,9 +1,10 @@
 import { MemoryRouter, RouterProvider, createMemoryRouter } from 'react-router-dom';
 
 import { render, screen } from '@testing-library/react';
+import ue from '@testing-library/user-event';
 import { describe, expect, it } from 'vitest';
 
-import JSON from '@/tests/msw/arcanine.json';
+import { Layout } from '@/components/layout/layout';
 
 import { Results } from './results';
 
@@ -18,12 +19,8 @@ describe('Results', () => {
   });
 });
 
-import ue from '@testing-library/user-event';
-
-import { Layout } from '@/components/layout/layout';
-
 describe('SearchPage', () => {
-  it('should find arcanine', async () => {
+  it('should show 20 items', async () => {
     const routes = [
       {
         element: <Layout />,
@@ -38,17 +35,6 @@ describe('SearchPage', () => {
 
     render(<RouterProvider router={router} />);
 
-    render(
-      <MemoryRouter>
-        <Results
-          isLoading={false}
-          response={JSON}
-          setLoadingState={() => false}
-          setTotalCount={() => JSON.totalCount}
-        />
-      </MemoryRouter>,
-    );
-
     const userEvent = ue.setup();
     const searchInput = screen.getByPlaceholderText('Search');
     const searchSubmit = screen.getByText('Search');
@@ -56,6 +42,6 @@ describe('SearchPage', () => {
     await userEvent.type(searchInput, 'arcanine');
     await userEvent.click(searchSubmit);
 
-    expect(await screen.findAllByRole('listitem')).toHaveLength(20);
+    expect(await screen.findAllByTestId('item')).toHaveLength(20);
   });
 });

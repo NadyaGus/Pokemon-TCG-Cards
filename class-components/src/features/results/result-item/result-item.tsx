@@ -11,6 +11,7 @@ export const ResultItem = (props: Pokemon): ReactNode => {
   return (
     <Link
       className={classes.link}
+      data-testid="item"
       to={`/cards/${props.id}?page=${searchParams.get('page')}&pageSize=${searchParams.get('pageSize')}&search=${searchParams.get('search')}`}
     >
       <li className={classes.item}>

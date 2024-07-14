@@ -1,7 +1,7 @@
 import { RouterProvider, createMemoryRouter } from 'react-router-dom';
 
 import { render, screen } from '@testing-library/react';
-// import userEvent from '@testing-library/user-event';
+import { userEvent } from '@testing-library/user-event';
 import { describe, expect, it } from 'vitest';
 
 import { Layout } from '@/components/layout/layout';
@@ -19,18 +19,18 @@ describe('should search', () => {
       initialEntries: ['/'],
       initialIndex: 0,
     });
-    render(<RouterProvider router={router} />);
+    const user = userEvent.setup();
 
-    // const user = userEvent.setup();
+    render(<RouterProvider router={router} />);
     expect(await screen.findByRole('button', { name: 'Search' })).toBeInTheDocument();
     await screen.findByRole('button', { name: 'Search' });
 
-    // const searchInput = screen.getByPlaceholderText('Search');
-    // const searchSubmit = screen.getByRole('button', { name: 'Search' });
+    const searchInput = screen.getByPlaceholderText('Search');
+    const searchSubmit = screen.getByRole('button', { name: 'Search' });
 
-    // await user.type(searchInput, 'arcanine');
-    // await user.click(searchSubmit);
+    await user.type(searchInput, 'arcanine');
+    await user.click(searchSubmit);
 
-    expect(await screen.findByText('arcanine')).toBeInTheDocument();
+    expect(await screen.findByText("Blaine's Arcanine")).toBeInTheDocument();
   });
 });
