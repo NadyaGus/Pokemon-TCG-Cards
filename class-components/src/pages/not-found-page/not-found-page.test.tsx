@@ -6,7 +6,7 @@ import { describe, expect, it } from 'vitest';
 import { NotFoundPage } from './not-found-page';
 
 describe('NotFoundPage', () => {
-  it('should render', () => {
+  it('not found page should render', () => {
     render(
       <MemoryRouter>
         <NotFoundPage />

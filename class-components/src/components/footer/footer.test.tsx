@@ -5,8 +5,8 @@ import { describe, expect, it } from 'vitest';
 
 import { Footer } from './footer';
 
-describe('Header', () => {
-  it('should render', () => {
+describe('Footer', () => {
+  it('footer should render', () => {
     render(
       <MemoryRouter>
         <Footer />

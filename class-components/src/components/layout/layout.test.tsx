@@ -6,7 +6,7 @@ import { describe, expect, it } from 'vitest';
 import { Layout } from './layout';
 
 describe('Layout', () => {
-  it('event route', () => {
+  it('layout should be render', () => {
     const routes = [
       {
         element: <Layout />,

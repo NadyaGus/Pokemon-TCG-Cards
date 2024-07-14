@@ -9,7 +9,7 @@ import { Layout } from '@/components/layout/layout';
 import { Results } from './results';
 
 describe('Results', () => {
-  it('should render', () => {
+  it('results should render', () => {
     render(
       <MemoryRouter>
         <Results isLoading={false} setLoadingState={() => false} setTotalCount={() => 0} />

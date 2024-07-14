@@ -60,9 +60,11 @@ describe('should search', () => {
       initialEntries: ['/', '/cards/gym2-1'],
       initialIndex: 0,
     });
+
     const user = userEvent.setup();
 
     render(<RouterProvider router={router} />);
+
     expect(await screen.findByRole('button', { name: 'Search' })).toBeInTheDocument();
     await screen.findByRole('button', { name: 'Search' });
 

@@ -23,7 +23,7 @@ const pokemon = {
 };
 
 describe('Results-Item', () => {
-  it('should render', () => {
+  it('results item should render', () => {
     render(
       <MemoryRouter>
         <ResultItem {...pokemon} />

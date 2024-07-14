@@ -6,7 +6,7 @@ import { describe, expect, it } from 'vitest';
 import { Header } from './header';
 
 describe('Header', () => {
-  it('should render', () => {
+  it('header should render', () => {
     render(
       <MemoryRouter>
         <Header />

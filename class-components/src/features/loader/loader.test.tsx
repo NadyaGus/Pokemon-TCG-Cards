@@ -7,7 +7,7 @@ import { Layout } from '@/components/layout/layout';
 import { DetailsPage } from '@/pages/search-page/details-page/details-page';
 
 describe('Layout', () => {
-  it('event route', async () => {
+  it('loader should be visible', async () => {
     const FAKE_EVENT = { name: 'test event' };
     const routes = [
       {
