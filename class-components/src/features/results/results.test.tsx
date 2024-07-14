@@ -3,7 +3,7 @@ import { MemoryRouter, RouterProvider, createMemoryRouter } from 'react-router-d
 import { render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
 
-import arcinine from '@/tests/msw/arcanine.json';
+import JSON from '@/tests/msw/arcanine.json';
 
 import { Results } from './results';
 
@@ -42,9 +42,9 @@ describe('SearchPage', () => {
       <MemoryRouter>
         <Results
           isLoading={false}
-          response={arcinine}
+          response={JSON}
           setLoadingState={() => false}
-          setTotalCount={() => arcinine.totalCount}
+          setTotalCount={() => JSON.totalCount}
         />
       </MemoryRouter>,
     );
