@@ -6,14 +6,13 @@ import { pokemonApi } from '@/app/api/pokemonApi';
 import { store } from '@/app/providers/store/configureStore';
 
 export const loader = async ({ params }: LoaderFunctionArgs): Promise<ResponseDataCard | undefined> => {
-  const p = store.dispatch(pokemonApi.endpoints.getPokemon.initiate(params.cardId ?? ''));
+  const response = store.dispatch(pokemonApi.endpoints.getPokemon.initiate(params.cardId ?? ''));
   try {
-    const response = await p.unwrap();
-    return response;
+    const promise = await response.unwrap();
+    return promise;
   } catch (error) {
-    console.error(error);
     redirect('/');
   } finally {
-    p.unsubscribe();
+    response.unsubscribe();
   }
 };
