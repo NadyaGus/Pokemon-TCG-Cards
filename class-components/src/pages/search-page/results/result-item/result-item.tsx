@@ -12,7 +12,7 @@ export const ResultItem = (props: Pokemon): ReactNode => {
     <Link
       className={classes.link}
       data-testid="item"
-      to={`/cards/${props.id}?page=${searchParams.get('page')}&pageSize=${searchParams.get('pageSize')}&search=${searchParams.get('search')}`}
+      to={`/cards/${props.id}?page=${searchParams.get('page')}&pageSize=${searchParams.get('pageSize')}&name=${searchParams.get('name')}`}
     >
       <li className={classes.item}>
         <h3 className={classes.title}>{props.name}</h3>

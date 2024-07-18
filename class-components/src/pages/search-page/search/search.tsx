@@ -21,7 +21,7 @@ export const Search = (props: SearchProps): ReactNode => {
   const handleSubmit = (): void => {
     const value = inputValue.trim();
 
-    props.setSearchParams({ page: '1', pageSize: '20', search: value });
+    props.setSearchParams({ name: value, page: '1', pageSize: '20' });
     props.setSavedValue(value);
     props.handleSearchValue(value);
   };

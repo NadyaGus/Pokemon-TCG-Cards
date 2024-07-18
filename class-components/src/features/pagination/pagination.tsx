@@ -14,7 +14,7 @@ interface PaginationProps {
 export const Pagination = (props: PaginationProps): ReactNode => {
   const handlePageIncrement = (): void => {
     if (Math.ceil(props.totalCount / 20) > props.page) {
-      props.setSearchParams({ page: `${props.page + 1}`, pageSize: '20', search: props.searchValue });
+      props.setSearchParams({ name: props.searchValue, page: `${props.page + 1}`, pageSize: '20' });
     }
 
     window.scrollTo(0, 0);
@@ -22,7 +22,7 @@ export const Pagination = (props: PaginationProps): ReactNode => {
 
   const handlePageDecrement = (): void => {
     if (props.page > 1) {
-      props.setSearchParams({ page: `${props.page - 1}`, pageSize: '20', search: props.searchValue });
+      props.setSearchParams({ name: props.searchValue, page: `${props.page - 1}`, pageSize: '20' });
     }
 
     window.scrollTo(0, 0);

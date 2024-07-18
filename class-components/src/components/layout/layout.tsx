@@ -16,8 +16,8 @@ export const Layout = (): ReactNode => {
 
   useEffect(() => {
     if (!searchParams.get('page')) {
-      const search = searchValue;
-      setSearchParams({ page: '1', pageSize: '20', search });
+      const name = searchValue;
+      setSearchParams({ name, page: '1', pageSize: '20' });
     }
   });
 
