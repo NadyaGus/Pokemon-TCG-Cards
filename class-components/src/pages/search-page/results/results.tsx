@@ -1,24 +1,22 @@
 import type { ReactNode } from 'react';
 
-import type { ResponseData } from '@/app/api/types';
+import { useAppSelector } from '@/app/hooks/storeHooks';
 
 import { ResultItem } from './result-item/result-item';
 
 import classes from './results.module.css';
 
-interface ResultsProps {
-  data: ResponseData | undefined;
-}
+export const Results = (): ReactNode => {
+  const data = useAppSelector((state) => state.searchResults.data);
 
-export const Results = (props: ResultsProps): ReactNode => {
-  if (props.data?.totalCount === 0) {
+  if (data.length === 0) {
     return <h2>No results</h2>;
   }
 
-  if (props.data && props.data.totalCount > 0) {
+  if (data && data.length > 0) {
     return (
       <ul className={classes.list} data-testid="list">
-        {props.data.data.map((item) => (
+        {data.map((item) => (
           <ResultItem key={item.id} {...item} />
         ))}
       </ul>

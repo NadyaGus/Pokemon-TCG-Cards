@@ -4,10 +4,13 @@ import { Outlet, useParams, useSearchParams } from 'react-router-dom';
 
 import { useGetPokemonListQuery } from '@/app/api/pokemonApi';
 import { useLocalStorage } from '@/app/hooks/useLocalStorage';
+import { store } from '@/app/providers/store/configureStore';
 import { Loader } from '@/features/loader/loader';
 import { Pagination } from '@/features/pagination/pagination';
 import { Results } from '@/pages/search-page/results/results';
 import { Search } from '@/pages/search-page/search/search';
+
+import { searchSlice } from './search-page.slice';
 
 import classes from './search-page.module.css';
 
@@ -21,9 +24,13 @@ export const SearchPage = (): ReactNode => {
 
   const { cardId } = useParams();
 
-  const { data, /* error, */ isFetching } = useGetPokemonListQuery(
+  const { data, isFetching } = useGetPokemonListQuery(
     `?page=${searchParams.get('page') ?? '1'}&pageSize=${searchParams.get('pageSize') ?? '20'}&q=name:${searchParams.get('name') ?? ''}*`,
   );
+
+  useEffect(() => {
+    store.dispatch(searchSlice.actions.setResultsList(data?.data ?? []));
+  }, [data, searchValue]);
 
   useEffect(() => {
     isFetching ? setIsLoading(true) : setIsLoading(false);
@@ -40,7 +47,7 @@ export const SearchPage = (): ReactNode => {
 
       <div className={classes.container}>
         <div className={cardId ? classes.resultsHalf : classes.results}>
-          <Results data={data} />
+          <Results />
         </div>
 
         <div className={cardId ? classes.outlet : classes.hidden}>
