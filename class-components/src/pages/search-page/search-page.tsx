@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 import { useEffect, useState } from 'react';
 import { Outlet, useParams, useSearchParams } from 'react-router-dom';
 
-import { useGetPokemonListQuery } from '@/app/api/pokemon';
+import { useGetPokemonListQuery } from '@/app/api/pokemonApi';
 import { useLocalStorage } from '@/app/hooks/useLocalStorage';
 import { Loader } from '@/features/loader/loader';
 import { Pagination } from '@/features/pagination/pagination';
@@ -13,7 +13,6 @@ import classes from './search-page.module.css';
 
 export const SearchPage = (): ReactNode => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const page = searchParams.get('page') ? Number(searchParams.get('page')) : 1;
 
   const [savedValue, setSavedValue] = useLocalStorage();
   const [searchValue, setSearchValue] = useState(savedValue);
@@ -51,7 +50,6 @@ export const SearchPage = (): ReactNode => {
 
       <Pagination
         isLoading={isLoading}
-        page={page}
         searchValue={searchValue}
         setSearchParams={setSearchParams}
         totalCount={data?.totalCount ?? 0}

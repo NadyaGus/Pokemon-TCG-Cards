@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { setupListeners } from '@reduxjs/toolkit/query';
 
-import { pokemonApi } from '@/app/api/pokemon';
+import { pokemonApi } from '@/app/api/pokemonApi';
 
 export const store = configureStore({
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(pokemonApi.middleware),

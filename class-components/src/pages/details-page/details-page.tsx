@@ -1,7 +1,7 @@
 import { type ReactNode } from 'react';
 import { useParams } from 'react-router-dom';
 
-import { useGetPokemonQuery } from '@/app/api/pokemon';
+import { useGetPokemonQuery } from '@/app/api/pokemonApi';
 
 import { DetailedCard } from './detailed-card/detailed-card';
 
