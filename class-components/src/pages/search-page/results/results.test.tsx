@@ -1,39 +1,43 @@
-import { MemoryRouter, RouterProvider, createMemoryRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { RouterProvider, createMemoryRouter } from 'react-router-dom';
 
 import { render, screen } from '@testing-library/react';
 import ue from '@testing-library/user-event';
 import { describe, expect, it } from 'vitest';
 
+import { store } from '@/app/providers/store/configureStore';
 import { Layout } from '@/components/layout/layout';
 
-import { Results } from './results';
+const routes = [
+  {
+    element: <Layout />,
+    path: '/',
+  },
+];
+
+const router = createMemoryRouter(routes, {
+  initialEntries: ['/'],
+  initialIndex: 0,
+});
 
 describe('Results', () => {
-  it('results should render', () => {
+  it('results should render', async () => {
     render(
-      <MemoryRouter>
-        <Results isLoading={false} setLoadingState={() => false} setTotalCount={() => 0} />
-      </MemoryRouter>,
+      <Provider store={store}>
+        <RouterProvider router={router} />
+      </Provider>,
     );
-    expect(screen.getByText('No results')).toBeInTheDocument();
+    expect(await screen.findByRole('list')).toBeInTheDocument();
   });
 });
 
 describe('SearchPage', () => {
   it('should show 20 items', async () => {
-    const routes = [
-      {
-        element: <Layout />,
-        path: '/',
-      },
-    ];
-
-    const router = createMemoryRouter(routes, {
-      initialEntries: ['/'],
-      initialIndex: 0,
-    });
-
-    render(<RouterProvider router={router} />);
+    render(
+      <Provider store={store}>
+        <RouterProvider router={router} />
+      </Provider>,
+    );
 
     const userEvent = ue.setup();
     const searchInput = screen.getByPlaceholderText('Search');

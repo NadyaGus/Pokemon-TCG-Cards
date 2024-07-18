@@ -1,7 +1,10 @@
+import { Provider } from 'react-redux';
 import { RouterProvider, createMemoryRouter } from 'react-router-dom';
 
 import { render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
+
+import { store } from '@/app/providers/store/configureStore';
 
 import { Layout } from './layout';
 
@@ -19,7 +22,11 @@ describe('Layout', () => {
       initialIndex: 1,
     });
 
-    render(<RouterProvider router={router} />);
+    render(
+      <Provider store={store}>
+        <RouterProvider router={router} />
+      </Provider>,
+    );
 
     expect(screen.getByText('Pokémon TCG Cards')).toBeInTheDocument();
   });

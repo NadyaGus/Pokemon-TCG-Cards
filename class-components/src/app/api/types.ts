@@ -22,3 +22,9 @@ export interface ResponseData {
 export interface ResponseDataCard {
   data: Pokemon;
 }
+
+export interface QueryString {
+  page: null | string;
+  pageSize: null | string;
+  search: null | string;
+}

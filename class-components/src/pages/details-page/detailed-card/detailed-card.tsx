@@ -6,11 +6,31 @@ import type { Pokemon } from '@/app/api/types';
 import classes from './detailed-card.module.css';
 
 interface DetailedCardProps {
-  pokemon: Pokemon;
+  pokemon: Pokemon | undefined;
 }
 
 export const DetailedCard = (props: DetailedCardProps): ReactNode => {
   const [searchParams] = useSearchParams();
+
+  if (!props.pokemon) {
+    return (
+      <div className={classes.container}>
+        <Link
+          className={classes.closeArea}
+          to={`/?page=${searchParams.get('page')}&pageSize=${searchParams.get('pageSize')}&search=${searchParams.get('search')}`}
+        />
+        <div className={classes.cardArea}>
+          <Link
+            className={classes.closeButton}
+            to={`/?page=${searchParams.get('page')}&pageSize=${searchParams.get('pageSize')}&search=${searchParams.get('search')}`}
+          >
+            <button>Close</button>
+          </Link>
+          <h2>Card not found</h2>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className={classes.container}>

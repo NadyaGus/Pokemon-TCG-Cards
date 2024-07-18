@@ -1,20 +1,14 @@
-import type { ReactNode } from 'react';
-import { useLoaderData, useParams } from 'react-router-dom';
+import { type ReactNode } from 'react';
+import { useParams } from 'react-router-dom';
 
-import type { Pokemon } from '@/app/api/types';
+import { useGetPokemonQuery } from '@/app/api/pokemon';
 
 import { DetailedCard } from './detailed-card/detailed-card';
 
 export const DetailsPage = (): ReactNode => {
   const { cardId } = useParams();
 
-  const pokemon = useLoaderData() as Pokemon | null;
+  const { data } = useGetPokemonQuery(cardId ?? '');
 
-  if (cardId && pokemon) {
-    return (
-      <>
-        <DetailedCard pokemon={pokemon} />
-      </>
-    );
-  }
+  return <DetailedCard pokemon={data?.data} />;
 };

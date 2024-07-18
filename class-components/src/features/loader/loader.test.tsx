@@ -1,8 +1,10 @@
+import { Provider } from 'react-redux';
 import { RouterProvider, createMemoryRouter } from 'react-router-dom';
 
 import { render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
 
+import { store } from '@/app/providers/store/configureStore';
 import { Layout } from '@/components/layout/layout';
 import { DetailsPage } from '@/pages/details-page/details-page';
 
@@ -27,7 +29,11 @@ describe('Layout', () => {
       initialIndex: 0,
     });
 
-    render(<RouterProvider router={router} />);
+    render(
+      <Provider store={store}>
+        <RouterProvider router={router} />
+      </Provider>,
+    );
 
     const loader = await screen.findByTestId('loader');
     expect(loader).toBeVisible();
