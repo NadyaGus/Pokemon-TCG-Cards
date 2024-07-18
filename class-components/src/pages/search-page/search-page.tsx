@@ -4,7 +4,7 @@ import { Outlet, useParams, useSearchParams } from 'react-router-dom';
 
 import { Loader } from '@/features/loader/loader';
 import { Pagination } from '@/features/pagination/pagination';
-import { useLocalStorage } from '@/hooks/useLocalStorage';
+import { useLocalStorage } from '@/app/hooks/useLocalStorage';
 import { Results } from '@/pages/search-page/results/results';
 import { Search } from '@/pages/search-page/search/search';
 

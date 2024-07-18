@@ -1,7 +1,7 @@
 import { type ReactNode, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 
-import { useLocalStorage } from '@/hooks/useLocalStorage';
+import { useLocalStorage } from '@/app/hooks/useLocalStorage';
 import { SearchPage } from '@/pages/search-page/search-page';
 
 import { Background } from '../background/background';
