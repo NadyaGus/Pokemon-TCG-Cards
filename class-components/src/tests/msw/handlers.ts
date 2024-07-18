@@ -3,6 +3,9 @@ import { HttpResponse, http } from 'msw';
 import json from './arcanine.json';
 
 export const handlers = [
+  http.get('*/cards/gym2-1*', () => {
+    return HttpResponse.json(json.data.find((card) => card.id === 'gym2-1'));
+  }),
   http.get('*/cards*', ({ request }) => {
     const url = new URL(request.url);
 
@@ -15,10 +18,6 @@ export const handlers = [
       return HttpResponse.json(json);
     }
 
-    return HttpResponse.json(json);
-  }),
-
-  http.get('*/cards/:cardId*', () => {
     return HttpResponse.json(json);
   }),
 ];
