@@ -1,4 +1,4 @@
-import { API_KEY, API_URL } from '@/utils/variables';
+import { API_KEY, API_URL } from '@/shared/variables';
 
 import type { ResponseData, ResponseDataCard } from './types';
 

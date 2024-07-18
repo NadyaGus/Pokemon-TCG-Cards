@@ -6,7 +6,7 @@ import { describe, expect, it } from 'vitest';
 
 import { Layout } from '@/components/layout/layout';
 
-import { DetailsPage } from './details-page/details-page';
+import { DetailsPage } from '../details-page/details-page';
 
 describe('should search', () => {
   it('event route', async () => {

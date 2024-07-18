@@ -2,9 +2,9 @@ import type { Dispatch, ReactNode, SetStateAction } from 'react';
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 
-import type { ResponseData } from '@/api/types';
+import type { ResponseData } from '@/app/api/types';
 
-import { getItemsList } from '@/api/get-items';
+import { getItemsList } from '@/app/api/get-items';
 
 import { ResultItem } from './result-item/result-item';
 

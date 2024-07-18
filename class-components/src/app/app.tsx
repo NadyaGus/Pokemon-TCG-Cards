@@ -1,8 +1,8 @@
 import { type ReactNode } from 'react';
 import { RouterProvider } from 'react-router-dom';
 
-import { router } from '@/routes/router';
-import { ErrorBoundary } from '@/utils/error-boundary';
+import { ErrorBoundary } from '@/shared/error-boundary/error-boundary';
+import { router } from '@/shared/router/router';
 
 export const App = (): ReactNode => {
   return (

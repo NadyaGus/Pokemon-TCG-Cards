@@ -4,9 +4,9 @@ import { Outlet, useParams, useSearchParams } from 'react-router-dom';
 
 import { Loader } from '@/features/loader/loader';
 import { Pagination } from '@/features/pagination/pagination';
-import { Results } from '@/features/results/results';
-import { Search } from '@/features/search/search';
 import { useLocalStorage } from '@/hooks/useLocalStorage';
+import { Results } from '@/pages/search-page/results/results';
+import { Search } from '@/pages/search-page/search/search';
 
 import classes from './search-page.module.css';
 

@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 
-import type { Pokemon } from '@/api/types';
+import type { Pokemon } from '@/app/api/types';
 
 import classes from './detailed-card.module.css';
 

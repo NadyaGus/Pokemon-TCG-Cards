@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 
-import { ErrorButton } from '@/features/error/error-button';
+import { ErrorButton } from '@/features/error-button/error-button';
 
 import classes from './header.module.css';
 
