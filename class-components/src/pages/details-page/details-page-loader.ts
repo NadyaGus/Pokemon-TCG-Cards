@@ -1,19 +1,19 @@
-// import type { LoaderFunctionArgs } from 'react-router-dom';
+import { type LoaderFunctionArgs, redirect } from 'react-router-dom';
 
-// import type { Pokemon } from '@/app/api/types';
+import type { ResponseDataCard } from '@/app/api/types';
 
-// import { getItem } from '@/app/api/get-items';
+import { pokemonApi } from '@/app/api/pokemonApi';
+import { store } from '@/app/providers/store/configureStore';
 
-// async function loader({ params }: LoaderFunctionArgs): Promise<Pokemon | null> {
-//   if (params.cardId) {
-//     const response = await getItem(params.cardId);
-
-//     if (response) {
-//       return response.data;
-//     }
-//   }
-
-//   return null;
-// }
-
-// export { loader };
+export const loader = async ({ params }: LoaderFunctionArgs): Promise<ResponseDataCard | undefined> => {
+  const p = store.dispatch(pokemonApi.endpoints.getPokemon.initiate(params.cardId ?? ''));
+  try {
+    const response = await p.unwrap();
+    return response;
+  } catch (error) {
+    console.error(error);
+    redirect('/');
+  } finally {
+    p.unsubscribe();
+  }
+};

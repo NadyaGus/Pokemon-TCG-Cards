@@ -2,7 +2,7 @@ import { createBrowserRouter } from 'react-router-dom';
 
 import { Layout } from '@/components/layout/layout';
 import { DetailsPage } from '@/pages/details-page/details-page';
-// import { Loader as DetailsLoader } from '@/pages/details-page/details-page-loader.tsx';
+import { loader as DetailsLoader } from '@/pages/details-page/details-page-loader';
 import { NotFoundPage } from '@/pages/not-found-page/not-found-page';
 
 export const APP_ROUTES = {
@@ -15,7 +15,7 @@ export const ROUTES = [
     children: [
       {
         element: <DetailsPage />,
-        // loader: DetailsLoader,
+        loader: DetailsLoader,
         path: `${APP_ROUTES.cards}/:cardId`,
       },
     ],
