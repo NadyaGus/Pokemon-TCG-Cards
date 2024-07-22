@@ -1,7 +1,10 @@
-import { type ReactNode, useEffect } from 'react';
+import { type ReactNode, useContext, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 
+import { clsx } from 'clsx';
+
 import { useLocalStorage } from '@/app/hooks/useLocalStorage';
+import { ThemeContext } from '@/app/providers/theme/theme';
 import { SearchPage } from '@/pages/search-page/search-page';
 
 import { Background } from '../background/background';
@@ -14,6 +17,8 @@ export const Layout = (): ReactNode => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [searchValue] = useLocalStorage();
 
+  const { theme } = useContext(ThemeContext);
+
   useEffect(() => {
     if (!searchParams.get('page')) {
       const name = searchValue;
@@ -22,7 +27,7 @@ export const Layout = (): ReactNode => {
   });
 
   return (
-    <div className={classes.app}>
+    <div className={clsx(classes.app, classes[theme])}>
       <Header />
       <SearchPage />
       <Background />

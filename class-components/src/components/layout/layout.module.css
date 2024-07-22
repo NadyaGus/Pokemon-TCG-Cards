@@ -1,6 +1,12 @@
 .app {
+  --color-main: rgb(248 134 28);
+
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+}
+
+.app.dark {
+  --color-main: rgb(42, 40, 46);
 }

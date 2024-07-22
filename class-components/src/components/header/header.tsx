@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react';
 
 import { ErrorButton } from '@/features/error-button/error-button';
+import { ThemeButton } from '@/features/theme-button/theme-button';
 
 import classes from './header.module.css';
 
@@ -21,6 +22,7 @@ export const Header = (): ReactNode => {
             About Task
           </a>
           <ErrorButton />
+          <ThemeButton />
         </div>
       </div>
     </header>

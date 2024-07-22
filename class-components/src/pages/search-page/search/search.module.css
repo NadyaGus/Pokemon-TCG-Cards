@@ -8,18 +8,18 @@
   margin-top: 6.5rem;
   padding: 1rem;
 
-  background-color: rgb(248 134 28);
+  background-color: var(--color-main);
   border-radius: 1rem;
 
-  @media screen and (width <= 768px) {
+  @media screen and (width <=768px) {
     margin-top: 10rem;
   }
 
-  @media screen and (width <= 680px) {
+  @media screen and (width <=680px) {
     flex-wrap: wrap;
   }
 
-  @media screen and (width <= 374px) {
+  @media screen and (width <=374px) {
     margin-top: 12rem;
   }
 }
@@ -59,7 +59,7 @@
 .button {
   min-width: 14.5rem;
 
-  @media screen and (width <= 680px) {
+  @media screen and (width <=680px) {
     min-width: 100%;
   }
 }
