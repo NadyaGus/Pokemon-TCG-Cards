@@ -60,12 +60,7 @@ export const SearchPage = (): ReactNode => {
         <Outlet />
       </div>
 
-      <Pagination
-        isLoading={isLoading}
-        searchValue={searchValue}
-        setSearchParams={setSearchParams}
-        totalCount={data?.totalCount ?? 0}
-      />
+      <Pagination totalCount={data?.totalCount ?? 0} />
 
       <Loader isLoading={isLoading} />
     </>

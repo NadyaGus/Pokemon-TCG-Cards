@@ -1,23 +1,24 @@
-import { type ReactNode, useState } from 'react';
-import { type SetURLSearchParams, useSearchParams } from 'react-router-dom';
+import { type ReactNode, useEffect, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 
 import classes from './pagination.module.css';
 
 interface PaginationProps {
-  isLoading: boolean;
-  searchValue: string;
-  setSearchParams: SetURLSearchParams;
   totalCount: number;
 }
 
 export const Pagination = (props: PaginationProps): ReactNode => {
-  const searchParams = useSearchParams()[0].get('page') ?? '1';
-  const [page, setPage] = useState(searchParams);
+  const [disabledPrev, setDisabledPrev] = useState(false);
+  const [disabledNext, setDisabledNext] = useState(false);
+
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [page, setPage] = useState(searchParams.get('page') ?? '1');
+
+  const name = searchParams.get('name') ?? '';
 
   const handlePageIncrement = (): void => {
     if (Math.ceil(props.totalCount / 20) > +page) {
-      setPage(`${+page + 1}`);
-      props.setSearchParams({ name: props.searchValue, page: `${+page + 1}`, pageSize: '20' });
+      setSearchParams({ name, page: `${+page + 1}`, pageSize: '20' });
     }
 
     window.scrollTo(0, 0);
@@ -25,21 +26,42 @@ export const Pagination = (props: PaginationProps): ReactNode => {
 
   const handlePageDecrement = (): void => {
     if (+page > 1) {
-      setPage(`${+page - 1}`);
-      props.setSearchParams({ name: props.searchValue, page: `${+page - 1}`, pageSize: '20' });
+      setSearchParams({ name, page: `${+page - 1}`, pageSize: '20' });
     }
 
     window.scrollTo(0, 0);
   };
 
+  useEffect(() => {
+    setPage(searchParams.get('page') ?? '1');
+  }, [searchParams]);
+
+  useEffect(() => {
+    if (+page < Math.ceil(props.totalCount / 20)) {
+      setDisabledNext(false);
+    } else {
+      setDisabledNext(true);
+    }
+
+    if (+page > 1) {
+      setDisabledPrev(false);
+    } else {
+      setDisabledPrev(true);
+    }
+  }, [page, props.totalCount]);
+
   if (props.totalCount) {
     return (
-      <div className={props.isLoading ? classes.hidden : classes.pagination}>
-        <button onClick={() => handlePageDecrement()}>Prev</button>
+      <div className={classes.pagination}>
+        <button disabled={disabledPrev} onClick={() => handlePageDecrement()}>
+          Prev
+        </button>
         <div>
           Page: {page} from {Math.ceil(props.totalCount / 20)}
         </div>
-        <button onClick={() => handlePageIncrement()}>Next</button>
+        <button disabled={disabledNext} onClick={() => handlePageIncrement()}>
+          Next
+        </button>
       </div>
     );
   }
