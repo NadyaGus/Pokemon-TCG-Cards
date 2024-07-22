@@ -3,7 +3,7 @@ import { Link, useSearchParams } from 'react-router-dom';
 
 import type { Pokemon } from '@/app/api/types';
 
-import { useAppDispatch } from '@/app/hooks/storeHooks';
+import { useAppDispatch, useAppSelector } from '@/app/hooks/storeHooks';
 
 import { savedItemSlice } from './result-item.slice';
 
@@ -12,13 +12,19 @@ import classes from './result-item.module.css';
 export const ResultItem = (props: Pokemon): ReactNode => {
   const [searchParams] = useSearchParams();
   const dispatch = useAppDispatch();
+  const savedItems = useAppSelector((state) => state.savedItems.data);
 
-  const handleClick = (e: ChangeEvent<HTMLInputElement>): void => {
+  const handleCheckbox = (e: ChangeEvent<HTMLInputElement>): void => {
     if (e.target.checked) {
       dispatch(savedItemSlice.actions.saveItem(props));
     } else {
       dispatch(savedItemSlice.actions.deleteItem(props));
     }
+  };
+
+  const handleCheckboxState = (): boolean => {
+    const isSaved = savedItems.find((item) => item.id === props.id);
+    return isSaved ? true : false;
   };
 
   return (
@@ -34,7 +40,12 @@ export const ResultItem = (props: Pokemon): ReactNode => {
       </Link>
 
       <label className={classes.checkbox}>
-        Choose the card <input onChange={(e: ChangeEvent<HTMLInputElement>) => handleClick(e)} type="checkbox" />
+        Choose the card{' '}
+        <input
+          checked={handleCheckboxState()}
+          onChange={(e: ChangeEvent<HTMLInputElement>) => handleCheckbox(e)}
+          type="checkbox"
+        />
       </label>
     </li>
   );
