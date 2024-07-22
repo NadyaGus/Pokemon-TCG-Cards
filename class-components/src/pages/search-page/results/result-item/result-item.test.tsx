@@ -1,7 +1,10 @@
+import { Provider } from 'react-redux';
 import { MemoryRouter } from 'react-router-dom';
 
 import { render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
+
+import { store } from '@/app/providers/store/configureStore';
 
 import { ResultItem } from './result-item';
 
@@ -26,7 +29,9 @@ describe('Results-Item', () => {
   it('results item should render', () => {
     render(
       <MemoryRouter>
-        <ResultItem {...pokemon} />
+        <Provider store={store}>
+          <ResultItem {...pokemon} />
+        </Provider>
       </MemoryRouter>,
     );
     expect(screen.getByRole('listitem')).toBeInTheDocument();
