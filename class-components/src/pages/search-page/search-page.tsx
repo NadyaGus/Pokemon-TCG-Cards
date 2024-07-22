@@ -2,6 +2,8 @@ import type { ReactNode } from 'react';
 import { useEffect, useState } from 'react';
 import { Outlet, useParams, useSearchParams } from 'react-router-dom';
 
+import { clsx } from 'clsx';
+
 import { useGetPokemonListQuery } from '@/app/api/pokemonApi';
 import { useLocalStorage } from '@/app/hooks/useLocalStorage';
 import { store } from '@/app/providers/store/configureStore';
@@ -45,14 +47,12 @@ export const SearchPage = (): ReactNode => {
         setSearchParams={setSearchParams}
       />
 
-      <div className={classes.container}>
-        <div className={cardId ? classes.resultsHalf : classes.results}>
-          <Results />
-        </div>
+      <div className={classes.results}>
+        <Results />
+      </div>
 
-        <div className={cardId ? classes.outlet : classes.hidden}>
-          <Outlet />
-        </div>
+      <div className={clsx(classes.outlet, cardId ? classes.show : '')}>
+        <Outlet />
       </div>
 
       <Pagination

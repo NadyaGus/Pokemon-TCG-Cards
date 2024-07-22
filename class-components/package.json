@@ -10,6 +10,7 @@
     "format:fix": "prettier --write .",
     "lint": "eslint ./src",
     "lint:fix": "eslint --fix --color ./src",
+    "format:all": "npm run format:fix && npm run styles:fix",
     "styles": "stylelint \"./src/**/*.css\"",
     "styles:fix": "stylelint \"./src/**/*.css\" --fix",
     "typecheck": "tsc",
