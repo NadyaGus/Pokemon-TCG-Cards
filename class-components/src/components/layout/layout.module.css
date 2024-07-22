@@ -3,8 +3,8 @@
   --color-main: rgb(248 134 28);
   --color-button: rgb(255 28 28);
   --color-button-hover: rgb(222 24 24);
-  --color-item-hover: rgb(229 124 26);
   --background-image: url('/background.webp');
+  --background-brightness: 0.9;
 
   display: flex;
   flex-direction: column;
@@ -27,12 +27,6 @@
     color: var(--color-text);
     text-decoration: none;
     transition: 0.3s;
-
-    @media (hover: hover) {
-      a:hover {
-        opacity: 0.8;
-      }
-    }
   }
 
   h1 {
@@ -58,6 +52,12 @@
   }
 
   @media (hover: hover) {
+    a:hover {
+      filter: brightness(0.9);
+    }
+  }
+
+  @media (hover: hover) {
     button:hover {
       background-color: var(--color-button-hover);
     }
@@ -69,6 +69,6 @@
   --color-main: rgb(63 49 93);
   --color-button: rgb(81 66 189);
   --color-button-hover: rgb(62 49 159);
-  --color-item-hover: rgb(56 43 85);
   --background-image: url('/background-dark.webp');
+  --background-brightness: 0.5;
 }

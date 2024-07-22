@@ -18,7 +18,6 @@
 
 .item:hover {
   cursor: pointer;
-  background-color: var(--color-item-hover);
 }
 
 .title {

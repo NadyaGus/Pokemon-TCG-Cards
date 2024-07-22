@@ -8,7 +8,7 @@
   background-image: var(--background-image);
   background-position: center;
   background-size: cover;
-  filter: brightness(80%);
+  filter: brightness(var(--background-brightness));
 
   transition: 0.5s;
 }
