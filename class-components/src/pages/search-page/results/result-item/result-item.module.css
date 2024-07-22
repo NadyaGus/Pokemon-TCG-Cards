@@ -18,7 +18,7 @@
 
 .item:hover {
   cursor: pointer;
-  background-color: rgb(237 102 18);
+  background-color: var(--color-item-hover);
 }
 
 .title {

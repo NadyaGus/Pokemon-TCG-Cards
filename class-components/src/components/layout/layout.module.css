@@ -1,12 +1,74 @@
 .app {
+  --color-text: rgb(255 255 255 / 90%);
   --color-main: rgb(248 134 28);
+  --color-button: rgb(255 28 28);
+  --color-button-hover: rgb(222 24 24);
+  --color-item-hover: rgb(229 124 26);
+  --background-image: url('/background.webp');
 
   display: flex;
   flex-direction: column;
   align-items: center;
+
   width: 100%;
+
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+  color: var(--color-text);
+  text-rendering: optimizelegibility;
+
+  font-synthesis: none;
+
+  a {
+    font-weight: 500;
+    color: var(--color-text);
+    text-decoration: none;
+    transition: 0.3s;
+
+    @media (hover: hover) {
+      a:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  h1 {
+    font-size: 3em;
+    line-height: 1.1;
+  }
+
+  button {
+    cursor: pointer;
+
+    padding: 0.6em 1.2em;
+
+    font-family: inherit;
+    font-size: 1em;
+    font-weight: 500;
+    color: rgb(255 255 255 / 90%);
+
+    background-color: var(--color-button);
+    border: none;
+    border-radius: 8px;
+
+    transition: 0.4s;
+  }
+
+  @media (hover: hover) {
+    button:hover {
+      background-color: var(--color-button-hover);
+    }
+  }
 }
 
 .app.dark {
-  --color-main: rgb(42, 40, 46);
+  --color-text: rgb(232 232 232 / 90%);
+  --color-main: rgb(63 49 93);
+  --color-button: rgb(81 66 189);
+  --color-button-hover: rgb(62 49 159);
+  --color-item-hover: rgb(56 43 85);
+  --background-image: url('/background-dark.webp');
 }

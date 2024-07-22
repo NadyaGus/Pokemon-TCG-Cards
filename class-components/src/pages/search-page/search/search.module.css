@@ -33,7 +33,7 @@
   font-size: inherit;
   text-indent: 0.5rem;
 
-  border: 1px solid #ffb749;
+  border: 1px solid var(--color-main);
   border-radius: 8px;
 }
 
@@ -52,7 +52,7 @@
 }
 
 .input:focus {
-  outline: 2px solid #ffb749;
+  outline: 2px solid var(--color-main);
   outline-offset: -4px;
 }
 
