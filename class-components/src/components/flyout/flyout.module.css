@@ -1,0 +1,26 @@
+.flyout {
+  position: fixed;
+  bottom: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 30rem;
+  height: 3rem;
+
+  background-color: var(--color-main);
+  border-radius: 2rem 2rem 0 0;
+  box-shadow: 0 -10px 20px rgb(30 30 30 / 25%);
+
+  transition: 0.5s ease-in-out;
+}
+
+.hidden {
+  transform: translateY(+100%);
+}
+
+.show {
+  transform: translateY(-150%);
+}

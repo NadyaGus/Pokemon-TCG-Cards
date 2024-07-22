@@ -8,6 +8,7 @@ import { ThemeContext } from '@/app/providers/theme/theme';
 import { SearchPage } from '@/pages/search-page/search-page';
 
 import { Background } from '../background/background';
+import { Flyout } from '../flyout/flyout';
 import { Footer } from '../footer/footer';
 import { Header } from '../header/header';
 
@@ -31,6 +32,7 @@ export const Layout = (): ReactNode => {
       <Header />
       <SearchPage />
       <Background />
+      <Flyout />
       <Footer />
     </div>
   );
