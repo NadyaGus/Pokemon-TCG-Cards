@@ -32,6 +32,11 @@ export const SearchPage = (): ReactNode => {
 
   useEffect(() => {
     store.dispatch(searchSlice.actions.setResultsList(data?.data ?? []));
+    store.dispatch(searchSlice.actions.isEmpty(false));
+
+    if (data && data.totalCount === 0) {
+      store.dispatch(searchSlice.actions.isEmpty(true));
+    }
   }, [data, searchValue]);
 
   useEffect(() => {

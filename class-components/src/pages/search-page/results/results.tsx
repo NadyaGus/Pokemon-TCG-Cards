@@ -8,8 +8,9 @@ import classes from './results.module.css';
 
 export const Results = (): ReactNode => {
   const data = useAppSelector((state) => state.searchResults.data);
+  const isEmpty = useAppSelector((state) => state.searchResults.isEmpty);
 
-  if (data.length === 0) {
+  if (isEmpty) {
     return <h2>No results</h2>;
   }
 
