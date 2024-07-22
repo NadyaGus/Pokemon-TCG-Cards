@@ -31,7 +31,9 @@
 
 .image {
   width: 15rem;
-  min-height: 20.9rem;
-  background-color: burlywood;
+  min-height: 21rem;
+
+  background-color: var(--color-main);
+  filter: brightness(0.8);
   border-radius: 8px;
 }
