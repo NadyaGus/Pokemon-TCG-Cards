@@ -11,27 +11,27 @@ import { Layout } from '@/components/layout/layout';
 import { DetailsPage } from '../details-page/details-page';
 import { loader } from '../details-page/details-page-loader';
 
+const loaderFake = loader;
+
+const routes = [
+  {
+    element: <DetailsPage />,
+    loader: loaderFake,
+    path: '/cards/:cardId',
+  },
+  {
+    element: <Layout />,
+    path: '/',
+  },
+];
+
+const router = createMemoryRouter(routes, {
+  initialEntries: ['/', '/cards/:cardId'],
+  initialIndex: 0,
+});
+
 describe('should find and open card details', () => {
   it('event route', async () => {
-    const loaderFake = loader;
-
-    const routes = [
-      {
-        element: <DetailsPage />,
-        loader: loaderFake,
-        path: '/cards/:cardId',
-      },
-      {
-        element: <Layout />,
-        path: '/',
-      },
-    ];
-
-    const router = createMemoryRouter(routes, {
-      initialEntries: ['/', '/cards/:cardId'],
-      initialIndex: 0,
-    });
-
     const user = userEvent.setup();
 
     render(
@@ -42,7 +42,6 @@ describe('should find and open card details', () => {
 
     const searchButton = await screen.findByRole('button', { name: 'Search' });
     expect(searchButton).toBeInTheDocument();
-    await screen.findByRole('button', { name: 'Search' });
 
     const searchInput = screen.getByPlaceholderText('Search');
     const searchSubmit = screen.getByRole('button', { name: 'Search' });
