@@ -2,7 +2,7 @@
 
 ## About Project
 
-This project was completed as part of the first assignment for [RS School React](https://github.com/rolling-scopes-school/tasks/blob/master/react/README.md#week-1-1st-of-july-2024).
+This project was completed as part of assignment for [RS School React](https://github.com/rolling-scopes-school/tasks/blob/master/react/README.md#week-1-1st-of-july-2024).
 
 To create this application was used [Pokémon TCG API](https://docs.pokemontcg.io/)
 
