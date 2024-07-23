@@ -8,7 +8,7 @@
   justify-content: center;
 
   width: 30rem;
-  height: 3rem;
+  height: 4rem;
 
   background-color: var(--color-main);
   border-radius: 2rem 2rem 0 0;
@@ -22,5 +22,21 @@
 }
 
 .show {
-  transform: translateY(-150%);
+  transform: translateY(-110%);
+}
+
+.content {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  justify-content: space-between;
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 8rem;
+    height: 2.5rem;
+  }
 }

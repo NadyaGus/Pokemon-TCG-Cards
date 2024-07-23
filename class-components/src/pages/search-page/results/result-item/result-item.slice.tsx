@@ -23,6 +23,9 @@ export const savedItemSlice = createSlice({
     saveItem: (state, action: PayloadAction<Pokemon>) => {
       state.data.push(action.payload);
     },
+    unselectAll: (state) => {
+      state.data = [];
+    },
   },
 });
 

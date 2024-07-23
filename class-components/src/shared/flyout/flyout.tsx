@@ -4,6 +4,8 @@ import { clsx } from 'clsx';
 
 import { useAppSelector } from '@/app/hooks/storeHooks';
 
+import { UnselectButton } from './unselect-button/unselect-button';
+
 import classes from './flyout.module.css';
 
 export const Flyout = (): ReactNode => {
@@ -11,7 +13,10 @@ export const Flyout = (): ReactNode => {
 
   return (
     <div className={clsx(classes.flyout, savedItem.length > 0 ? classes.show : classes.hidden)}>
-      Saved: {savedItem.length}
+      <div className={classes.content}>
+        <UnselectButton />
+        Saved: {savedItem.length}
+      </div>
     </div>
   );
 };
