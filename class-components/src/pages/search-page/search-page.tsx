@@ -7,10 +7,10 @@ import { clsx } from 'clsx';
 import { useGetPokemonListQuery } from '@/app/api/pokemonApi';
 import { useLocalStorage } from '@/app/hooks/useLocalStorage';
 import { store } from '@/app/providers/store/configureStore';
-import { Loader } from '@/features/loader/loader';
-import { Pagination } from '@/features/pagination/pagination';
+import { Pagination } from '@/pages/search-page/pagination/pagination';
 import { Results } from '@/pages/search-page/results/results';
 import { Search } from '@/pages/search-page/search/search';
+import { Loader } from '@/shared/loader/loader';
 
 import { searchSlice } from './search-page.slice';
 

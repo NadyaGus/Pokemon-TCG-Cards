@@ -4,9 +4,9 @@ import { useNavigate } from 'react-router-dom';
 import { clsx } from 'clsx';
 
 import { ThemeContext } from '@/app/providers/theme/theme';
-import { Background } from '@/components/background/background';
-import { Footer } from '@/components/footer/footer';
-import { Header } from '@/components/header/header';
+import { Background } from '@/shared/background/background';
+import { Footer } from '@/shared/footer/footer';
+import { Header } from '@/shared/header/header';
 
 import classes from './not-found-page.module.css';
 

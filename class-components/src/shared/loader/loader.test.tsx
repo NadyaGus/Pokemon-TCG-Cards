@@ -5,8 +5,8 @@ import { render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
 
 import { store } from '@/app/providers/store/configureStore';
-import { Layout } from '@/components/layout/layout';
 import { DetailsPage } from '@/pages/details-page/details-page';
+import { Layout } from '@/shared/layout/layout';
 
 describe('Layout', () => {
   it('loader should be visible', async () => {

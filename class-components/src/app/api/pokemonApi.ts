@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
-import { API_URL } from '@/shared/variables';
+import { API_URL } from '@/app/variables';
 
 import type { ResponseData, ResponseDataCard } from './types';
 

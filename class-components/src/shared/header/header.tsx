@@ -1,7 +1,6 @@
 import type { ReactNode } from 'react';
 
-import { ErrorButton } from '@/features/error-button/error-button';
-import { ThemeButton } from '@/features/theme-button/theme-button';
+import { ThemeButton } from '@/shared/header/theme-button/theme-button';
 
 import classes from './header.module.css';
 
@@ -21,7 +20,6 @@ export const Header = (): ReactNode => {
           <a className={classes.link} href={TASK_LINK} rel="noreferrer" target="_blank">
             About Task
           </a>
-          <ErrorButton />
           <ThemeButton />
         </div>
       </div>

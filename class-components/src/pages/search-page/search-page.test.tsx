@@ -6,7 +6,7 @@ import { userEvent } from '@testing-library/user-event';
 import { describe, expect, it } from 'vitest';
 
 import { store } from '@/app/providers/store/configureStore';
-import { Layout } from '@/components/layout/layout';
+import { Layout } from '@/shared/layout/layout';
 
 import { DetailsPage } from '../details-page/details-page';
 import { loader } from '../details-page/details-page-loader';
