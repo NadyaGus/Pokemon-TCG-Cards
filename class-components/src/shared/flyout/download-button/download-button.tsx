@@ -11,8 +11,9 @@ export const DownloadButton = (): ReactNode => {
     const csvContent = createCSV(data);
 
     const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
 
-    return URL.createObjectURL(blob);
+    return url;
   };
 
   return (

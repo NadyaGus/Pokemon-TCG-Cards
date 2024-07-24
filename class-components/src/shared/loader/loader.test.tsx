@@ -2,13 +2,15 @@ import { Provider } from 'react-redux';
 import { RouterProvider, createMemoryRouter } from 'react-router-dom';
 
 import { render, screen } from '@testing-library/react';
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 
 import { store } from '@/app/providers/store/configureStore';
 import { DetailsPage } from '@/pages/details-page/details-page';
 import { Layout } from '@/shared/layout/layout';
 
 describe('Layout', () => {
+  global.URL.createObjectURL = vi.fn();
+
   it('loader should be visible', async () => {
     const FAKE_EVENT = { name: 'test event' };
     const routes = [

@@ -3,7 +3,7 @@ import { RouterProvider, createMemoryRouter } from 'react-router-dom';
 
 import { render, screen } from '@testing-library/react';
 import ue from '@testing-library/user-event';
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 
 import { store } from '@/app/providers/store/configureStore';
 import { Layout } from '@/shared/layout/layout';
@@ -21,6 +21,8 @@ const router = createMemoryRouter(routes, {
 });
 
 describe('Results', () => {
+  global.URL.createObjectURL = vi.fn();
+
   it('results should render', async () => {
     render(
       <Provider store={store}>
@@ -29,9 +31,7 @@ describe('Results', () => {
     );
     expect(await screen.findByRole('list')).toBeInTheDocument();
   });
-});
 
-describe('SearchPage', () => {
   it('should show 20 items', async () => {
     render(
       <Provider store={store}>
