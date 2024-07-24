@@ -4,6 +4,7 @@ import { clsx } from 'clsx';
 
 import { useAppSelector } from '@/app/hooks/storeHooks';
 
+import { DownloadButton } from './download-button/download-button';
 import { UnselectButton } from './unselect-button/unselect-button';
 
 import classes from './flyout.module.css';
@@ -16,6 +17,7 @@ export const Flyout = (): ReactNode => {
       <div className={classes.content}>
         <UnselectButton />
         Saved: {savedItem.length}
+        <DownloadButton />
       </div>
     </div>
   );
