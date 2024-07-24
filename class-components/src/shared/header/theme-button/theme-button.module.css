@@ -1,0 +1,19 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 2.5rem;
+  height: 2.5rem;
+
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.button.light {
+  background-image: url('/moon.svg');
+}
+
+.button.dark {
+  background-image: url('/sun.svg');
+}
