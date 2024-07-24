@@ -13,15 +13,27 @@
 
   background-color: var(--color-main);
   box-shadow: 0 -10px 20px rgb(30 30 30 / 25%);
+
+  transition: 0.3s;
 }
 
 .content {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 76rem;
 
-  width: 85%;
-  max-width: 76rem;
+  @media screen and (width <=1295px) {
+    width: 57rem;
+  }
+
+  @media screen and (width <=986px) {
+    width: 38rem;
+  }
+
+  @media screen and (width <=677px) {
+    width: 90%;
+  }
 }
 
 .logo {

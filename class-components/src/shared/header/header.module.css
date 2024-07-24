@@ -12,18 +12,26 @@
 
   background-color: var(--color-main);
   box-shadow: 0 10px 20px rgb(30 30 30 / 25%);
+
+  transition: 0.3s;
 }
 
 .content {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  width: 85%;
-  max-width: 76rem;
+  width: 76rem;
 
   .title {
     font-size: 2rem;
+  }
+
+  @media screen and (width <=1295px) {
+    width: 57rem;
+  }
+
+  @media screen and (width <=986px) {
+    width: 38rem;
   }
 
   @media screen and (width <=768px) {
@@ -35,21 +43,23 @@
     }
   }
 
-  @media screen and (width <=680px) {
+  @media screen and (width <=677px) {
     gap: 1rem;
-    justify-content: flex-start;
+    width: 90%;
 
+    .wrapper {
+      gap: 1rem;
+    }
+  }
+
+  @media screen and (width <=569px) {
     .link {
       display: none;
     }
+  }
 
-    .wrapper:first-child {
-      flex-grow: 2;
-    }
-
-    .wrapper:last-child {
-      width: 5rem;
-    }
+  @media screen and (width <=419px) {
+    padding: 0;
   }
 }
 
@@ -57,15 +67,7 @@
   display: flex;
   gap: 2rem;
   align-items: center;
-  justify-content: flex-end;
-
-  margin-right: 1rem;
-
-  @media screen and (width <=680px) {
-    gap: 1rem;
-    width: 100%;
-    margin-right: 0;
-  }
+  justify-content: space-between;
 }
 
 .logo {

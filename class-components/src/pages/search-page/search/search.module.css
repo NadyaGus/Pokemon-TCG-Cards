@@ -3,24 +3,26 @@
   gap: 1rem;
   align-items: center;
 
-  width: 83%;
-  max-width: 74rem;
+  width: 74rem;
   margin-top: 6.5rem;
   padding: 1rem;
 
   background-color: var(--color-main);
   border-radius: 1rem;
 
-  @media screen and (width <=768px) {
-    margin-top: 10rem;
+  transition: 0.3s;
+
+  @media screen and (width <=1295px) {
+    width: 54.4rem;
   }
 
-  @media screen and (width <=680px) {
+  @media screen and (width <=986px) {
+    width: 35.4rem;
+  }
+
+  @media screen and (width <=677px) {
     flex-wrap: wrap;
-  }
-
-  @media screen and (width <=374px) {
-    margin-top: 12rem;
+    width: 80%;
   }
 }
 

@@ -1,12 +1,21 @@
 .list {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1.3rem;
   justify-content: center;
 
   max-width: 88rem;
-  margin: 0;
-  padding: 0;
+  margin: 2rem auto;
+  padding: 0 2rem;
 
   list-style: none;
+
+  @media screen and (width <=370px) {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.open {
+  background-color: var(--color-main);
 }
