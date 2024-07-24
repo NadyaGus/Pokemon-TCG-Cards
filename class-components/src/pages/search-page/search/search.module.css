@@ -61,7 +61,7 @@
 .button {
   min-width: 14.5rem;
 
-  @media screen and (width <=680px) {
+  @media screen and (width <=677px) {
     min-width: 100%;
   }
 }
