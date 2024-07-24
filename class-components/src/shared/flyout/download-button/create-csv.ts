@@ -1,6 +1,6 @@
-import type { Pokemon } from '@/app/api/types';
+import type { PokemonTableData } from '@/pages/search-page/results/result-item/result-item.slice';
 
-export const createCSV = (data: Pokemon[]): string => {
+export const createCSV = (data: PokemonTableData[]): string => {
   const titles = Object.keys(data[0] ?? {});
 
   const csv = [];
@@ -13,7 +13,7 @@ export const createCSV = (data: Pokemon[]): string => {
   let csvContent = '';
 
   csv.forEach((row) => {
-    csvContent += row.join(';') + '\n';
+    csvContent += row.join(';') + '\r\n';
   });
 
   return csvContent;

@@ -4,8 +4,14 @@ import { createSlice } from '@reduxjs/toolkit';
 
 import type { Pokemon } from '@/app/api/types';
 
+export interface PokemonTableData extends Omit<Pokemon, 'images' | 'set'> {
+  images: string;
+  setName: string;
+  setSeries: string;
+}
+
 export interface SaveItemsState {
-  data: Pokemon[];
+  data: PokemonTableData[];
 }
 
 const initialState: SaveItemsState = {
@@ -21,7 +27,19 @@ export const savedItemSlice = createSlice({
       state.data = newData;
     },
     saveItem: (state, action: PayloadAction<Pokemon>) => {
-      state.data.push(action.payload);
+      const pokemon = {
+        hp: action.payload.hp,
+        id: action.payload.id,
+        images: action.payload.images.small,
+        name: action.payload.name,
+        setName: action.payload.set.name,
+        setSeries: action.payload.set.series,
+        subtypes: action.payload.subtypes,
+        supertype: action.payload.supertype,
+        types: action.payload.types,
+      };
+
+      state.data.push(pokemon);
     },
     unselectAll: (state) => {
       state.data = [];
