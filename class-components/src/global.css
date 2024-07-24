@@ -1,0 +1,64 @@
+#root {
+  width: 100%;
+
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+  color: rgb(255 255 255 / 90%);
+  text-rendering: optimizelegibility;
+
+  font-synthesis: none;
+}
+
+a {
+  font-weight: 500;
+  color: rgb(255 255 255 / 90%);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+@media (hover: hover) {
+  a:hover {
+    opacity: 0.8;
+  }
+}
+
+body {
+  scroll-behavior: smooth;
+
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+
+  background-color: #17630d;
+}
+
+h1 {
+  font-size: 3em;
+  line-height: 1.1;
+}
+
+button {
+  cursor: pointer;
+
+  padding: 0.6em 1.2em;
+
+  font-family: inherit;
+  font-size: 1em;
+  font-weight: 500;
+  color: rgb(255 255 255 / 90%);
+
+  background-color: #ff1c1c;
+  border: none;
+  border-radius: 8px;
+
+  transition: 0.4s;
+}
+
+@media (hover: hover) {
+  button:hover {
+    background-color: #de1818;
+  }
+}

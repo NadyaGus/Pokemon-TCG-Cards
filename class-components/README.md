@@ -2,7 +2,7 @@
 
 ## About Project
 
-This project was completed as part of assignment for [RS School React](https://github.com/rolling-scopes-school/tasks/blob/master/react/README.md#week-1-1st-of-july-2024).
+This project was completed as part of the first assignment for [RS School React](https://github.com/rolling-scopes-school/tasks/blob/master/react/README.md#week-1-1st-of-july-2024).
 
 To create this application was used [Pokémon TCG API](https://docs.pokemontcg.io/)
 
@@ -13,9 +13,8 @@ To create this application was used [Pokémon TCG API](https://docs.pokemontcg.i
 > To get started with the development:
 >
 > 1. Clone the repository.
-> 2. **Close your IDE and open the internal folder `class-components` to avoid possible eslint errors**
-> 3. Install dependencies using `npm install`.
-> 4. Run the development server using `npm run dev`.
+> 2. Install dependencies using `npm install`.
+> 3. Run the development server using `npm run dev`.
 
 <details>
 <summary>Scripts</summary>

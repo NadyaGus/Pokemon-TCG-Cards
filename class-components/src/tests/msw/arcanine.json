@@ -1,0 +1,1618 @@
+{
+  "data": [
+    {
+      "id": "hgss1-1",
+      "name": "Arcanine",
+      "supertype": "Pokémon",
+      "subtypes": ["Stage 1"],
+      "hp": "110",
+      "types": ["Fire"],
+      "evolvesFrom": "Growlithe",
+      "attacks": [
+        { "name": "Sharp Fang", "cost": ["Fire", "Colorless"], "convertedEnergyCost": 2, "damage": "50", "text": "" },
+        {
+          "name": "Fire Mane",
+          "cost": ["Fire", "Colorless", "Colorless", "Colorless"],
+          "convertedEnergyCost": 4,
+          "damage": "90",
+          "text": ""
+        }
+      ],
+      "weaknesses": [{ "type": "Water", "value": "×2" }],
+      "retreatCost": ["Colorless", "Colorless"],
+      "convertedRetreatCost": 2,
+      "set": {
+        "id": "hgss1",
+        "name": "HeartGold & SoulSilver",
+        "series": "HeartGold & SoulSilver",
+        "printedTotal": 123,
+        "total": 124,
+        "legalities": { "unlimited": "Legal" },
+        "ptcgoCode": "HS",
+        "releaseDate": "2010/02/10",
+        "updatedAt": "2018/03/04 10:35:00",
+        "images": {
+          "symbol": "https://images.pokemontcg.io/hgss1/symbol.png",
+          "logo": "https://images.pokemontcg.io/hgss1/logo.png"
+        }
+      },
+      "number": "1",
+      "artist": "Naoki Saito",
+      "rarity": "Rare Holo",
+      "flavorText": "This legendary Chinese Pokémon is considered magnificent. Many people are enchanted by its grand mane.",
+      "nationalPokedexNumbers": [59],
+      "legalities": { "unlimited": "Legal" },
+      "images": {
+        "small": "https://images.pokemontcg.io/hgss1/1.png",
+        "large": "https://images.pokemontcg.io/hgss1/1_hires.png"
+      },
+      "tcgplayer": {
+        "url": "https://prices.pokemontcg.io/tcgplayer/hgss1-1",
+        "updatedAt": "2024/07/14",
+        "prices": {
+          "holofoil": { "low": 14.97, "mid": 24.97, "high": 35, "market": 26.57, "directLow": null },
+          "reverseHolofoil": { "low": 10.5, "mid": 24.11, "high": 46.12, "market": 23.38, "directLow": null }
+        }
+      },
+      "cardmarket": {
+        "url": "https://prices.pokemontcg.io/cardmarket/hgss1-1",
+        "updatedAt": "2024/07/14",
+        "prices": {
+          "averageSellPrice": 4.92,
+          "lowPrice": 0.45,
+          "trendPrice": 4.59,
+          "germanProLow": 0,
+          "suggestedPrice": 0,
+          "reverseHoloSell": 6.91,
+          "reverseHoloLow": 0.59,
+          "reverseHoloTrend": 4.82,
+          "lowPriceExPlus": 2.5,
+          "avg1": 5.99,
+          "avg7": 5.3,
+          "avg30": 4.86,
+          "reverseHoloAvg1": 3.95,
+          "reverseHoloAvg7": 6.75,
+          "reverseHoloAvg30": 5.61
+        }
+      }
+    },
+    {
+      "id": "ecard2-H2",
+      "name": "Arcanine",
+      "supertype": "Pokémon",
+      "subtypes": ["Stage 1"],
+      "hp": "90",
+      "types": ["Fire"],
+      "evolvesFrom": "Growlithe",
+      "abilities": [
+        {
+          "name": "Extreme Speed",
+          "text": "You pay Colorless less to retreat Arcanine for each Energy attached to it.",
+          "type": "Poké-Body"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Fire Blow",
+          "cost": ["Colorless", "Colorless", "Colorless"],
+          "convertedEnergyCost": 3,
+          "damage": "30+",
+          "text": "You may discard any number of Fire Energy cards attached to Arcanine when you use this attack. If you do, flip a number of coins equal to the number of Fire Energy cards you discarded. This attack does 30 damage plus 30 more damage for each heads."
+        }
+      ],
+      "weaknesses": [{ "type": "Water", "value": "×2" }],
+      "retreatCost": ["Colorless", "Colorless", "Colorless"],
+      "convertedRetreatCost": 3,
+      "set": {
+        "id": "ecard2",
+        "name": "Aquapolis",
+        "series": "E-Card",
+        "printedTotal": 147,
+        "total": 182,
+        "legalities": { "unlimited": "Legal" },
+        "ptcgoCode": "AQ",
+        "releaseDate": "2003/01/15",
+        "updatedAt": "2020/08/14 09:35:00",
+        "images": {
+          "symbol": "https://images.pokemontcg.io/ecard2/symbol.png",
+          "logo": "https://images.pokemontcg.io/ecard2/logo.png"
+        }
+      },
+      "number": "H2",
+      "artist": "Kyoko Umemoto",
+      "rarity": "Rare Holo",
+      "nationalPokedexNumbers": [59],
+      "legalities": { "unlimited": "Legal" },
+      "images": {
+        "small": "https://images.pokemontcg.io/ecard2/H2.png",
+        "large": "https://images.pokemontcg.io/ecard2/H2_hires.png"
+      },
+      "cardmarket": {
+        "url": "https://prices.pokemontcg.io/cardmarket/ecard2-H2",
+        "updatedAt": "2024/07/14",
+        "prices": {
+          "averageSellPrice": 93.5,
+          "lowPrice": 13,
+          "trendPrice": 28.31,
+          "germanProLow": 0,
+          "suggestedPrice": 0,
+          "reverseHoloSell": 0,
+          "reverseHoloLow": 0,
+          "reverseHoloTrend": 48.34,
+          "lowPriceExPlus": 41.9,
+          "avg1": 24,
+          "avg7": 67.57,
+          "avg30": 90.6,
+          "reverseHoloAvg1": 10,
+          "reverseHoloAvg7": 56.53,
+          "reverseHoloAvg30": 37.03
+        }
+      }
+    },
+    {
+      "id": "gym2-1",
+      "name": "Blaine's Arcanine",
+      "supertype": "Pokémon",
+      "subtypes": ["Stage 1"],
+      "level": "42",
+      "hp": "90",
+      "types": ["Fire"],
+      "evolvesFrom": "Blaine's Growlithe",
+      "attacks": [
+        {
+          "name": "Heat Tackle",
+          "cost": ["Fire", "Colorless", "Colorless"],
+          "convertedEnergyCost": 3,
+          "damage": "40",
+          "text": "Blaine's Arcanine does 10 damage to itself."
+        },
+        {
+          "name": "Firestorm",
+          "cost": ["Fire", "Fire", "Fire", "Fire"],
+          "convertedEnergyCost": 4,
+          "damage": "120",
+          "text": "Discard 3 Fire Energy cards attached to Blaine's Arcanine in order to use this attack."
+        }
+      ],
+      "weaknesses": [{ "type": "Water", "value": "×2" }],
+      "retreatCost": ["Colorless", "Colorless", "Colorless"],
+      "convertedRetreatCost": 3,
+      "set": {
+        "id": "gym2",
+        "name": "Gym Challenge",
+        "series": "Gym",
+        "printedTotal": 132,
+        "total": 132,
+        "legalities": { "unlimited": "Legal" },
+        "ptcgoCode": "G2",
+        "releaseDate": "2000/10/16",
+        "updatedAt": "2022/10/10 15:12:00",
+        "images": {
+          "symbol": "https://images.pokemontcg.io/gym2/symbol.png",
+          "logo": "https://images.pokemontcg.io/gym2/logo.png"
+        }
+      },
+      "number": "1",
+      "artist": "Ken Sugimori",
+      "rarity": "Rare Holo",
+      "nationalPokedexNumbers": [59],
+      "legalities": { "unlimited": "Legal" },
+      "images": {
+        "small": "https://images.pokemontcg.io/gym2/1.png",
+        "large": "https://images.pokemontcg.io/gym2/1_hires.png"
+      },
+      "tcgplayer": {
+        "url": "https://prices.pokemontcg.io/tcgplayer/gym2-1",
+        "updatedAt": "2024/07/14",
+        "prices": {
+          "1stEditionHolofoil": { "low": 200.42, "mid": 207.09, "high": 515, "market": 210.46, "directLow": null },
+          "unlimitedHolofoil": { "low": 43.57, "mid": 49.98, "high": 78.74, "market": 53.59, "directLow": null }
+        }
+      },
+      "cardmarket": {
+        "url": "https://prices.pokemontcg.io/cardmarket/gym2-1",
+        "updatedAt": "2024/07/14",
+        "prices": {
+          "averageSellPrice": 58.22,
+          "lowPrice": 4.78,
+          "trendPrice": 50.67,
+          "germanProLow": 0,
+          "suggestedPrice": 0,
+          "reverseHoloSell": 0,
+          "reverseHoloLow": 0,
+          "reverseHoloTrend": 20.65,
+          "lowPriceExPlus": 25,
+          "avg1": 6.99,
+          "avg7": 41.26,
+          "avg30": 39.53,
+          "reverseHoloAvg1": 27.5,
+          "reverseHoloAvg7": 18.59,
+          "reverseHoloAvg30": 33.79
+        }
+      }
+    },
+    {
+      "id": "det1-6",
+      "name": "Arcanine",
+      "supertype": "Pokémon",
+      "subtypes": ["Stage 1"],
+      "hp": "120",
+      "types": ["Fire"],
+      "evolvesFrom": "Growlithe",
+      "abilities": [
+        {
+          "name": "Security Guard",
+          "text": "As long as this Pokémon is your Active Pokémon, all of your Pokémon take 30 less damage from your opponent's attacks (after applying Weakness and Resistance).",
+          "type": "Ability"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Sharp Fang",
+          "cost": ["Fire", "Colorless", "Colorless"],
+          "convertedEnergyCost": 3,
+          "damage": "90",
+          "text": ""
+        }
+      ],
+      "weaknesses": [{ "type": "Water", "value": "×2" }],
+      "retreatCost": ["Colorless", "Colorless", "Colorless"],
+      "convertedRetreatCost": 3,
+      "set": {
+        "id": "det1",
+        "name": "Detective Pikachu",
+        "series": "Sun & Moon",
+        "printedTotal": 18,
+        "total": 18,
+        "legalities": { "unlimited": "Legal", "expanded": "Legal" },
+        "ptcgoCode": "DET",
+        "releaseDate": "2019/04/05",
+        "updatedAt": "2021/09/01 05:37:00",
+        "images": {
+          "symbol": "https://images.pokemontcg.io/det1/symbol.png",
+          "logo": "https://images.pokemontcg.io/det1/logo.png"
+        }
+      },
+      "number": "6",
+      "artist": "MPC Film",
+      "rarity": "Rare",
+      "flavorText": "Legends tell of its fighting alongside a general and conquering a whole country.",
+      "nationalPokedexNumbers": [59],
+      "legalities": { "unlimited": "Legal", "expanded": "Legal" },
+      "images": {
+        "small": "https://images.pokemontcg.io/det1/6.png",
+        "large": "https://images.pokemontcg.io/det1/6_hires.png"
+      },
+      "tcgplayer": {
+        "url": "https://prices.pokemontcg.io/tcgplayer/det1-6",
+        "updatedAt": "2024/07/14",
+        "prices": { "holofoil": { "low": 0.72, "mid": 1.6, "high": 4.95, "market": 1.61, "directLow": 3.74 } }
+      },
+      "cardmarket": {
+        "url": "https://prices.pokemontcg.io/cardmarket/det1-6",
+        "updatedAt": "2024/07/14",
+        "prices": {
+          "averageSellPrice": 3.72,
+          "lowPrice": 0.8,
+          "trendPrice": 3.78,
+          "germanProLow": 0,
+          "suggestedPrice": 0,
+          "reverseHoloSell": 0,
+          "reverseHoloLow": 1,
+          "reverseHoloTrend": 4.25,
+          "lowPriceExPlus": 0.97,
+          "avg1": 6,
+          "avg7": 3.91,
+          "avg30": 3.21,
+          "reverseHoloAvg1": 4.99,
+          "reverseHoloAvg7": 3.43,
+          "reverseHoloAvg30": 3.57
+        }
+      }
+    },
+    {
+      "id": "pl2-1",
+      "name": "Arcanine",
+      "supertype": "Pokémon",
+      "subtypes": ["Stage 1"],
+      "level": "53",
+      "hp": "100",
+      "types": ["Fire"],
+      "evolvesFrom": "Growlithe",
+      "abilities": [
+        {
+          "name": "Flare Condition",
+          "text": "As long as Arcanine has any Fire Energy attached to it, Arcanine has no Weakness.",
+          "type": "Poké-Body"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Burn Out",
+          "cost": ["Fire", "Colorless"],
+          "convertedEnergyCost": 2,
+          "damage": "30+",
+          "text": "You may do 30 damage plus 30 more damage. If you do, Arcanine is now Burned."
+        },
+        {
+          "name": "Flames of Rage",
+          "cost": ["Fire", "Colorless", "Colorless"],
+          "convertedEnergyCost": 3,
+          "damage": "60+",
+          "text": "Discard a Fire Energy attached to Arcanine. This attack does 60 damage plus 10 more damage for each damage counter on Arcanine."
+        }
+      ],
+      "weaknesses": [{ "type": "Water", "value": "+20" }],
+      "retreatCost": ["Colorless", "Colorless"],
+      "convertedRetreatCost": 2,
+      "set": {
+        "id": "pl2",
+        "name": "Rising Rivals",
+        "series": "Platinum",
+        "printedTotal": 111,
+        "total": 120,
+        "legalities": { "unlimited": "Legal" },
+        "ptcgoCode": "RR",
+        "releaseDate": "2009/05/16",
+        "updatedAt": "2020/08/14 09:35:00",
+        "images": {
+          "symbol": "https://images.pokemontcg.io/pl2/symbol.png",
+          "logo": "https://images.pokemontcg.io/pl2/logo.png"
+        }
+      },
+      "number": "1",
+      "artist": "Masakazu Fukuda",
+      "rarity": "Rare Holo",
+      "nationalPokedexNumbers": [59],
+      "legalities": { "unlimited": "Legal" },
+      "images": {
+        "small": "https://images.pokemontcg.io/pl2/1.png",
+        "large": "https://images.pokemontcg.io/pl2/1_hires.png"
+      },
+      "tcgplayer": {
+        "url": "https://prices.pokemontcg.io/tcgplayer/pl2-1",
+        "updatedAt": "2024/07/14",
+        "prices": {
+          "holofoil": { "low": 9, "mid": 18.57, "high": 23.97, "market": 18.78, "directLow": null },
+          "reverseHolofoil": { "low": 7.64, "mid": 15.99, "high": 19.02, "market": 16.11, "directLow": null }
+        }
+      },
+      "cardmarket": {
+        "url": "https://prices.pokemontcg.io/cardmarket/pl2-1",
+        "updatedAt": "2024/07/14",
+        "prices": {
+          "averageSellPrice": 6.66,
+          "lowPrice": 0.8,
+          "trendPrice": 6.22,
+          "germanProLow": 0,
+          "suggestedPrice": 0,
+          "reverseHoloSell": 5.52,
+          "reverseHoloLow": 0.8,
+          "reverseHoloTrend": 5.25,
+          "lowPriceExPlus": 2.99,
+          "avg1": 5.5,
+          "avg7": 5.01,
+          "avg30": 5.12,
+          "reverseHoloAvg1": 15,
+          "reverseHoloAvg7": 5.96,
+          "reverseHoloAvg30": 5.41
+        }
+      }
+    },
+    {
+      "id": "basep-6",
+      "name": "Arcanine",
+      "supertype": "Pokémon",
+      "subtypes": ["Stage 1"],
+      "level": "34",
+      "hp": "70",
+      "types": ["Fire"],
+      "evolvesFrom": "Growlithe",
+      "attacks": [
+        {
+          "name": "Quick Attack",
+          "cost": ["Colorless", "Colorless"],
+          "convertedEnergyCost": 2,
+          "damage": "10+",
+          "text": "Flip a coin. If heads, this attack does 10 damage plus 20 more damage; if tails, this attack does 10 damage."
+        },
+        {
+          "name": "Flames of Rage",
+          "cost": ["Fire", "Fire"],
+          "convertedEnergyCost": 2,
+          "damage": "40+",
+          "text": "Discard 2 Fire Energy cards attached to Arcanine in order to use this attack. This attack does 40 damage plus 10 more damage for each damage counter on Arcanine."
+        }
+      ],
+      "weaknesses": [{ "type": "Water", "value": "×2" }],
+      "retreatCost": ["Colorless"],
+      "convertedRetreatCost": 1,
+      "set": {
+        "id": "basep",
+        "name": "Wizards Black Star Promos",
+        "series": "Base",
+        "printedTotal": 53,
+        "total": 53,
+        "legalities": { "unlimited": "Legal" },
+        "ptcgoCode": "PR",
+        "releaseDate": "1999/07/01",
+        "updatedAt": "2020/08/14 09:35:00",
+        "images": {
+          "symbol": "https://images.pokemontcg.io/basep/symbol.png",
+          "logo": "https://images.pokemontcg.io/basep/logo.png"
+        }
+      },
+      "number": "6",
+      "artist": "Ken Sugimori",
+      "rarity": "Promo",
+      "flavorText": "A legendary Pokémon famous for its beauty. It looks almost as if it flies when it runs.",
+      "nationalPokedexNumbers": [59],
+      "legalities": { "unlimited": "Legal" },
+      "images": {
+        "small": "https://images.pokemontcg.io/basep/6.png",
+        "large": "https://images.pokemontcg.io/basep/6_hires.png"
+      },
+      "tcgplayer": {
+        "url": "https://prices.pokemontcg.io/tcgplayer/basep-6",
+        "updatedAt": "2024/07/14",
+        "prices": { "normal": { "low": 4, "mid": 7.09, "high": 17.49, "market": 8.61, "directLow": 6.76 } }
+      },
+      "cardmarket": {
+        "url": "https://prices.pokemontcg.io/cardmarket/basep-6",
+        "updatedAt": "2024/07/14",
+        "prices": {
+          "averageSellPrice": 7.58,
+          "lowPrice": 1.1,
+          "trendPrice": 4.64,
+          "germanProLow": 0,
+          "suggestedPrice": 0,
+          "reverseHoloSell": 0,
+          "reverseHoloLow": 0,
+          "reverseHoloTrend": 4.77,
+          "lowPriceExPlus": 3,
+          "avg1": 4.99,
+          "avg7": 5.21,
+          "avg30": 8.89,
+          "reverseHoloAvg1": 11.5,
+          "reverseHoloAvg7": 4.78,
+          "reverseHoloAvg30": 1.94
+        }
+      }
+    },
+    {
+      "id": "ecard3-H2",
+      "name": "Arcanine",
+      "supertype": "Pokémon",
+      "subtypes": ["Stage 1"],
+      "hp": "80",
+      "types": ["Fire"],
+      "evolvesFrom": "Growlithe",
+      "abilities": [
+        {
+          "name": "Energy Recharge",
+          "text": "When you play Arcanine from your hand to evolve your Active Pokémon, you may flip 3 coins. For each heads, choose a basic Energy card from your discard pile and attach it to Arcanine.",
+          "type": "Poké-Power"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Shake",
+          "cost": ["Colorless"],
+          "convertedEnergyCost": 1,
+          "damage": "10",
+          "text": "Your opponent switches the Defending Pokémon with 1 of his or her Benched Pokémon, if any."
+        },
+        {
+          "name": "White Flames",
+          "cost": ["Fire", "Fire", "Colorless"],
+          "convertedEnergyCost": 3,
+          "damage": "70",
+          "text": "Discard all Fire Energy cards attached to Arcanine."
+        }
+      ],
+      "weaknesses": [{ "type": "Water", "value": "×2" }],
+      "retreatCost": ["Colorless", "Colorless"],
+      "convertedRetreatCost": 2,
+      "set": {
+        "id": "ecard3",
+        "name": "Skyridge",
+        "series": "E-Card",
+        "printedTotal": 144,
+        "total": 182,
+        "legalities": { "unlimited": "Legal" },
+        "ptcgoCode": "SK",
+        "releaseDate": "2003/05/12",
+        "updatedAt": "2020/08/14 09:35:00",
+        "images": {
+          "symbol": "https://images.pokemontcg.io/ecard3/symbol.png",
+          "logo": "https://images.pokemontcg.io/ecard3/logo.png"
+        }
+      },
+      "number": "H2",
+      "artist": "Aya Kusube",
+      "rarity": "Rare Holo",
+      "nationalPokedexNumbers": [59],
+      "legalities": { "unlimited": "Legal" },
+      "images": {
+        "small": "https://images.pokemontcg.io/ecard3/H2.png",
+        "large": "https://images.pokemontcg.io/ecard3/H2_hires.png"
+      },
+      "cardmarket": {
+        "url": "https://prices.pokemontcg.io/cardmarket/ecard3-H2",
+        "updatedAt": "2024/07/14",
+        "prices": {
+          "averageSellPrice": 55.99,
+          "lowPrice": 28,
+          "trendPrice": 125.38,
+          "germanProLow": 0,
+          "suggestedPrice": 0,
+          "reverseHoloSell": 0,
+          "reverseHoloLow": 0,
+          "reverseHoloTrend": 79.66,
+          "lowPriceExPlus": 69.99,
+          "avg1": 55.99,
+          "avg7": 102.13,
+          "avg30": 93.32,
+          "reverseHoloAvg1": 45,
+          "reverseHoloAvg7": 100,
+          "reverseHoloAvg30": 61.99
+        }
+      }
+    },
+    {
+      "id": "neo4-12",
+      "name": "Light Arcanine",
+      "supertype": "Pokémon",
+      "subtypes": ["Stage 1"],
+      "level": "47",
+      "hp": "100",
+      "types": ["Fire"],
+      "evolvesFrom": "Growlithe",
+      "abilities": [
+        {
+          "name": "Drive Off",
+          "text": "As long as Light Arcanine is your Active Pokémon, once during your turn (before your attack), if your opponent has any Benched Pokémon, he or she chooses 1 of them and switches it with the Defending Pokémon. This power can't be used while Light Arcanine is Asleep, Confused, or Paralyzed.",
+          "type": "Pokémon Power"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Gentle Flames",
+          "cost": ["Fire", "Fire", "Colorless"],
+          "convertedEnergyCost": 3,
+          "damage": "50",
+          "text": "If the Defending Pokémon is a Baby Pokémon, this attack does 10 damage instead of 50. If the Defending Pokémon is a Basic Pokémon, this attack does 30 damage instead of 50."
+        }
+      ],
+      "weaknesses": [{ "type": "Water", "value": "×2" }],
+      "retreatCost": ["Colorless", "Colorless"],
+      "convertedRetreatCost": 2,
+      "set": {
+        "id": "neo4",
+        "name": "Neo Destiny",
+        "series": "Neo",
+        "printedTotal": 105,
+        "total": 113,
+        "legalities": { "unlimited": "Legal" },
+        "ptcgoCode": "N4",
+        "releaseDate": "2002/02/28",
+        "updatedAt": "2020/09/25 10:09:00",
+        "images": {
+          "symbol": "https://images.pokemontcg.io/neo4/symbol.png",
+          "logo": "https://images.pokemontcg.io/neo4/logo.png"
+        }
+      },
+      "number": "12",
+      "artist": "Atsuko Nishida",
+      "rarity": "Rare Holo",
+      "flavorText": "This legendary Chinese Pokémon is easily recognized by its large flowing mane.",
+      "nationalPokedexNumbers": [59],
+      "legalities": { "unlimited": "Legal" },
+      "images": {
+        "small": "https://images.pokemontcg.io/neo4/12.png",
+        "large": "https://images.pokemontcg.io/neo4/12_hires.png"
+      },
+      "tcgplayer": {
+        "url": "https://prices.pokemontcg.io/tcgplayer/neo4-12",
+        "updatedAt": "2024/07/14",
+        "prices": {
+          "1stEditionHolofoil": { "low": 140, "mid": 200.8, "high": 374.99, "market": 259.95, "directLow": null },
+          "unlimitedHolofoil": { "low": 126.22, "mid": 147.65, "high": 159.95, "market": 140.24, "directLow": null }
+        }
+      },
+      "cardmarket": {
+        "url": "https://prices.pokemontcg.io/cardmarket/neo4-12",
+        "updatedAt": "2024/07/14",
+        "prices": {
+          "averageSellPrice": 97.2,
+          "lowPrice": 18.99,
+          "trendPrice": 89.28,
+          "germanProLow": 0,
+          "suggestedPrice": 0,
+          "reverseHoloSell": 0,
+          "reverseHoloLow": 0,
+          "reverseHoloTrend": 32.97,
+          "lowPriceExPlus": 45,
+          "avg1": 33.99,
+          "avg7": 78.18,
+          "avg30": 63.02,
+          "reverseHoloAvg1": 29.99,
+          "reverseHoloAvg7": 41.21,
+          "reverseHoloAvg30": 47.13
+        }
+      }
+    },
+    {
+      "id": "bw4-12",
+      "name": "Arcanine",
+      "supertype": "Pokémon",
+      "subtypes": ["Stage 1"],
+      "hp": "130",
+      "types": ["Fire"],
+      "evolvesFrom": "Growlithe",
+      "abilities": [
+        {
+          "name": "Blazing Mane",
+          "text": "If this Pokémon is your Active Pokémon and is damaged by an opponent's attack (even if this Pokémon is Knocked Out), the Attacking Pokémon is now Burned.",
+          "type": "Ability"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Fire Spin",
+          "cost": ["Fire", "Fire", "Colorless"],
+          "convertedEnergyCost": 3,
+          "damage": "100",
+          "text": "Flip a coin. If tails, discard 2 Energy attached to this Pokémon."
+        }
+      ],
+      "weaknesses": [{ "type": "Water", "value": "×2" }],
+      "retreatCost": ["Colorless", "Colorless", "Colorless"],
+      "convertedRetreatCost": 3,
+      "set": {
+        "id": "bw4",
+        "name": "Next Destinies",
+        "series": "Black & White",
+        "printedTotal": 99,
+        "total": 103,
+        "legalities": { "unlimited": "Legal", "expanded": "Legal" },
+        "ptcgoCode": "NXD",
+        "releaseDate": "2012/02/08",
+        "updatedAt": "2019/01/28 16:44:00",
+        "images": {
+          "symbol": "https://images.pokemontcg.io/bw4/symbol.png",
+          "logo": "https://images.pokemontcg.io/bw4/logo.png"
+        }
+      },
+      "number": "12",
+      "artist": "Mitsuhiro Arita",
+      "rarity": "Rare",
+      "flavorText": "Its proud and regal appearance has captured the hearts of people since long ago.",
+      "nationalPokedexNumbers": [59],
+      "legalities": { "unlimited": "Legal", "expanded": "Legal" },
+      "images": {
+        "small": "https://images.pokemontcg.io/bw4/12.png",
+        "large": "https://images.pokemontcg.io/bw4/12_hires.png"
+      },
+      "tcgplayer": {
+        "url": "https://prices.pokemontcg.io/tcgplayer/bw4-12",
+        "updatedAt": "2024/07/14",
+        "prices": {
+          "normal": { "low": 0.7, "mid": 0.93, "high": 1.4, "market": 1.01, "directLow": null },
+          "reverseHolofoil": { "low": 0.76, "mid": 1.37, "high": 8.97, "market": 1.6, "directLow": null }
+        }
+      },
+      "cardmarket": {
+        "url": "https://prices.pokemontcg.io/cardmarket/bw4-12",
+        "updatedAt": "2024/07/14",
+        "prices": {
+          "averageSellPrice": 3.76,
+          "lowPrice": 0.02,
+          "trendPrice": 3.4,
+          "germanProLow": 0,
+          "suggestedPrice": 0,
+          "reverseHoloSell": 2.16,
+          "reverseHoloLow": 0.15,
+          "reverseHoloTrend": 2.11,
+          "lowPriceExPlus": 0.09,
+          "avg1": 0.5,
+          "avg7": 3.49,
+          "avg30": 4.68,
+          "reverseHoloAvg1": 0.3,
+          "reverseHoloAvg7": 2.04,
+          "reverseHoloAvg30": 2.4
+        }
+      }
+    },
+    {
+      "id": "bw4-13",
+      "name": "Arcanine",
+      "supertype": "Pokémon",
+      "subtypes": ["Stage 1"],
+      "hp": "120",
+      "types": ["Fire"],
+      "evolvesFrom": "Growlithe",
+      "attacks": [
+        {
+          "name": "Crunch",
+          "cost": ["Fire", "Colorless"],
+          "convertedEnergyCost": 2,
+          "damage": "30",
+          "text": "Flip a coin. If heads, discard an Energy attached to the Defending Pokémon."
+        },
+        {
+          "name": "Heat Blast",
+          "cost": ["Fire", "Colorless", "Colorless"],
+          "convertedEnergyCost": 3,
+          "damage": "70",
+          "text": ""
+        }
+      ],
+      "weaknesses": [{ "type": "Water", "value": "×2" }],
+      "retreatCost": ["Colorless", "Colorless", "Colorless"],
+      "convertedRetreatCost": 3,
+      "set": {
+        "id": "bw4",
+        "name": "Next Destinies",
+        "series": "Black & White",
+        "printedTotal": 99,
+        "total": 103,
+        "legalities": { "unlimited": "Legal", "expanded": "Legal" },
+        "ptcgoCode": "NXD",
+        "releaseDate": "2012/02/08",
+        "updatedAt": "2019/01/28 16:44:00",
+        "images": {
+          "symbol": "https://images.pokemontcg.io/bw4/symbol.png",
+          "logo": "https://images.pokemontcg.io/bw4/logo.png"
+        }
+      },
+      "number": "13",
+      "artist": "Ryo Ueda",
+      "rarity": "Uncommon",
+      "flavorText": "Its proud and regal appearance has captured the hearts of people since long ago.",
+      "nationalPokedexNumbers": [59],
+      "legalities": { "unlimited": "Legal", "expanded": "Legal" },
+      "images": {
+        "small": "https://images.pokemontcg.io/bw4/13.png",
+        "large": "https://images.pokemontcg.io/bw4/13_hires.png"
+      },
+      "tcgplayer": {
+        "url": "https://prices.pokemontcg.io/tcgplayer/bw4-13",
+        "updatedAt": "2024/07/14",
+        "prices": {
+          "normal": { "low": 0.2, "mid": 0.5, "high": 3.99, "market": 0.66, "directLow": 0.25 },
+          "reverseHolofoil": { "low": 1.45, "mid": 2.35, "high": 5.24, "market": 3.44, "directLow": null }
+        }
+      },
+      "cardmarket": {
+        "url": "https://prices.pokemontcg.io/cardmarket/bw4-13",
+        "updatedAt": "2024/07/14",
+        "prices": {
+          "averageSellPrice": 0.85,
+          "lowPrice": 0.02,
+          "trendPrice": 0.76,
+          "germanProLow": 0,
+          "suggestedPrice": 0,
+          "reverseHoloSell": 2.47,
+          "reverseHoloLow": 0.19,
+          "reverseHoloTrend": 3.26,
+          "lowPriceExPlus": 0.02,
+          "avg1": 0.34,
+          "avg7": 0.58,
+          "avg30": 0.52,
+          "reverseHoloAvg1": 1.99,
+          "reverseHoloAvg7": 3.3,
+          "reverseHoloAvg30": 2.17
+        }
+      }
+    },
+    {
+      "id": "pl3-15",
+      "name": "Arcanine G",
+      "supertype": "Pokémon",
+      "subtypes": ["Basic", "SP"],
+      "level": "60",
+      "hp": "90",
+      "types": ["Fire"],
+      "abilities": [
+        {
+          "name": "Extreme Speed",
+          "text": "Arcanine G's Retreat Cost is Colorless less for each Fire Energy attached to Arcanine G.",
+          "type": "Poké-Body"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Overrun",
+          "cost": ["Fire", "Colorless", "Colorless"],
+          "convertedEnergyCost": 3,
+          "damage": "40",
+          "text": "Does 20 damage to 1 of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)"
+        }
+      ],
+      "weaknesses": [{ "type": "Water", "value": "×2" }],
+      "retreatCost": ["Colorless", "Colorless"],
+      "convertedRetreatCost": 2,
+      "set": {
+        "id": "pl3",
+        "name": "Supreme Victors",
+        "series": "Platinum",
+        "printedTotal": 147,
+        "total": 153,
+        "legalities": { "unlimited": "Legal" },
+        "ptcgoCode": "SV",
+        "releaseDate": "2009/08/19",
+        "updatedAt": "2018/03/07 22:40:00",
+        "images": {
+          "symbol": "https://images.pokemontcg.io/pl3/symbol.png",
+          "logo": "https://images.pokemontcg.io/pl3/logo.png"
+        }
+      },
+      "number": "15",
+      "artist": "Yusuke Ishikawa",
+      "rarity": "Rare",
+      "nationalPokedexNumbers": [59],
+      "legalities": { "unlimited": "Legal" },
+      "images": {
+        "small": "https://images.pokemontcg.io/pl3/15.png",
+        "large": "https://images.pokemontcg.io/pl3/15_hires.png"
+      },
+      "tcgplayer": {
+        "url": "https://prices.pokemontcg.io/tcgplayer/pl3-15",
+        "updatedAt": "2024/07/14",
+        "prices": {
+          "normal": { "low": 2.25, "mid": 4.39, "high": 7.33, "market": 5, "directLow": null },
+          "reverseHolofoil": { "low": 3, "mid": 4.86, "high": 8.84, "market": 6.02, "directLow": null }
+        }
+      },
+      "cardmarket": {
+        "url": "https://prices.pokemontcg.io/cardmarket/pl3-15",
+        "updatedAt": "2024/07/14",
+        "prices": {
+          "averageSellPrice": 2.42,
+          "lowPrice": 0.6,
+          "trendPrice": 2.52,
+          "germanProLow": 0,
+          "suggestedPrice": 0,
+          "reverseHoloSell": 0,
+          "reverseHoloLow": 0,
+          "reverseHoloTrend": 2.34,
+          "lowPriceExPlus": 2,
+          "avg1": 2.9,
+          "avg7": 2.57,
+          "avg30": 3.08,
+          "reverseHoloAvg1": 3.95,
+          "reverseHoloAvg7": 1.69,
+          "reverseHoloAvg30": 1.36
+        }
+      }
+    },
+    {
+      "id": "dp3-22",
+      "name": "Arcanine",
+      "supertype": "Pokémon",
+      "subtypes": ["Stage 1"],
+      "level": "48",
+      "hp": "100",
+      "types": ["Fire"],
+      "evolvesFrom": "Growlithe",
+      "abilities": [
+        {
+          "name": "Flame Dash",
+          "text": "Once during your turn, when you play Arcanine from your hand to evolve 1 of your Benched Pokémon, you may switch Arcanine with 1 of your Active Pokémon. If you do, you may move any number of Energy cards attached to that Pokémon to Arcanine.",
+          "type": "Poké-Power"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Inferno Onrush",
+          "cost": ["Fire", "Fire", "Colorless", "Colorless"],
+          "convertedEnergyCost": 4,
+          "damage": "120",
+          "text": "Arcanine does 40 damage to itself."
+        }
+      ],
+      "weaknesses": [{ "type": "Water", "value": "+30" }],
+      "retreatCost": ["Colorless", "Colorless"],
+      "convertedRetreatCost": 2,
+      "set": {
+        "id": "dp3",
+        "name": "Secret Wonders",
+        "series": "Diamond & Pearl",
+        "printedTotal": 132,
+        "total": 132,
+        "legalities": { "unlimited": "Legal" },
+        "ptcgoCode": "SW",
+        "releaseDate": "2007/11/01",
+        "updatedAt": "2018/03/04 10:35:00",
+        "images": {
+          "symbol": "https://images.pokemontcg.io/dp3/symbol.png",
+          "logo": "https://images.pokemontcg.io/dp3/logo.png"
+        }
+      },
+      "number": "22",
+      "artist": "Kouki Saitou",
+      "rarity": "Rare",
+      "flavorText": "Its proud and regal appearance has captured the hearts of people since long ago.",
+      "nationalPokedexNumbers": [59],
+      "legalities": { "unlimited": "Legal" },
+      "images": {
+        "small": "https://images.pokemontcg.io/dp3/22.png",
+        "large": "https://images.pokemontcg.io/dp3/22_hires.png"
+      },
+      "tcgplayer": {
+        "url": "https://prices.pokemontcg.io/tcgplayer/dp3-22",
+        "updatedAt": "2024/07/14",
+        "prices": {
+          "normal": { "low": 0.45, "mid": 0.99, "high": 5.5, "market": 1.55, "directLow": null },
+          "reverseHolofoil": { "low": 13.25, "mid": 21, "high": 30, "market": 22.27, "directLow": null }
+        }
+      },
+      "cardmarket": {
+        "url": "https://prices.pokemontcg.io/cardmarket/dp3-22",
+        "updatedAt": "2024/07/14",
+        "prices": {
+          "averageSellPrice": 0.66,
+          "lowPrice": 0.05,
+          "trendPrice": 0.71,
+          "germanProLow": 0,
+          "suggestedPrice": 0,
+          "reverseHoloSell": 0.99,
+          "reverseHoloLow": 0.49,
+          "reverseHoloTrend": 4.31,
+          "lowPriceExPlus": 0.2,
+          "avg1": 0.19,
+          "avg7": 0.77,
+          "avg30": 0.85,
+          "reverseHoloAvg1": 7,
+          "reverseHoloAvg7": 3.92,
+          "reverseHoloAvg30": 3.33
+        }
+      }
+    },
+    {
+      "id": "xy9-11",
+      "name": "Arcanine",
+      "supertype": "Pokémon",
+      "subtypes": ["Stage 1"],
+      "hp": "110",
+      "types": ["Fire"],
+      "evolvesFrom": "Growlithe",
+      "attacks": [
+        { "name": "Flop", "cost": ["Colorless"], "convertedEnergyCost": 1, "damage": "30", "text": "" },
+        {
+          "name": "Flamethrower",
+          "cost": ["Fire", "Fire", "Colorless"],
+          "convertedEnergyCost": 3,
+          "damage": "90",
+          "text": "Discard an Energy attached to this Pokémon."
+        }
+      ],
+      "weaknesses": [{ "type": "Water", "value": "×2" }],
+      "retreatCost": ["Colorless", "Colorless"],
+      "convertedRetreatCost": 2,
+      "set": {
+        "id": "xy9",
+        "name": "BREAKpoint",
+        "series": "XY",
+        "printedTotal": 122,
+        "total": 126,
+        "legalities": { "unlimited": "Legal", "expanded": "Legal" },
+        "ptcgoCode": "BKP",
+        "releaseDate": "2016/02/03",
+        "updatedAt": "2020/08/14 09:35:00",
+        "images": {
+          "symbol": "https://images.pokemontcg.io/xy9/symbol.png",
+          "logo": "https://images.pokemontcg.io/xy9/logo.png"
+        }
+      },
+      "number": "11",
+      "artist": "match",
+      "rarity": "Uncommon",
+      "flavorText": "Its magnificent bark conveys a sense of majesty. Anyone hearing it can't help but grovel before it.",
+      "nationalPokedexNumbers": [59],
+      "legalities": { "unlimited": "Legal", "expanded": "Legal" },
+      "images": {
+        "small": "https://images.pokemontcg.io/xy9/11.png",
+        "large": "https://images.pokemontcg.io/xy9/11_hires.png"
+      },
+      "tcgplayer": {
+        "url": "https://prices.pokemontcg.io/tcgplayer/xy9-11",
+        "updatedAt": "2024/07/14",
+        "prices": {
+          "normal": { "low": 0.03, "mid": 0.24, "high": 2.45, "market": 0.21, "directLow": null },
+          "reverseHolofoil": { "low": 0.73, "mid": 1.2, "high": 8.97, "market": 1.67, "directLow": null }
+        }
+      },
+      "cardmarket": {
+        "url": "https://prices.pokemontcg.io/cardmarket/xy9-11",
+        "updatedAt": "2024/07/14",
+        "prices": {
+          "averageSellPrice": 0.39,
+          "lowPrice": 0.02,
+          "trendPrice": 0.35,
+          "germanProLow": 0,
+          "suggestedPrice": 0,
+          "reverseHoloSell": 0,
+          "reverseHoloLow": 0.3,
+          "reverseHoloTrend": 2.56,
+          "lowPriceExPlus": 0.02,
+          "avg1": 0.19,
+          "avg7": 0.34,
+          "avg30": 0.29,
+          "reverseHoloAvg1": 2,
+          "reverseHoloAvg7": 2.33,
+          "reverseHoloAvg30": 1.95
+        }
+      }
+    },
+    {
+      "id": "sm1-22",
+      "name": "Arcanine",
+      "supertype": "Pokémon",
+      "subtypes": ["Stage 1"],
+      "hp": "130",
+      "types": ["Fire"],
+      "evolvesFrom": "Growlithe",
+      "attacks": [
+        {
+          "name": "Searing Flame",
+          "cost": ["Fire", "Colorless", "Colorless"],
+          "convertedEnergyCost": 3,
+          "damage": "60",
+          "text": "Your opponent's Active Pokémon is now Burned."
+        },
+        {
+          "name": "Firestorm",
+          "cost": ["Fire", "Fire", "Fire", "Colorless"],
+          "convertedEnergyCost": 4,
+          "damage": "190",
+          "text": "Discard 3 Fire Energy from this Pokémon."
+        }
+      ],
+      "weaknesses": [{ "type": "Water", "value": "×2" }],
+      "retreatCost": ["Colorless", "Colorless"],
+      "convertedRetreatCost": 2,
+      "set": {
+        "id": "sm1",
+        "name": "Sun & Moon",
+        "series": "Sun & Moon",
+        "printedTotal": 149,
+        "total": 173,
+        "legalities": { "unlimited": "Legal", "expanded": "Legal" },
+        "ptcgoCode": "SUM",
+        "releaseDate": "2017/02/03",
+        "updatedAt": "2019/04/10 19:59:00",
+        "images": {
+          "symbol": "https://images.pokemontcg.io/sm1/symbol.png",
+          "logo": "https://images.pokemontcg.io/sm1/logo.png"
+        }
+      },
+      "number": "22",
+      "artist": "kodama",
+      "rarity": "Rare Holo",
+      "flavorText": "Overflowing with beauty and majesty, this strong Pokémon appears in ancient Eastern folklore.",
+      "nationalPokedexNumbers": [59],
+      "legalities": { "unlimited": "Legal", "expanded": "Legal" },
+      "images": {
+        "small": "https://images.pokemontcg.io/sm1/22.png",
+        "large": "https://images.pokemontcg.io/sm1/22_hires.png"
+      },
+      "tcgplayer": {
+        "url": "https://prices.pokemontcg.io/tcgplayer/sm1-22",
+        "updatedAt": "2024/07/14",
+        "prices": {
+          "holofoil": { "low": 0.11, "mid": 0.52, "high": 3.36, "market": 0.45, "directLow": 0.44 },
+          "reverseHolofoil": { "low": 0.4, "mid": 0.8, "high": 7.5, "market": 0.85, "directLow": null }
+        }
+      },
+      "cardmarket": {
+        "url": "https://prices.pokemontcg.io/cardmarket/sm1-22",
+        "updatedAt": "2024/07/14",
+        "prices": {
+          "averageSellPrice": 1.52,
+          "lowPrice": 0.2,
+          "trendPrice": 1.72,
+          "germanProLow": 0,
+          "suggestedPrice": 0,
+          "reverseHoloSell": 2.69,
+          "reverseHoloLow": 0.89,
+          "reverseHoloTrend": 2.33,
+          "lowPriceExPlus": 0.2,
+          "avg1": 1,
+          "avg7": 1.64,
+          "avg30": 1.71,
+          "reverseHoloAvg1": 2,
+          "reverseHoloAvg7": 2.83,
+          "reverseHoloAvg30": 2.61
+        }
+      }
+    },
+    {
+      "id": "ex2-15",
+      "name": "Arcanine",
+      "supertype": "Pokémon",
+      "subtypes": ["Stage 1"],
+      "hp": "80",
+      "types": ["Fire"],
+      "evolvesFrom": "Growlithe",
+      "abilities": [
+        {
+          "name": "Fire Veil",
+          "text": "If Arcanine is your Active Pokémon and is damaged by an opponent's attack (even if Arcanine is Knocked Out), the Attacking Pokémon is now Burned.",
+          "type": "Poké-Body"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Burn Up",
+          "cost": ["Fire", "Colorless", "Colorless"],
+          "convertedEnergyCost": 3,
+          "damage": "60",
+          "text": "Flip a coin. If tails, discard all Fire Energy cards attached to Arcanine."
+        }
+      ],
+      "weaknesses": [{ "type": "Water", "value": "×2" }],
+      "retreatCost": ["Colorless"],
+      "convertedRetreatCost": 1,
+      "set": {
+        "id": "ex2",
+        "name": "Sandstorm",
+        "series": "EX",
+        "printedTotal": 100,
+        "total": 100,
+        "legalities": { "unlimited": "Legal" },
+        "ptcgoCode": "SS",
+        "releaseDate": "2003/09/18",
+        "updatedAt": "2018/03/04 10:35:00",
+        "images": {
+          "symbol": "https://images.pokemontcg.io/ex2/symbol.png",
+          "logo": "https://images.pokemontcg.io/ex2/logo.png"
+        }
+      },
+      "number": "15",
+      "artist": "Hajime Kusajima",
+      "rarity": "Rare",
+      "nationalPokedexNumbers": [59],
+      "legalities": { "unlimited": "Legal" },
+      "images": {
+        "small": "https://images.pokemontcg.io/ex2/15.png",
+        "large": "https://images.pokemontcg.io/ex2/15_hires.png"
+      },
+      "tcgplayer": {
+        "url": "https://prices.pokemontcg.io/tcgplayer/ex2-15",
+        "updatedAt": "2024/07/14",
+        "prices": {
+          "normal": { "low": 0.75, "mid": 1.66, "high": 15.47, "market": 1.61, "directLow": null },
+          "reverseHolofoil": { "low": 19.27, "mid": 24.19, "high": 40, "market": 33.46, "directLow": null }
+        }
+      },
+      "cardmarket": {
+        "url": "https://prices.pokemontcg.io/cardmarket/ex2-15",
+        "updatedAt": "2024/07/14",
+        "prices": {
+          "averageSellPrice": 2.22,
+          "lowPrice": 0.04,
+          "trendPrice": 9.66,
+          "germanProLow": 0,
+          "suggestedPrice": 0,
+          "reverseHoloSell": 0,
+          "reverseHoloLow": 0.39,
+          "reverseHoloTrend": 9.17,
+          "lowPriceExPlus": 0.2,
+          "avg1": 0.6,
+          "avg7": 5.94,
+          "avg30": 3.91,
+          "reverseHoloAvg1": 0.2,
+          "reverseHoloAvg7": 9.55,
+          "reverseHoloAvg30": 10.22
+        }
+      }
+    },
+    {
+      "id": "base1-23",
+      "name": "Arcanine",
+      "supertype": "Pokémon",
+      "subtypes": ["Stage 1"],
+      "level": "45",
+      "hp": "100",
+      "types": ["Fire"],
+      "evolvesFrom": "Growlithe",
+      "attacks": [
+        {
+          "name": "Flamethrower",
+          "cost": ["Fire", "Fire", "Colorless"],
+          "convertedEnergyCost": 3,
+          "damage": "50",
+          "text": "Discard 1 Fire Energy card attached to Arcanine in order to use this attack."
+        },
+        {
+          "name": "Take Down",
+          "cost": ["Fire", "Fire", "Colorless", "Colorless"],
+          "convertedEnergyCost": 4,
+          "damage": "80",
+          "text": "Arcanine does 30 damage to itself."
+        }
+      ],
+      "weaknesses": [{ "type": "Water", "value": "×2" }],
+      "retreatCost": ["Colorless", "Colorless", "Colorless"],
+      "convertedRetreatCost": 3,
+      "set": {
+        "id": "base1",
+        "name": "Base",
+        "series": "Base",
+        "printedTotal": 102,
+        "total": 102,
+        "legalities": { "unlimited": "Legal" },
+        "ptcgoCode": "BS",
+        "releaseDate": "1999/01/09",
+        "updatedAt": "2022/10/10 15:12:00",
+        "images": {
+          "symbol": "https://images.pokemontcg.io/base1/symbol.png",
+          "logo": "https://images.pokemontcg.io/base1/logo.png"
+        }
+      },
+      "number": "23",
+      "artist": "Ken Sugimori",
+      "rarity": "Uncommon",
+      "flavorText": "A Pokémon that has been long admired for its beauty. It runs gracefully, as if on wings.",
+      "nationalPokedexNumbers": [59],
+      "legalities": { "unlimited": "Legal" },
+      "images": {
+        "small": "https://images.pokemontcg.io/base1/23.png",
+        "large": "https://images.pokemontcg.io/base1/23_hires.png"
+      },
+      "tcgplayer": {
+        "url": "https://prices.pokemontcg.io/tcgplayer/base1-23",
+        "updatedAt": "2024/07/14",
+        "prices": { "normal": { "low": 0.25, "mid": 1.51, "high": 52, "market": 1.54, "directLow": null } }
+      },
+      "cardmarket": {
+        "url": "https://prices.pokemontcg.io/cardmarket/base1-23",
+        "updatedAt": "2024/07/14",
+        "prices": {
+          "averageSellPrice": 3.44,
+          "lowPrice": 0.04,
+          "trendPrice": 3.87,
+          "germanProLow": 0,
+          "suggestedPrice": 0,
+          "reverseHoloSell": 0,
+          "reverseHoloLow": 0,
+          "reverseHoloTrend": 1.48,
+          "lowPriceExPlus": 0.5,
+          "avg1": 15.5,
+          "avg7": 2.49,
+          "avg30": 3.95,
+          "reverseHoloAvg1": 0.05,
+          "reverseHoloAvg7": 2.81,
+          "reverseHoloAvg30": 2.81
+        }
+      }
+    },
+    {
+      "id": "ex6-18",
+      "name": "Arcanine",
+      "supertype": "Pokémon",
+      "subtypes": ["Stage 1"],
+      "hp": "90",
+      "types": ["Fire"],
+      "evolvesFrom": "Growlithe",
+      "attacks": [
+        { "name": "Flare", "cost": ["Fire"], "convertedEnergyCost": 1, "damage": "20", "text": "" },
+        {
+          "name": "Heat Tackle",
+          "cost": ["Fire", "Colorless", "Colorless", "Colorless"],
+          "convertedEnergyCost": 4,
+          "damage": "70",
+          "text": "Arcanine does 10 damage to itself."
+        }
+      ],
+      "weaknesses": [{ "type": "Water", "value": "×2" }],
+      "retreatCost": ["Colorless", "Colorless"],
+      "convertedRetreatCost": 2,
+      "set": {
+        "id": "ex6",
+        "name": "FireRed & LeafGreen",
+        "series": "EX",
+        "printedTotal": 112,
+        "total": 116,
+        "legalities": { "unlimited": "Legal" },
+        "ptcgoCode": "RG",
+        "releaseDate": "2004/09/01",
+        "updatedAt": "2019/01/28 16:44:00",
+        "images": {
+          "symbol": "https://images.pokemontcg.io/ex6/symbol.png",
+          "logo": "https://images.pokemontcg.io/ex6/logo.png"
+        }
+      },
+      "number": "18",
+      "artist": "Ken Sugimori",
+      "rarity": "Rare",
+      "nationalPokedexNumbers": [59],
+      "legalities": { "unlimited": "Legal" },
+      "images": {
+        "small": "https://images.pokemontcg.io/ex6/18.png",
+        "large": "https://images.pokemontcg.io/ex6/18_hires.png"
+      },
+      "tcgplayer": {
+        "url": "https://prices.pokemontcg.io/tcgplayer/ex6-18",
+        "updatedAt": "2024/07/14",
+        "prices": {
+          "normal": { "low": 0.25, "mid": 0.79, "high": 5, "market": 0.94, "directLow": null },
+          "reverseHolofoil": { "low": 14.42, "mid": 22.2, "high": 27.98, "market": 29.46, "directLow": null }
+        }
+      },
+      "cardmarket": {
+        "url": "https://prices.pokemontcg.io/cardmarket/ex6-18",
+        "updatedAt": "2024/07/14",
+        "prices": {
+          "averageSellPrice": 1,
+          "lowPrice": 0.02,
+          "trendPrice": 0.87,
+          "germanProLow": 0,
+          "suggestedPrice": 0,
+          "reverseHoloSell": 6,
+          "reverseHoloLow": 2.5,
+          "reverseHoloTrend": 11.44,
+          "lowPriceExPlus": 0.18,
+          "avg1": 1.95,
+          "avg7": 0.59,
+          "avg30": 0.78,
+          "reverseHoloAvg1": 6,
+          "reverseHoloAvg7": 8.2,
+          "reverseHoloAvg30": 10.25
+        }
+      }
+    },
+    {
+      "id": "xy12-18",
+      "name": "Arcanine",
+      "supertype": "Pokémon",
+      "subtypes": ["Stage 1"],
+      "level": "45",
+      "hp": "130",
+      "types": ["Fire"],
+      "evolvesFrom": "Growlithe",
+      "abilities": [
+        {
+          "name": "Burning Road",
+          "text": "Once during your turn (before your attack), if this Pokémon was on the Bench and became your Active Pokémon this turn, you may move any number of Fire Energy attached to your Pokémon to this Pokémon.",
+          "type": "Ability"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Scorching Breath",
+          "cost": ["Fire", "Fire", "Fire", "Colorless"],
+          "convertedEnergyCost": 4,
+          "damage": "150",
+          "text": "This Pokémon can't attack during your next turn."
+        }
+      ],
+      "weaknesses": [{ "type": "Water", "value": "×2" }],
+      "retreatCost": ["Colorless", "Colorless"],
+      "convertedRetreatCost": 2,
+      "set": {
+        "id": "xy12",
+        "name": "Evolutions",
+        "series": "XY",
+        "printedTotal": 108,
+        "total": 113,
+        "legalities": { "unlimited": "Legal", "expanded": "Legal" },
+        "ptcgoCode": "EVO",
+        "releaseDate": "2016/11/02",
+        "updatedAt": "2020/09/25 10:09:00",
+        "images": {
+          "symbol": "https://images.pokemontcg.io/xy12/symbol.png",
+          "logo": "https://images.pokemontcg.io/xy12/logo.png"
+        }
+      },
+      "number": "18",
+      "artist": "Ken Sugimori",
+      "rarity": "Rare",
+      "flavorText": "A Pokémon that is described in Chinese legends. It is said to race at an unbelievable speed.",
+      "nationalPokedexNumbers": [59],
+      "legalities": { "unlimited": "Legal", "expanded": "Legal" },
+      "images": {
+        "small": "https://images.pokemontcg.io/xy12/18.png",
+        "large": "https://images.pokemontcg.io/xy12/18_hires.png"
+      },
+      "tcgplayer": {
+        "url": "https://prices.pokemontcg.io/tcgplayer/xy12-18",
+        "updatedAt": "2024/07/14",
+        "prices": {
+          "normal": { "low": 0.01, "mid": 0.21, "high": 10, "market": 0.2, "directLow": 0.15 },
+          "reverseHolofoil": { "low": 0.3, "mid": 1.46, "high": 5.95, "market": 1.36, "directLow": 1.4 }
+        }
+      },
+      "cardmarket": {
+        "url": "https://prices.pokemontcg.io/cardmarket/xy12-18",
+        "updatedAt": "2024/07/14",
+        "prices": {
+          "averageSellPrice": 0.17,
+          "lowPrice": 0.02,
+          "trendPrice": 0.33,
+          "germanProLow": 0,
+          "suggestedPrice": 0,
+          "reverseHoloSell": 3.17,
+          "reverseHoloLow": 0.19,
+          "reverseHoloTrend": 3.52,
+          "lowPriceExPlus": 0.02,
+          "avg1": 0.16,
+          "avg7": 0.26,
+          "avg30": 0.19,
+          "reverseHoloAvg1": 8.99,
+          "reverseHoloAvg7": 3.48,
+          "reverseHoloAvg30": 2.95
+        }
+      }
+    },
+    {
+      "id": "sm10-22",
+      "name": "Arcanine",
+      "supertype": "Pokémon",
+      "subtypes": ["Stage 1"],
+      "hp": "140",
+      "types": ["Fire"],
+      "evolvesFrom": "Growlithe",
+      "attacks": [
+        {
+          "name": "Grand Flame",
+          "cost": ["Fire", "Fire", "Fire"],
+          "convertedEnergyCost": 3,
+          "damage": "120",
+          "text": "Attach 2 Fire Energy cards from your discard pile to 1 of your Benched Pokémon."
+        },
+        {
+          "name": "Heat Tackle",
+          "cost": ["Fire", "Fire", "Fire", "Fire"],
+          "convertedEnergyCost": 4,
+          "damage": "190",
+          "text": "This Pokémon does 50 damage to itself."
+        }
+      ],
+      "weaknesses": [{ "type": "Water", "value": "×2" }],
+      "retreatCost": ["Colorless", "Colorless", "Colorless", "Colorless"],
+      "convertedRetreatCost": 4,
+      "set": {
+        "id": "sm10",
+        "name": "Unbroken Bonds",
+        "series": "Sun & Moon",
+        "printedTotal": 214,
+        "total": 234,
+        "legalities": { "unlimited": "Legal", "expanded": "Legal" },
+        "ptcgoCode": "UNB",
+        "releaseDate": "2019/05/03",
+        "updatedAt": "2021/09/01 05:37:00",
+        "images": {
+          "symbol": "https://images.pokemontcg.io/sm10/symbol.png",
+          "logo": "https://images.pokemontcg.io/sm10/logo.png"
+        }
+      },
+      "number": "22",
+      "artist": "Shin Nagasawa",
+      "rarity": "Rare Holo",
+      "flavorText": "Legends tell of its fighting alongside a general and conquering a whole country.",
+      "nationalPokedexNumbers": [59],
+      "legalities": { "unlimited": "Legal", "expanded": "Legal" },
+      "images": {
+        "small": "https://images.pokemontcg.io/sm10/22.png",
+        "large": "https://images.pokemontcg.io/sm10/22_hires.png"
+      },
+      "tcgplayer": {
+        "url": "https://prices.pokemontcg.io/tcgplayer/sm10-22",
+        "updatedAt": "2024/07/14",
+        "prices": {
+          "holofoil": { "low": 0.98, "mid": 1.9, "high": 4.24, "market": 1.89, "directLow": null },
+          "reverseHolofoil": { "low": 1, "mid": 1.99, "high": 3.75, "market": 1.96, "directLow": null }
+        }
+      },
+      "cardmarket": {
+        "url": "https://prices.pokemontcg.io/cardmarket/sm10-22",
+        "updatedAt": "2024/07/14",
+        "prices": {
+          "averageSellPrice": 4.58,
+          "lowPrice": 0.7,
+          "trendPrice": 4.71,
+          "germanProLow": 0,
+          "suggestedPrice": 0,
+          "reverseHoloSell": 3.73,
+          "reverseHoloLow": 0.7,
+          "reverseHoloTrend": 4.26,
+          "lowPriceExPlus": 1.8,
+          "avg1": 5.45,
+          "avg7": 4.72,
+          "avg30": 4.28,
+          "reverseHoloAvg1": 2,
+          "reverseHoloAvg7": 3.94,
+          "reverseHoloAvg30": 4.26
+        }
+      }
+    },
+    {
+      "id": "ecard2-2",
+      "name": "Arcanine",
+      "supertype": "Pokémon",
+      "subtypes": ["Stage 1"],
+      "hp": "90",
+      "types": ["Fire"],
+      "evolvesFrom": "Growlithe",
+      "abilities": [
+        {
+          "name": "Extreme Speed",
+          "text": "You pay Colorless less to retreat Arcanine for each Energy attached to it.",
+          "type": "Poké-Body"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Fire Blow",
+          "cost": ["Colorless", "Colorless", "Colorless"],
+          "convertedEnergyCost": 3,
+          "damage": "30+",
+          "text": "You may discard any number of Fire Energy cards attached to Arcanine when you use this attack. If you do, flip a number of coins equal to the number of Fire Energy cards you discarded. This attack does 30 damage plus 30 more damage for each heads."
+        }
+      ],
+      "weaknesses": [{ "type": "Water", "value": "×2" }],
+      "retreatCost": ["Colorless", "Colorless", "Colorless"],
+      "convertedRetreatCost": 3,
+      "set": {
+        "id": "ecard2",
+        "name": "Aquapolis",
+        "series": "E-Card",
+        "printedTotal": 147,
+        "total": 182,
+        "legalities": { "unlimited": "Legal" },
+        "ptcgoCode": "AQ",
+        "releaseDate": "2003/01/15",
+        "updatedAt": "2020/08/14 09:35:00",
+        "images": {
+          "symbol": "https://images.pokemontcg.io/ecard2/symbol.png",
+          "logo": "https://images.pokemontcg.io/ecard2/logo.png"
+        }
+      },
+      "number": "2",
+      "artist": "Kyoko Umemoto",
+      "rarity": "Rare",
+      "nationalPokedexNumbers": [59],
+      "legalities": { "unlimited": "Legal" },
+      "images": {
+        "small": "https://images.pokemontcg.io/ecard2/2.png",
+        "large": "https://images.pokemontcg.io/ecard2/2_hires.png"
+      },
+      "tcgplayer": {
+        "url": "https://prices.pokemontcg.io/tcgplayer/ecard2-2",
+        "updatedAt": "2024/07/14",
+        "prices": {
+          "normal": { "low": 19.02, "mid": 24.94, "high": 44.99, "market": 30.48, "directLow": null },
+          "reverseHolofoil": { "low": 22.4, "mid": 25, "high": 68.24, "market": 35.01, "directLow": null }
+        }
+      },
+      "cardmarket": {
+        "url": "https://prices.pokemontcg.io/cardmarket/ecard2-2",
+        "updatedAt": "2024/07/14",
+        "prices": {
+          "averageSellPrice": 17.32,
+          "lowPrice": 2.5,
+          "trendPrice": 15.13,
+          "germanProLow": 0,
+          "suggestedPrice": 0,
+          "reverseHoloSell": 17.99,
+          "reverseHoloLow": 4.5,
+          "reverseHoloTrend": 11.17,
+          "lowPriceExPlus": 9.99,
+          "avg1": 17.5,
+          "avg7": 15.91,
+          "avg30": 12.52,
+          "reverseHoloAvg1": 17.99,
+          "reverseHoloAvg7": 8.78,
+          "reverseHoloAvg30": 16.12
+        }
+      }
+    }
+  ],
+  "page": 1,
+  "pageSize": 20,
+  "count": 20,
+  "totalCount": 41
+}

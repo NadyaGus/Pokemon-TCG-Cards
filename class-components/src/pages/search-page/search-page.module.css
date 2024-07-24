@@ -1,0 +1,33 @@
+.container,
+.hidden,
+.results,
+.resultsHalf {
+  transition: 0.3s;
+}
+
+.container {
+  display: flex;
+}
+
+.outlet {
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  display: flex;
+
+  width: 100%;
+  height: 100vh;
+}
+
+.hidden {
+  width: 0;
+}
+
+.results {
+  width: 100%;
+}
+
+.resultsHalf {
+  width: 50%;
+}

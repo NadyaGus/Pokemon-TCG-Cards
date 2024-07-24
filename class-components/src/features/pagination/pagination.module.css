@@ -1,0 +1,13 @@
+.pagination,
+.hidden {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+
+  margin: 1rem;
+  margin-bottom: 8rem;
+}
+
+.hidden {
+  display: none;
+}
