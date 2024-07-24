@@ -1,5 +1,7 @@
 import { HttpResponse, http } from 'msw';
 
+import { ITEM_PER_PAGE } from '@/app/variables';
+
 import json from './arcanine.json';
 
 export const handlers = [
@@ -14,7 +16,7 @@ export const handlers = [
     const pageSize = url.searchParams.get('pageSize');
     const search = url.searchParams.get('search');
 
-    if (name === 'arcanine' && page === '1' && pageSize === '20' && search === '') {
+    if (name === 'arcanine' && page === '1' && pageSize === ITEM_PER_PAGE && search === '') {
       return HttpResponse.json(json);
     }
 

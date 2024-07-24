@@ -32,7 +32,7 @@ describe('Results', () => {
     expect(await screen.findByRole('list')).toBeInTheDocument();
   });
 
-  it('should show 20 items', async () => {
+  it('should show 12 items', async () => {
     render(
       <Provider store={store}>
         <RouterProvider router={router} />
@@ -46,6 +46,6 @@ describe('Results', () => {
     await userEvent.type(searchInput, 'arcanine');
     await userEvent.click(searchSubmit);
 
-    expect(await screen.findAllByTestId('item')).toHaveLength(20);
+    expect(await screen.findAllByTestId('item')).toHaveLength(12);
   });
 });

@@ -7,6 +7,7 @@ import { clsx } from 'clsx';
 import { useGetPokemonListQuery } from '@/app/api/pokemonApi';
 import { useLocalStorage } from '@/app/hooks/useLocalStorage';
 import { store } from '@/app/providers/store/configureStore';
+import { ITEM_PER_PAGE } from '@/app/variables';
 import { Loader } from '@/pages/search-page/loader/loader';
 import { Pagination } from '@/pages/search-page/pagination/pagination';
 import { Results } from '@/pages/search-page/results/results';
@@ -27,7 +28,7 @@ export const SearchPage = (): ReactNode => {
   const { cardId } = useParams();
 
   const { data, isFetching } = useGetPokemonListQuery(
-    `?page=${searchParams.get('page') ?? '1'}&pageSize=${searchParams.get('pageSize') ?? '20'}&q=name:${searchParams.get('name') ?? ''}*`,
+    `?page=${searchParams.get('page') ?? '1'}&pageSize=${searchParams.get('pageSize') ?? ITEM_PER_PAGE}&q=name:${searchParams.get('name') ?? ''}*`,
   );
 
   useEffect(() => {

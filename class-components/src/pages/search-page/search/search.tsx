@@ -2,6 +2,8 @@ import type { ChangeEvent, FormEvent, ReactNode, SetStateAction } from 'react';
 import { useState } from 'react';
 import type { SetURLSearchParams } from 'react-router-dom';
 
+import { ITEM_PER_PAGE } from '@/app/variables';
+
 import classes from './search.module.css';
 
 interface SearchProps {
@@ -21,7 +23,7 @@ export const Search = (props: SearchProps): ReactNode => {
   const handleSubmit = (): void => {
     const value = inputValue.trim();
 
-    props.setSearchParams({ name: value, page: '1', pageSize: '20' });
+    props.setSearchParams({ name: value, page: '1', pageSize: ITEM_PER_PAGE });
     props.setSavedValue(value);
     props.handleSearchValue(value);
   };

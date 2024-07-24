@@ -1,6 +1,8 @@
 import { type ReactNode, useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 
+import { ITEM_PER_PAGE } from '@/app/variables';
+
 import classes from './pagination.module.css';
 
 interface PaginationProps {
@@ -17,8 +19,8 @@ export const Pagination = (props: PaginationProps): ReactNode => {
   const name = searchParams.get('name') ?? '';
 
   const handlePageIncrement = (): void => {
-    if (Math.ceil(props.totalCount / 20) > +page) {
-      setSearchParams({ name, page: `${+page + 1}`, pageSize: '20' });
+    if (Math.ceil(props.totalCount / +ITEM_PER_PAGE) > +page) {
+      setSearchParams({ name, page: `${+page + 1}`, pageSize: ITEM_PER_PAGE });
     }
 
     window.scrollTo(0, 0);
@@ -26,7 +28,7 @@ export const Pagination = (props: PaginationProps): ReactNode => {
 
   const handlePageDecrement = (): void => {
     if (+page > 1) {
-      setSearchParams({ name, page: `${+page - 1}`, pageSize: '20' });
+      setSearchParams({ name, page: `${+page - 1}`, pageSize: ITEM_PER_PAGE });
     }
 
     window.scrollTo(0, 0);
@@ -37,7 +39,7 @@ export const Pagination = (props: PaginationProps): ReactNode => {
   }, [searchParams]);
 
   useEffect(() => {
-    if (+page < Math.ceil(props.totalCount / 20)) {
+    if (+page < Math.ceil(props.totalCount / +ITEM_PER_PAGE)) {
       setDisabledNext(false);
     } else {
       setDisabledNext(true);
@@ -57,7 +59,7 @@ export const Pagination = (props: PaginationProps): ReactNode => {
           Prev
         </button>
         <div>
-          Page: {page} from {Math.ceil(props.totalCount / 20)}
+          Page: {page} from {Math.ceil(props.totalCount / +ITEM_PER_PAGE)}
         </div>
         <button disabled={disabledNext} onClick={() => handlePageIncrement()}>
           Next

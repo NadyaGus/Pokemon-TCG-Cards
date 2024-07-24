@@ -5,6 +5,7 @@ import { clsx } from 'clsx';
 
 import { useLocalStorage } from '@/app/hooks/useLocalStorage';
 import { ThemeContext } from '@/app/providers/theme/theme';
+import { ITEM_PER_PAGE } from '@/app/variables';
 import { SearchPage } from '@/pages/search-page/search-page';
 
 import { Background } from '../background/background';
@@ -23,7 +24,7 @@ export const Layout = (): ReactNode => {
   useEffect(() => {
     if (!searchParams.get('page')) {
       const name = searchValue;
-      setSearchParams({ name, page: '1', pageSize: '20' });
+      setSearchParams({ name, page: '1', pageSize: ITEM_PER_PAGE });
     }
   });
 
