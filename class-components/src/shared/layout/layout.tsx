@@ -31,8 +31,8 @@ export const Layout = (): ReactNode => {
     <div className={clsx(classes.app, classes[theme])}>
       <Header />
       <SearchPage />
-      <Background />
       <Flyout />
+      <Background />
       <Footer />
     </div>
   );
