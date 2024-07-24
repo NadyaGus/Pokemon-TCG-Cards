@@ -29,24 +29,23 @@ export const ResultItem = (props: Pokemon): ReactNode => {
 
   return (
     <li className={classes.item}>
+      <div className={classes.wrapper}>
+        <h3 className={classes.title}>{props.name}</h3>
+        <input
+          checked={handleCheckboxState()}
+          className={classes.checkbox}
+          onChange={(e: ChangeEvent<HTMLInputElement>) => handleCheckbox(e)}
+          type="checkbox"
+        />
+      </div>
       <Link
         className={classes.link}
         data-testid="item"
         to={`/cards/${props.id}?page=${searchParams.get('page')}&pageSize=${searchParams.get('pageSize')}&name=${searchParams.get('name')}`}
       >
-        <h3 className={classes.title}>{props.name}</h3>
         <img alt={props.name} className={classes.image} src={props.images.small} />
         <p className={classes.description}>Set: {props.set.name}</p>
       </Link>
-
-      <label className={classes.checkbox}>
-        Choose the card{' '}
-        <input
-          checked={handleCheckboxState()}
-          onChange={(e: ChangeEvent<HTMLInputElement>) => handleCheckbox(e)}
-          type="checkbox"
-        />
-      </label>
     </li>
   );
 };

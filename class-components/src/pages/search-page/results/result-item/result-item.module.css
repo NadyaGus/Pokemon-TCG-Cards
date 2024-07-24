@@ -15,6 +15,7 @@
 .link {
   display: flex;
   flex-direction: column;
+  gap: 1rem;
   align-items: center;
 }
 
@@ -22,17 +23,21 @@
   opacity: 1;
 }
 
-.item:hover {
-  cursor: pointer;
-}
+.title,
+.description {
+  overflow: hidden;
+  display: inline-block;
 
-.title {
-  margin-top: 0;
+  width: 12rem;
+  margin: 0;
+  padding: 0;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .description {
-  margin: 0;
-  margin-top: 1rem;
+  text-align: center;
 }
 
 .image {
@@ -51,14 +56,29 @@
   gap: 0.5rem;
   align-items: center;
 
-  padding: 1rem 0.5rem 0.5rem;
+  width: 2rem;
+  height: 2rem;
+  padding: 1.2rem;
 
-  input {
-    width: 1rem;
-    height: 1rem;
-  }
+  appearance: none;
+  opacity: 0.8;
+  background-image: url('/heart.svg');
+  background-repeat: no-repeat;
+  background-position: center;
 
-  input:checked {
-    accent-color: var(--color-button);
-  }
+  transition: 0.3s;
+}
+
+.checkbox:checked {
+  accent-color: var(--color-button);
+  background-image: url('/heart-fill.svg');
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  margin-bottom: 0.6rem;
 }
