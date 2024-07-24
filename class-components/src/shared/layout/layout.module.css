@@ -6,6 +6,8 @@
   --background-image: url('/background.webp');
   --brightness: 0.9;
 
+  content: url('/background.webp') url('background-dark.webp');
+
   display: flex;
   flex-direction: column;
   align-items: center;
