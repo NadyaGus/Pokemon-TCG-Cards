@@ -16,7 +16,7 @@ export const Flyout = (): ReactNode => {
     <div className={clsx(classes.flyout, savedItem.length > 0 ? classes.show : classes.hidden)}>
       <div className={classes.content}>
         <UnselectButton />
-        Saved: {savedItem.length}
+        <div className={classes.wrapper}> Saved: {savedItem.length}</div>
         <DownloadButton />
       </div>
     </div>

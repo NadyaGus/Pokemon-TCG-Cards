@@ -3,7 +3,6 @@
   bottom: 0;
 
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
 
@@ -27,7 +26,7 @@
 
 .content {
   display: flex;
-  gap: 3rem;
+  gap: 1rem;
   align-items: center;
   justify-content: space-between;
 
@@ -38,5 +37,20 @@
 
     width: 8rem;
     height: 2.5rem;
+  }
+}
+
+.wrapper {
+  width: 6rem;
+  text-align: center;
+}
+
+@media screen and (width <=680px) {
+  .flyout {
+    width: 23rem;
+
+    button {
+      width: 6rem;
+    }
   }
 }
