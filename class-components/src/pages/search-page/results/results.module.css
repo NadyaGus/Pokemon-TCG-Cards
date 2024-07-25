@@ -12,6 +12,7 @@
 
   @media screen and (width <=370px) {
     margin: 0;
+    margin-top: 2rem;
     padding: 0;
   }
 }
