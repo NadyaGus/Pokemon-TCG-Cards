@@ -1,9 +1,3 @@
-.container,
-.hidden,
-.results {
-  transition: 0.3s;
-}
-
 .outlet {
   position: fixed;
   z-index: 1;
