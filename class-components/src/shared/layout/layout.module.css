@@ -84,3 +84,11 @@
   --background-image: url('/background-dark.webp');
   --brightness: 0.5;
 }
+
+body:has(div.app) {
+  background-color: rgb(0 128 0);
+}
+
+body:has(div.app.dark) {
+  background-color: rgb(63 49 93);
+}

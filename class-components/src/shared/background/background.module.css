@@ -9,6 +9,4 @@
   background-position: center;
   background-size: cover;
   filter: brightness(var(--brightness));
-
-  transition: 0.5s;
 }

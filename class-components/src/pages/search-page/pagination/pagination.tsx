@@ -1,5 +1,5 @@
 import { type ReactNode, useEffect, useState } from 'react';
-import { useLocation, useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 
 import { ITEM_PER_PAGE } from '@/app/variables';
 
@@ -10,7 +10,6 @@ interface PaginationProps {
 }
 
 export const Pagination = (props: PaginationProps): ReactNode => {
-  const { search } = useLocation();
   const [disabledPrev, setDisabledPrev] = useState(false);
   const [disabledNext, setDisabledNext] = useState(false);
 
@@ -20,26 +19,23 @@ export const Pagination = (props: PaginationProps): ReactNode => {
   const name = searchParams.get('name') ?? '';
 
   const scrollToTop = (): void => {
-    window.scrollTo({
-      behavior: 'smooth',
-      top: 0,
-    });
+    window.scrollTo(0, 0);
   };
-
-  useEffect(() => {
-    scrollToTop();
-  }, [search]);
 
   const handlePageIncrement = (): void => {
     if (Math.ceil(props.totalCount / +ITEM_PER_PAGE) > +page) {
       setSearchParams({ name, page: `${+page + 1}`, pageSize: ITEM_PER_PAGE });
     }
+
+    scrollToTop();
   };
 
   const handlePageDecrement = (): void => {
     if (+page > 1) {
       setSearchParams({ name, page: `${+page - 1}`, pageSize: ITEM_PER_PAGE });
     }
+
+    scrollToTop();
   };
 
   useEffect(() => {

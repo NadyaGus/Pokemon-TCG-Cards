@@ -25,3 +25,7 @@
 .show {
   transform: translateX(0);
 }
+
+body:has(div.outlet.show) {
+  overflow: hidden;
+}
