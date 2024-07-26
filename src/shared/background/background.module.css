@@ -5,8 +5,12 @@
   width: 100%;
   height: 100lvh;
 
-  background-image: var(--background-image);
+  background-image: url('/background.webp'), url('background-dark.webp');
   background-position: center;
   background-size: cover;
   filter: brightness(var(--brightness));
+}
+
+.background.dark {
+  background-image: url('/background-dark.webp'), url('/background.webp');
 }
