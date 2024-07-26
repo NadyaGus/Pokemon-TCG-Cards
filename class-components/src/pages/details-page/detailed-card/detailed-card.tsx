@@ -40,22 +40,24 @@ export const DetailedCard = (props: DetailedCardProps): ReactNode => {
       />
 
       <div className={classes.cardArea}>
-        <Link
-          className={classes.closeButton}
-          to={`/?page=${searchParams.get('page')}&pageSize=${searchParams.get('pageSize')}&name=${searchParams.get('name')}`}
-        >
-          <button>Close</button>
-        </Link>
+        <div className={classes.cardContainer}>
+          <Link
+            className={classes.closeButton}
+            to={`/?page=${searchParams.get('page')}&pageSize=${searchParams.get('pageSize')}&name=${searchParams.get('name')}`}
+          >
+            <button>Close</button>
+          </Link>
 
-        <div className={classes.card}>
-          <img alt={props.pokemon.name} className={classes.image} src={props.pokemon.images?.small} />
-          <div className={classes.info}>
-            <h2 className={classes.title}>{props.pokemon.name}</h2>
-            <p className={classes.description}>Set: {props.pokemon.set?.name}</p>
-            <p className={classes.description}>Series: {props.pokemon.set?.series}</p>
-            <p className={classes.description}>Supertype: {props.pokemon.supertype}</p>
-            <p className={classes.description}>Types: {props.pokemon.types}</p>
-            <p className={classes.description}>HP: {props.pokemon.hp}</p>
+          <div className={classes.card}>
+            <img alt={props.pokemon.name} className={classes.image} src={props.pokemon.images?.large} />
+            <div className={classes.info}>
+              <h2 className={classes.title}>{props.pokemon.name}</h2>
+              <p className={classes.description}>Set: {props.pokemon.set?.name}</p>
+              <p className={classes.description}>Series: {props.pokemon.set?.series}</p>
+              <p className={classes.description}>Supertype: {props.pokemon.supertype}</p>
+              <p className={classes.description}>Types: {props.pokemon.types}</p>
+              <p className={classes.description}>HP: {props.pokemon.hp}</p>
+            </div>
           </div>
         </div>
       </div>
