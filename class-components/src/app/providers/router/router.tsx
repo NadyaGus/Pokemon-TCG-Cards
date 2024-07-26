@@ -6,7 +6,7 @@ import { NotFoundPage } from '@/pages/not-found-page/not-found-page';
 import { Layout } from '@/shared/layout/layout';
 
 export const APP_ROUTES = {
-  cards: '/cards',
+  cards: 'cards',
   root: '/',
 };
 
