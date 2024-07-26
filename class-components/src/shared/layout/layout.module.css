@@ -6,9 +6,6 @@
   --background-image: url('/background.webp');
   --brightness: 0.9;
 
-  content: url('/background.webp') url('background-dark.webp') url('/moon.svg') url('/sun.svg') url('/heart.svg')
-    url('/heart-fill.svg');
-
   display: flex;
   flex-direction: column;
   align-items: center;

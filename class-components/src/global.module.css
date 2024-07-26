@@ -1,4 +1,6 @@
 body {
+  content: url('/background.webp') url('background-dark.webp') url('/moon.svg') url('/sun.svg') url('/heart.svg')
+    url('/heart-fill.svg');
   scroll-behavior: smooth;
 
   min-width: 320px;
