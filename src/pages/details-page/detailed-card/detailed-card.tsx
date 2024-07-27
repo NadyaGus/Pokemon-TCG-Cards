@@ -17,12 +17,12 @@ export const DetailedCard = (props: DetailedCardProps): ReactNode => {
       <div className={classes.container}>
         <Link
           className={classes.closeArea}
-          to={`/?page=${searchParams.get('page')}&pageSize=${searchParams.get('pageSize')}&name=${searchParams.get('name')}`}
+          to={`/?name=${searchParams.get('name')}&page=${searchParams.get('page')}&pageSize=${searchParams.get('pageSize')}`}
         />
         <div className={classes.cardArea}>
           <Link
             className={classes.closeButton}
-            to={`/?page=${searchParams.get('page')}&pageSize=${searchParams.get('pageSize')}&name=${searchParams.get('name')}`}
+            to={`/?name=${searchParams.get('name')}&page=${searchParams.get('page')}&pageSize=${searchParams.get('pageSize')}`}
           >
             <button>Close</button>
           </Link>
@@ -36,14 +36,14 @@ export const DetailedCard = (props: DetailedCardProps): ReactNode => {
     <div className={classes.container}>
       <Link
         className={classes.closeArea}
-        to={`/?page=${searchParams.get('page')}&pageSize=${searchParams.get('pageSize')}&name=${searchParams.get('name')}`}
+        to={`/?name=${searchParams.get('name')}&page=${searchParams.get('page')}&pageSize=${searchParams.get('pageSize')}`}
       />
 
       <div className={classes.cardArea}>
         <div className={classes.cardContainer}>
           <Link
             className={classes.closeButton}
-            to={`/?page=${searchParams.get('page')}&pageSize=${searchParams.get('pageSize')}&name=${searchParams.get('name')}`}
+            to={`/?name=${searchParams.get('name')}&page=${searchParams.get('page')}&pageSize=${searchParams.get('pageSize')}`}
           >
             <button>Close</button>
           </Link>

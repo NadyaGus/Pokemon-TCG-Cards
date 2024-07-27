@@ -39,7 +39,7 @@ export const savedItemSlice = createSlice({
         types: action.payload.types,
       };
 
-      state.data.push(pokemon);
+      state.data = [...state.data, pokemon];
     },
     unselectAll: (state) => {
       state.data = [];

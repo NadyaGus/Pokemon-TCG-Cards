@@ -41,7 +41,7 @@ export const ResultItem = (props: Pokemon): ReactNode => {
       <Link
         className={classes.link}
         data-testid="item"
-        to={`/cards/${props.id}?page=${searchParams.get('page')}&pageSize=${searchParams.get('pageSize')}&name=${searchParams.get('name')}`}
+        to={`/cards/${props.id}?name=${searchParams.get('name')}&page=${searchParams.get('page')}&pageSize=${searchParams.get('pageSize')}`}
       >
         <img alt={props.name} className={classes.image} src={props.images.small} />
         <p className={classes.description}>Set: {props.set.name}</p>
