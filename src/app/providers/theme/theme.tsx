@@ -1,5 +1,7 @@
 import { createContext } from 'react';
 
+import { LS_KEY_THEME } from '@/app/variables';
+
 export type Theme = 'dark' | 'light';
 
 export interface ThemeContext {
@@ -11,5 +13,5 @@ export const ThemeContext = createContext<ThemeContext>({
   setTheme: () => {
     null;
   },
-  theme: 'light',
+  theme: localStorage.getItem(LS_KEY_THEME) as Theme,
 });
